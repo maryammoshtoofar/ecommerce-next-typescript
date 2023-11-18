@@ -27,7 +27,8 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": ">=16.13.0",
-    "npm": "please-use-npm"
+    "node": ">=21.0.0",
+    "npm": ">=9.7.1"
   }
+  
 }
