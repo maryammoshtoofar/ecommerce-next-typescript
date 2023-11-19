@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-size: 62.5%;
+}
+
+@layer components {
+  .main {
+    @apply bg-[linear-gradient(to_left,_#7C573C_0%_50%,_#221518_14%_50%)];
+  }
+  .nav-menu-btn {
+    @apply rounded-b-3xl flex items-end px-3 py-5 text-coffee-10 font-sans h-20 hover:nav-menu-btn-hover transition-colors ease-in-out delay-150 duration-300;
+  }
+  .nav-menu-btn-hover {
+    @apply backdrop-blur-sm bg-[linear-gradient(94deg,_rgba(223,195,157,0.40)_-9.94%,_rgba(248,228,190,0.40)_19.83%,_rgba(223,195,157,0.40)_50.71%,_rgba(248,228,190,0.40)_81.26%,_rgba(248,228,190,0.40)_111.66%)];
+  }
+}

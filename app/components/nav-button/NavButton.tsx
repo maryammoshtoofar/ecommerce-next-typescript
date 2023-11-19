@@ -1,4 +1,12 @@
-const NavButton = ({ children }: { children: React.ReactNode }) => {
-  return <div>{children}</div>;
+type NavButtonProps = {
+  title: string;
+  active?: boolean;
+};
+const NavButton = ({ title }: NavButtonProps) => {
+  return (
+    <button className="nav-menu-btn">
+      <span className="">{title}</span>
+    </button>
+  );
 };
 export default NavButton;

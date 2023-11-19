@@ -1,15 +1,14 @@
-import NavButton from '@/app/components/nav-button/NavButton';
+import NavIconsMenu from '@/app/components/nav-icons-menu/NavIconsMenu';
+import Logo from '@/app/components/logo/Logo';
+import NavMenu from '@/app/components/nav-menu/NavMenu';
 
 const Header = () => {
   return (
-    <div className="my-class">
-      <NavButton>Home</NavButton>
-      <NavButton>Menu</NavButton>
-      <NavButton>Services</NavButton>
-      <NavButton>Product</NavButton>
-      <NavButton>Blog</NavButton>
-      <NavButton>Contact</NavButton>
-    </div>
+    <header className="grid grid-cols-3 items-center pb-2 px-8">
+      <Logo />
+      <NavIconsMenu />
+      <NavMenu />
+    </header>
   );
 };
 export default Header;
