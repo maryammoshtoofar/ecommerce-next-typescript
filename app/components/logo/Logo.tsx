@@ -1,7 +1,9 @@
-import logo from '@/app/assets/logo.png';
 import Image from 'next/image';
-
-const Logo = () => {
-  return <Image src={logo} alt="logo" className="w-10" />;
+import logo from '@/app/assets/logo.png';
+type LogoProps = {
+  className: string;
+};
+const Logo = ({ className }: LogoProps) => {
+  return <Image src={logo} alt="logo" className={className} />;
 };
 export default Logo;

@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-size: 62.5%;
-}
 
 @layer components {
   .main {

@@ -1,4 +1,3 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
 import { colors } from './app/styles/colors';
 
 export default {
@@ -6,8 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)'],
-        mono: ['var(--font-roboto-mono)'],
+        luxurious_Roman: ['var(--font-alike)'],
       },
       colors,
     },

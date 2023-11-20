@@ -2,7 +2,7 @@ import NavButton from '@/app/components/nav-button/NavButton';
 
 const NavMenu = () => {
   return (
-    <nav className="justify-self-end flex gap-5 justify-between items-center text-xl">
+    <nav className="col-span-6 flex gap-5 justify-between items-center text-xl mx-2">
       <NavButton title="Home" />
       <NavButton title="Menu" />
       <NavButton title="Services" />
