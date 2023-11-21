@@ -1,7 +1,6 @@
 import { FaLocationDot } from 'react-icons/fa6';
 import { FaEnvelope } from 'react-icons/fa';
 import { MdOutlinePhoneIphone } from 'react-icons/md';
-import { TailwindComponent } from '@/app/types/types';
 import FooterMenuItem from '../footer-menu-items/FooterMenuItem';
 import IconedFooterMenuItem from '../footer-menu-items/IconedFooterMenuItem';
 import TitleFooterMenuItem from '../footer-menu-items/TitleFooterMenuItem';
