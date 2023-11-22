@@ -7,10 +7,44 @@
   .main {
     @apply bg-[linear-gradient(to_left,_#7C573C_0%_50%,_#221518_14%_50%)];
   }
+  .btn {
+    @apply text-coffee-70 font-playfair text-2xl capitalize py-2 px-9 inline-flex items-center gap-2 rounded-[3rem]  border-2 border-coffee-610;
+  }
+  .btn-primary {
+    @apply bg-coffee-600;
+  }
+  .btn-secondary {
+    @apply bg-coffee-620;
+  }
   .nav-menu-btn {
-    @apply rounded-b-3xl flex items-end px-3 py-5 text-coffee-10 font-sans h-20 hover:nav-menu-btn-hover transition-colors ease-in-out delay-150 duration-300;
+    @apply rounded-b-3xl flex items-end px-3 py-5 text-coffee-10 h-20 hover:nav-menu-btn-hover transition-colors ease-in-out delay-150 duration-300;
   }
   .nav-menu-btn-hover {
     @apply backdrop-blur-sm bg-[linear-gradient(94deg,_rgba(223,195,157,0.40)_-9.94%,_rgba(248,228,190,0.40)_19.83%,_rgba(223,195,157,0.40)_50.71%,_rgba(248,228,190,0.40)_81.26%,_rgba(248,228,190,0.40)_111.66%)];
   }
+  .card {
+    @apply rounded-[3.125rem] border-[3.7px] border-coffee-100  bg-coffee-630  backdrop-blur-lg;
+  }
+}
+.gradient-text {
+  background: var(
+    --storke,
+    linear-gradient(
+      251deg,
+      #e0a872 13.76%,
+      #f8e4be 49.91%,
+      #fff3e0 58.47%,
+      #e0a872 95.09%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-border {
+  background:
+    linear-gradient(#4a2721, #4a2721) padding-box,
+    radial-gradient(circle at center, #f8e4be 20%, #4a2721d9 89%);
+  border: 4px solid transparent;
 }

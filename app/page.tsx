@@ -1,6 +1,10 @@
+import Hero from './components/hero/Hero';
+
 const Home = () => {
   return (
-    <main className=" flex flex-col items-center justify-between p-24"></main>
+    <main className=" flex flex-col items-center justify-between">
+      <Hero />
+    </main>
   );
 };
 
