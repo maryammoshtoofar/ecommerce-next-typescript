@@ -1,6 +1,6 @@
 import NavIconsMenu from '@/app/components/nav-icons-menu/NavIconsMenu';
-import Logo from '@/app/components/logo/Logo';
-import NavMenu from '@/app/components/nav-menu/NavMenu';
+import Logo from '@/app/components/base/logo/Logo';
+import NavMenu from '@/app/components/layout/user/navigation/nav-menu/NavMenu';
 
 const Header = () => {
   return (

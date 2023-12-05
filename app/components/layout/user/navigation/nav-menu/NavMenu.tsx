@@ -1,4 +1,4 @@
-import NavButton from '@/app/components/nav-button/NavButton';
+import NavButton from '@/app/components/layout/user/navigation/nav-button/NavButton';
 
 const NavMenu = () => {
   return (

@@ -1,7 +1,13 @@
-import { Component, ReactElement } from 'react';
+import { ReactElement } from 'react';
 
-export type TailwindComponent = {
+export type UIComponent = {
   children?: React.ReactNode;
   tailwind?: string;
   component?: ReactElement;
+};
+
+export type ButtonProps = UIComponent & {
+  primary?: boolean;
+  label: string;
+  onClick?: () => void;
 };

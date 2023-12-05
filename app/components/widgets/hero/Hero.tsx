@@ -2,8 +2,9 @@ import Image from 'next/image';
 import coffeeMachine from '@/app/assets/coffee-landing.png';
 import title from '@/app/assets/title.png';
 import cup from '@/app/assets/Cup1.png';
-import Button from '@/app/components/button/Button';
+import Button from '@/app/components/base/button/Button';
 import Card from '../card/Card';
+import { RiEBike2Line } from 'react-icons/ri';
 const Hero = () => {
   return (
     <div className="w-full relative ps-32 flex items-center">
@@ -26,8 +27,12 @@ const Hero = () => {
       <Image src={coffeeMachine} alt="coffee-machine" className="w-full" />
       <Card tailwind="absolute self-end flex items-center w-[30%] px-2 rounded-b-none">
         <Image src={cup} alt="coffee-cup" className="w-1/2" />
-        <p className="font-dancing gradient-text text-2xl">But First Coffee</p>
-        <Button label="Hurry Up" />
+        <p className="font-dancing gradient-text text-4xl">But First Coffee</p>
+        <Button
+          label="Hurry Up"
+          tailwind="absolute bottom-0 right-0 text-[1.2.rem] mb-5 me-3"
+          component={<RiEBike2Line />}
+        />
       </Card>
     </div>
   );
