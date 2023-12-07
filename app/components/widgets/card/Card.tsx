@@ -1,11 +1,9 @@
-type CardProps = {
-  children: React.ReactNode;
-  tailwind: string;
-};
+import { UIComponent } from "@/app/types/types";
 
-const Card = (props: CardProps) => {
+
+const Card = (props: UIComponent) => {
   return (
-    <div className={`card gradient-border ${props.tailwind} `} {...props}>
+    <div className={`card ${props.tailwind} `}>
       {props.children}
     </div>
   );

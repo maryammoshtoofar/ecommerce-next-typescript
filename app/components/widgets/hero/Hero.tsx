@@ -4,10 +4,10 @@ import title from '@/app/assets/title.png';
 import cup from '@/app/assets/Cup1.png';
 import Button from '@/app/components/base/button/Button';
 import Card from '../card/Card';
-import { RiEBike2Line } from 'react-icons/ri';
+import { FaMotorcycle } from 'react-icons/fa6';
 const Hero = () => {
   return (
-    <div className="w-full relative ps-32 flex items-center">
+    <section className="w-full relative ps-32 flex items-center">
       <div className="absolute top-48">
         <Image src={title} alt="elza coffee" className="w-[40rem]" />
         <div className="absolute top-1/2 flex flex-col">
@@ -25,16 +25,16 @@ const Hero = () => {
         </div>
       </div>
       <Image src={coffeeMachine} alt="coffee-machine" className="w-full" />
-      <Card tailwind="absolute self-end flex items-center w-[30%] px-2 rounded-b-none">
+      <Card tailwind="absolute self-end flex items-center w-[30%] p-8 rounded-[2rem] rounded-b-none ">
         <Image src={cup} alt="coffee-cup" className="w-1/2" />
         <p className="font-dancing gradient-text text-4xl">But First Coffee</p>
         <Button
           label="Hurry Up"
-          tailwind="absolute bottom-0 right-0 text-[1.2.rem] mb-5 me-3"
-          component={<RiEBike2Line />}
+          tailwind="absolute bottom-0 right-0  mb-5 me-3"
+          component={<FaMotorcycle />}
         />
       </Card>
-    </div>
+    </section>
   );
 };
 export default Hero;
