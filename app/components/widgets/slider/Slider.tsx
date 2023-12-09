@@ -24,7 +24,7 @@ const Slider = () => {
           className="w-full px-8"
         >
           {slides.map((slide) => (
-            <SwiperSlide key={1} className="my-8">
+            <SwiperSlide key={slide.id} className="my-8">
               <div className="flex h-full w-full items-center justify-center">
                 <Slide slide={slide} />
               </div>
