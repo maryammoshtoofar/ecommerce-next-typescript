@@ -11,9 +11,7 @@ const Services = (props: UIComponent) => {
       </h1>
       <div className="flex gap-24">
         {services.map((service) => (
-          <Card
-            tailwind="rounded-[2rem] bg-coffee-270 capitalize text-coffee-70 flex flex-col items-center px-8 py-10"
-          >
+          <Card tailwind="rounded-[2rem] bg-coffee-270 capitalize text-coffee-70 flex flex-col items-center px-8 py-10 ">
             <Image src={service.img} alt={service.title} />
             {service.title}
           </Card>

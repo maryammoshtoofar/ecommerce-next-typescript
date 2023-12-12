@@ -4,8 +4,8 @@ import NavMenu from '@/app/components/layout/user/navigation/nav-menu/NavMenu';
 
 const Header = () => {
   return (
-    <header className="grid grid-cols-12 items-baseline pb-2 px-8">
-      <Logo className="w-10 col-span-5" />
+    <header className="grid grid-cols-12 items-center pb-2 px-8 bg-transparent">
+      <Logo className="w-12 col-span-6" />
       <NavIconsMenu />
       <NavMenu />
     </header>

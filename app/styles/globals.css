@@ -24,7 +24,12 @@
   .card {
     @apply bg-coffee-630  backdrop-blur-lg;
   }
+  .offer-card {
+    @apply bg-coffee-640 flex rounded-lg w-2/3 m-auto relative;
+  }
 }
+
+/* pure css rules */
 .gradient-text {
   background: var(
     --storke,
@@ -53,9 +58,47 @@
 }
 
 .swiper .swiper-pagination-bullet {
-  background-color: #744F40;
+  background-color: #744f40;
 }
-.swiper .swiper-pagination-bullet{
-    width: 1rem;
-    height: 1rem;
+.swiper .swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+}
+
+.offer-card-glow {
+  background-image: radial-gradient(
+    ellipse at 25% -25%,
+    #7d5647 0%,
+    transparent 40%
+  );
+  background-size: 100% 100%;
+}
+
+.slide-glow {
+  background-image: radial-gradient(
+    ellipse at 85% 10%,
+    #775142 0%,
+    transparent 40%
+  );
+  background-size: 100% 100%;
+}
+
+.home-glow {
+  background-image: radial-gradient(
+      ellipse at 1% 1%,
+      #3f2f2a 0%,
+      transparent 25%
+    ),
+    linear-gradient(to top, #221518 68%, transparent 10%),
+    linear-gradient(to left, #7c573c 45%, transparent 10%);
+  background-size: 100% 100%;
+}
+
+.form-glow {
+  background-image: radial-gradient(
+    ellipse at 25% -25%,
+    #7d5647 0%,
+    transparent 50%
+  );
+  background-size: 100% 220%;
 }

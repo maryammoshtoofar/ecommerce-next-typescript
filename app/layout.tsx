@@ -25,7 +25,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       className={`${playfair.variable} ${dancingScript.variable}`}
     >
       <body className="bg-coffee-470 font-playfair">
-        <div>
+        <div className='home-glow'>
           <Header />
           {children}
           <Footer />

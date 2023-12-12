@@ -22,3 +22,8 @@ export type SlideProps = UIComponent & {
     description: string;
   };
 };
+
+export type InputProps = UIComponent & {
+  type: string;
+  placeholder: string;
+};
