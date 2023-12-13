@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Preview } from '@storybook/react';
-import '../app/styles/globals.css';
+import '@/lib/styles/globals.css';
 import * as nextImage from 'next/image';
 
 Object.defineProperty(nextImage, 'default', {

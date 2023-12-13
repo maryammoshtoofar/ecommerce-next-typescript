@@ -1,7 +1,7 @@
 // Images
 import ourStory from '@/app/assets/our-story.png';
 
-export const slides = [
+export const aboutSlides = [
   {
     id: 1,
     img: ourStory,

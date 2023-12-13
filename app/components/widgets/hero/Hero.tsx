@@ -26,8 +26,8 @@ const Hero = () => {
             Search for your coffee now
           </p>
           <div className="flex gap-6">
-            <Button primary label="Shop Now" />
-            <Button label="Catalog" />
+            <Button primary label="Shop Now" key={1} />
+            <Button label="Catalog" key={2} />
           </div>
         </div>
       </div>

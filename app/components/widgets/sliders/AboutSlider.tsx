@@ -6,10 +6,10 @@ import { SwiperOptions } from 'swiper/types/swiper-options';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Slide from '../slide/Slide';
-import { slides } from '@/lib/slides';
+import Slide from '../slides/AboutSlide';
+import { aboutSlides } from '@/lib/aboutSlides';
 
-const Slider = () => {
+const AboutSlider = () => {
   return (
     <section className="relative py-12 w-5/6">
       <div className="container">
@@ -23,11 +23,9 @@ const Slider = () => {
           onSwiper={(swiper: SwiperOptions) => console.log(swiper)}
           className="w-full px-8"
         >
-          {slides.map((slide) => (
+          {aboutSlides.map((slide) => (
             <SwiperSlide key={slide.id} className="my-8">
-              <div className="flex h-full w-full items-center justify-center">
                 <Slide slide={slide} />
-              </div>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -36,4 +34,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default AboutSlider;

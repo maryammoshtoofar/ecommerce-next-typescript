@@ -29,7 +29,6 @@ const ReserveTable = (props: UIComponent) => {
             component={<MdOutlineCalendarToday />}
           />
         </div>
-
         <Input
           type="text"
           placeholder="Your Name"

@@ -5,6 +5,7 @@ export type UIComponent = {
   children?: React.ReactNode;
   tailwind?: string;
   component?: ReactElement;
+  id?: string;
 };
 
 export type ButtonProps = UIComponent & {
@@ -18,8 +19,18 @@ export type SlideProps = UIComponent & {
     id: number;
     img: StaticImageData;
     alt: string;
+  };
+};
+export type AboutSlideProps = SlideProps & {
+  slide: {
     title: string;
     description: string;
+  };
+};
+export type ProductSlideProps = SlideProps & {
+  slide: {
+    type: string;
+    title: string;
   };
 };
 
@@ -27,3 +38,5 @@ export type InputProps = UIComponent & {
   type: string;
   placeholder: string;
 };
+
+export type IconProps = UIComponent & {};
