@@ -39,4 +39,8 @@ export type InputProps = UIComponent & {
   placeholder: string;
 };
 
-export type IconProps = UIComponent & {};
+export type MenuItemProps = UIComponent & {
+  name: string;
+  price: number;
+  dir: 'left' | 'right';
+};

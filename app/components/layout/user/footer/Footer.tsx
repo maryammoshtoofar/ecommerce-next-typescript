@@ -8,7 +8,7 @@ import FooterCopyRight from '@/app/components/layout/user/footer/footer-copyrigh
 
 const Footer = () => {
   return (
-    <footer className="text-coffee-20 text-lg">
+    <footer className="text-coffee-20 text-lg mt-24">
       <div className="flex gap-2 justify-end items-center me-10">
         <span>Social Media:</span>
         <FaLinkedin size="1.5rem" />

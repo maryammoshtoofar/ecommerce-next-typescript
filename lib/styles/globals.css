@@ -27,6 +27,30 @@
   .offer-card {
     @apply bg-coffee-640 flex rounded-lg w-2/3 m-auto relative;
   }
+  .menu-item-1 {
+    @apply left-36 top-72;
+  }
+  .menu-item-3 {
+    @apply left-16 bottom-96;
+  }
+  .menu-item-5 {
+    @apply left-36 bottom-52;
+  }
+  .menu-item-7 {
+    @apply left-48 bottom-10;
+  }
+  .menu-item-2 {
+    @apply right-36 top-72 flex flex-col items-end;
+  }
+  .menu-item-4 {
+    @apply right-16 bottom-96 flex flex-col items-end;
+  }
+  .menu-item-6 {
+    @apply right-36 bottom-52 flex flex-col items-end;
+  }
+  .menu-item-8 {
+    @apply right-48 bottom-10 flex flex-col items-end;
+  }
 }
 
 /* pure css rules */
@@ -101,4 +125,13 @@
     transparent 50%
   );
   background-size: 100% 220%;
+}
+
+.menu-glow {
+  background-image: radial-gradient(
+    ellipse at 50% 58%,
+    #775142 -40%,
+    transparent 50%
+  );
+  background-size: 100% 100%;
 }

@@ -4,7 +4,7 @@ import Services from './components/widgets/services/Services';
 import OfferCard from './components/widgets/offer-card/OfferCard';
 import ReserveTable from './components/widgets/reserve-table/ReserveTable';
 import ProductSlider from './components/widgets/sliders/ProductsSlider';
-
+import Menu from './components/widgets/menu/Menu';
 const Home = () => {
   return (
     <main className=" flex flex-col items-center justify-between">
@@ -14,6 +14,7 @@ const Home = () => {
       <OfferCard />
       <ReserveTable />
       <ProductSlider />
+      <Menu />
     </main>
   );
 };
