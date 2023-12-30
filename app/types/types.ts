@@ -19,18 +19,31 @@ export type SlideProps = UIComponent & {
     id: number;
     img: StaticImageData;
     alt: string;
+    title: string;
   };
 };
 export type AboutSlideProps = SlideProps & {
   slide: {
-    title: string;
     description: string;
   };
 };
 export type ProductSlideProps = SlideProps & {
   slide: {
     type: string;
-    title: string;
+  };
+};
+
+export type BlogPostSlideProps = SlideProps & {
+  slide: {
+    caption: string;
+  };
+};
+
+export type TestimonialsSlideProps = SlideProps & {
+  slide: {
+    occupation: string;
+    rating: number;
+    comment: string;
   };
 };
 
@@ -43,4 +56,8 @@ export type MenuItemProps = UIComponent & {
   name: string;
   price: number;
   dir: 'left' | 'right';
+};
+
+export type StarRatingProps = UIComponent & {
+  rating: number;
 };

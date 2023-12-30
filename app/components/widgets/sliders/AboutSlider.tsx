@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import Slide from '../slides/AboutSlide';
 import { aboutSlides } from '@/lib/aboutSlides';
 
+
 const AboutSlider = () => {
   return (
     <section className="relative py-12 w-5/6">

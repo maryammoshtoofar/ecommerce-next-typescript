@@ -26,6 +26,9 @@ export default {
         large: '12px',
         xl: '28px',
       },
+      backgroundImage: {
+        testimonials: "url('/img/testimonial-bg.png')",
+      },
     },
   },
   plugins: [

@@ -11,8 +11,8 @@ import { recommendedProducts } from '@/lib/recommendedProducts';
 
 const ProductSlider = () => {
   return (
-    <section className="relative py-12  ">
-      <div className="products container">
+    <section className="relative py-12 ">
+      <div className="container">
         <h1 className="gradient-text text-5xl capitalize font-dancing w-full text-center mb-9">
           recommended
         </h1>

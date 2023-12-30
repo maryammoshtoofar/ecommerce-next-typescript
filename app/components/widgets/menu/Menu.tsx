@@ -15,7 +15,6 @@ const Menu = (props: UIComponent) => {
       <Image src={menuPic} alt="people drinking coffee" />
       <ul>
         {MenuItems.map((menuItem, index) => {
-          console.log(index);
           return (
             <MenuItem
               tailwind={`menu-item-${index + 1}`}

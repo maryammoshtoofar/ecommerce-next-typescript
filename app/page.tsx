@@ -5,6 +5,8 @@ import OfferCard from './components/widgets/offer-card/OfferCard';
 import ReserveTable from './components/widgets/reserve-table/ReserveTable';
 import ProductSlider from './components/widgets/sliders/ProductsSlider';
 import Menu from './components/widgets/menu/Menu';
+import BlogPostsSlider from './components/widgets/sliders/BlogPostsSlider';
+import TestimonialsSlider from './components/widgets/sliders/testimonialsSlider';
 const Home = () => {
   return (
     <main className=" flex flex-col items-center justify-between">
@@ -15,6 +17,8 @@ const Home = () => {
       <ReserveTable />
       <ProductSlider />
       <Menu />
+      <BlogPostsSlider />
+      <TestimonialsSlider />
     </main>
   );
 };

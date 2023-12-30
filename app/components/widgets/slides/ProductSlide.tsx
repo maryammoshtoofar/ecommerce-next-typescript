@@ -19,7 +19,6 @@ const ProductSlide = (props: ProductSlideProps) => {
           }
         />
         <Image src={img} alt={alt} className=" -top-16 left-0 " />
-
         <Icon
           component={
             <FiShoppingCart
