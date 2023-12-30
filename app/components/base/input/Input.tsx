@@ -1,5 +1,6 @@
 import { InputProps } from '@/app/types/types';
 
+
 const Input = (props: InputProps) => {
   return (
     <div className="relative w-full">

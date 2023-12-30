@@ -7,6 +7,7 @@ import ProductSlider from './components/widgets/sliders/ProductsSlider';
 import Menu from './components/widgets/menu/Menu';
 import BlogPostsSlider from './components/widgets/sliders/BlogPostsSlider';
 import TestimonialsSlider from './components/widgets/sliders/testimonialsSlider';
+import NewsletterForm from './components/widgets/newsletter-form/NewsletterForm';
 const Home = () => {
   return (
     <main className=" flex flex-col items-center justify-between">
@@ -19,6 +20,7 @@ const Home = () => {
       <Menu />
       <BlogPostsSlider />
       <TestimonialsSlider />
+      <NewsletterForm />
     </main>
   );
 };

@@ -116,6 +116,15 @@
   background-size: 100% 100%;
 }
 
+.newsletter-form-glow {
+  background-image: radial-gradient(
+    ellipse at 5% 5%,
+    #7d5647 10%,
+    transparent 70%
+  );
+  background-size: 100% 100%;
+}
+
 .slide-glow {
   background-image: radial-gradient(
     ellipse at 85% 10%,
