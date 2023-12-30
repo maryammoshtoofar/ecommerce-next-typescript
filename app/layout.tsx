@@ -3,6 +3,7 @@ import Header from '@/app/components/layout/user/header/Header';
 import Footer from '@/app/components/layout/user/footer/Footer';
 import type { Metadata } from 'next';
 import { Playfair_Display, Dancing_Script } from 'next/font/google';
+import Hero from './components/widgets/hero/Hero';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -25,11 +26,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       className={`${playfair.variable} ${dancingScript.variable}`}
     >
       <body className="bg-coffee-470 font-playfair">
-        <div className='home-glow'>
+        <div className="home-glow">
           <Header />
-          {children}
-          <Footer />
+          <Hero />
         </div>
+        {children}
+        <Footer />
       </body>
     </html>
   );

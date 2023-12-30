@@ -140,7 +140,7 @@
       #3f2f2a 0%,
       transparent 25%
     ),
-    linear-gradient(to top, #221518 68%, transparent 10%),
+    linear-gradient(to top, #221518 2%, transparent 10%),
     linear-gradient(to left, #7c573c 45%, transparent 10%);
   background-size: 100% 100%;
 }

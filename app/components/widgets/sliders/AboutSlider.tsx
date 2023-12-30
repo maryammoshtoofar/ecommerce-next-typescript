@@ -8,11 +8,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Slide from '../slides/AboutSlide';
 import { aboutSlides } from '@/lib/aboutSlides';
-
+import Bean1 from '@/app/components/base/wandering-coffee-beans/Bean1';
 
 const AboutSlider = () => {
   return (
     <section className="relative py-12 w-5/6">
+      <Bean1 tailwind="absolute -left-32 bottom-0" />
       <div className="container">
         {/* Main slides */}
         <Swiper
@@ -26,7 +27,7 @@ const AboutSlider = () => {
         >
           {aboutSlides.map((slide) => (
             <SwiperSlide key={slide.id} className="my-8">
-                <Slide slide={slide} />
+              <Slide slide={slide} />
             </SwiperSlide>
           ))}
         </Swiper>
