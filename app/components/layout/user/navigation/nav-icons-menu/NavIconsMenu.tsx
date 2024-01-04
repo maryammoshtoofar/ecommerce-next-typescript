@@ -1,10 +1,12 @@
 import { BsPerson } from 'react-icons/bs';
 import { BsCart2 } from 'react-icons/bs';
+import { SlMenu } from 'react-icons/sl';
 const NavIconsMenu = () => {
   return (
-    <nav className="flex ">
-      <BsCart2 size="1.2rem" className="text-coffee-70 cursor-pointer" />
-      <BsPerson size="1.2rem" className="text-coffee-70 cursor-pointer" />
+    <nav className="nav-icons-menu ">
+      <BsCart2 className="nav-icon" />
+      <BsPerson className="nav-icon" />
+      <SlMenu className="nav-icon hamburger-icon" />
     </nav>
   );
 };

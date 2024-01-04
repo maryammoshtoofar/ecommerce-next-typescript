@@ -7,7 +7,7 @@ import Bean2 from '@/app/components/base/wandering-coffee-beans/Bean2';
 const Services = (props: UIComponent) => {
   return (
     <section className="flex flex-col items-center gap-12">
-      <Bean2 tailwind="absolute -right-28 bottom-0 bg-red-600" />
+      {/* <Bean2 tailwind="absolute -right-28 bottom-0 bg-red-600" /> */}
       <h1 className="text-6xl font-dancing capitalize font-bold gradient-text">
         services
       </h1>

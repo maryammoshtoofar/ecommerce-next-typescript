@@ -1,4 +1,3 @@
-import Hero from '@/app/components/widgets/hero/Hero';
 import AboutSlider from '@/app/components/widgets/sliders/AboutSlider';
 import Services from './components/widgets/services/Services';
 import OfferCard from './components/widgets/offer-card/OfferCard';
@@ -10,8 +9,8 @@ import TestimonialsSlider from './components/widgets/sliders/testimonialsSlider'
 import NewsletterForm from './components/widgets/newsletter-form/NewsletterForm';
 const Home = () => {
   return (
-    <main className="flex flex-col items-center justify-between">
-      <AboutSlider />
+    <main className="flex flex-col items-center justify-between w-full">
+      {/* <AboutSlider />
       <Services />
       <OfferCard />
       <ReserveTable />
@@ -19,7 +18,7 @@ const Home = () => {
       <Menu />
       <BlogPostsSlider />
       <TestimonialsSlider />
-      <NewsletterForm />
+      <NewsletterForm /> */}
     </main>
   );
 };

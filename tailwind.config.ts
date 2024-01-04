@@ -28,6 +28,7 @@ export default {
       },
       backgroundImage: {
         testimonials: "url('/img/testimonial-bg.png')",
+        hero: "url('/img/hero.png')",
       },
     },
   },

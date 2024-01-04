@@ -13,14 +13,14 @@ import Image from 'next/image';
 
 const BlogPostsSlider = () => {
   return (
-    <section className="blog-posts first-letter:mt-12 relative w-full bg-coffee-290 mt-24">
+    <section className="first-letter:mt-12 relative w-full bg-coffee-290 mt-24">
       <Image
         src={blogBg}
         alt="blog post background"
         className="absolute bottom-0 h-full"
       />
       <div className="container m-auto">
-        <h1 className="gradient-text text-5xl capitalize font-dancing w-full text-center mb-9 absolute -top-10">
+        <h1 className="gradient-text text-5xl capitalize font-dancing text-center mb-9 absolute -top-10">
           our blog
         </h1>
         <Swiper

@@ -8,11 +8,13 @@ import Hero from './components/widgets/hero/Hero';
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair-display',
+  weight:"400"
 });
 
 const dancingScript = Dancing_Script({
   subsets: ['latin'],
   variable: '--font-dancing-script',
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -31,7 +33,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <Hero />
         </div>
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
