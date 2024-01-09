@@ -9,7 +9,7 @@ import { FaMotorcycle } from 'react-icons/fa6';
 
 const Hero = () => {
   return (
-    <section className="hero relative">
+    <section className="hero">
       <div className="relative ps-6 lg:ps-24 pt-24 lg:pt-52">
         <Image src={title} alt="elza coffee" className="absolute md:w-2/5 w-3/5" />
         <div className="flex flex-col pt-28 md:pt-32 xl:pt-52 text-sm">

@@ -16,16 +16,22 @@
     @apply bg-[linear-gradient(to_left,_#7C573C_0%_50%,_#221518_14%_50%)];
   }
   .header {
-    @apply absolute w-full grid grid-cols-12 px-2  bg-transparent z-50 md:items-center;
+    @apply absolute w-full grid grid-cols-header items-center px-2 bg-transparent z-50;
   }
   .logo {
-    @apply col-start-1 w-12 xl:w-14 mt-2;
+    @apply col-start-1 col-end-3 w-12 mt-2 xl:w-14;
   }
   .nav-menu {
-    @apply hidden col-end-13 md:flex  items-center lg:text-lg xl:text-2xl 2xl:text-3xl  justify-self-end;
+    @apply hidden md:flex md:col-start-10 md:col-end-18 lg:text-lg xl:text-2xl;
+  }
+  .nav-menu-btn {
+    @apply w-full flex justify-center items-end rounded-b-3xl ps-1 pe-2 lg:px-3 py-5 text-coffee-10 h-20 hover:nav-menu-btn-hover transition-colors ease-in-out delay-150 duration-300;
+  }
+  .nav-menu-btn-hover {
+    @apply backdrop-blur-sm bg-[linear-gradient(94deg,_rgba(223,195,157,0.40)_-9.94%,_rgba(248,228,190,0.40)_19.83%,_rgba(223,195,157,0.40)_50.71%,_rgba(248,228,190,0.40)_81.26%,_rgba(248,228,190,0.40)_111.66%)];
   }
   .nav-icons-menu {
-    @apply flex col-start-12 md:col-start-6 justify-self-end gap-2 mt-2;
+    @apply col-start-17 flex justify-self-end gap-1 mt-2 md:col-start-9 md:justify-self-start;
   }
   .nav-icon {
     @apply text-coffee-70 cursor-pointer xl:text-2xl 2xl:text-3xl;
@@ -33,17 +39,12 @@
   .hamburger-icon {
     @apply md:hidden;
   }
-  .nav-menu-btn {
-    @apply rounded-b-3xl flex items-end ps-1 pe-2 lg:px-3 py-5 text-coffee-10 h-20 hover:nav-menu-btn-hover transition-colors ease-in-out delay-150 duration-300;
-  }
-  .nav-menu-btn-hover {
-    @apply backdrop-blur-sm bg-[linear-gradient(94deg,_rgba(223,195,157,0.40)_-9.94%,_rgba(248,228,190,0.40)_19.83%,_rgba(223,195,157,0.40)_50.71%,_rgba(248,228,190,0.40)_81.26%,_rgba(248,228,190,0.40)_111.66%)];
-  }
+
   .card {
     @apply bg-coffee-630  backdrop-blur-lg;
   }
   .hero {
-    @apply bg-hero w-full bg-contain bg-no-repeat h-0 pb-[79.42%];
+    @apply relative bg-hero w-full bg-contain bg-no-repeat h-0 pb-[79.42%];
   }
   .offer-card {
     @apply bg-coffee-640 flex rounded-lg w-2/3 m-auto relative;

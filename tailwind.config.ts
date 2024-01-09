@@ -30,6 +30,27 @@ export default {
         testimonials: "url('/img/testimonial-bg.png')",
         hero: "url('/img/hero.png')",
       },
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        header: 'repeat(17, minmax(0, 1fr))',
+        // Complex site-specific column configuration
+        footer: '200px minmax(900px, 1fr) 100px',
+      },
+      gridColumnStart: {
+        '13': '13',
+        '14': '14',
+        '15': '15',
+        '16': '16',
+        '17': '17',
+      },
+      gridColumnEnd: {
+        '13': '13',
+        '14': '14',
+        '15': '15',
+        '16': '16',
+        '17': '17',
+        '18': '18',
+      },
     },
   },
   plugins: [
