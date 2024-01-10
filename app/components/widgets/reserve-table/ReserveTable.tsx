@@ -6,9 +6,9 @@ import { MdOutlineCalendarToday } from 'react-icons/md';
 import Button from '@/app/components/base/button/Button';
 const ReserveTable = (props: UIComponent) => {
   return (
-    <div className="form-glow relative flex w-full items-center justify-between gap-80 bg-coffee-640 px-32 py-10">
-      <h1 className="gradient-text absolute -top-10 right-3/4 font-dancing text-5xl capitalize">
-        reserve a table
+    <div className="form-glow relative flex w-full flex-col items-center justify-between gap-20 bg-coffee-640 px-5 py-10 sm:flex-row lg:gap-40 xl:gap-80 xl:px-32">
+      <h1 className="gradient-text absolute -top-10 left-5 whitespace-nowrap font-dancing text-5xl capitalize">
+        reserve <span className='hidden sm:inline'>a table</span>
       </h1>
       <Image src={cupAndPeople} alt="reserve" />
       <form className="flex grow flex-col gap-6 ">

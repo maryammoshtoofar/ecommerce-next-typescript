@@ -19,7 +19,7 @@ const OfferCard = (props: UIComponent) => {
             most renowned coffee growing regions in the world, ensuring that
             each cup is unrivaled in flavor and freshness.
           </p>
-          <Button mode="tertiary" label="Shop Now" tailwind="offer-card-btn" />
+          <Button mode="primary" label="Shop Now" tailwind="offer-card-btn" />
         </div>
         <Image
           className="offer-card-img"

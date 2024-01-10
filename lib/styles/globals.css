@@ -89,13 +89,13 @@
     @apply slide-glow relative my-6 flex w-full flex-col items-center gap-3 rounded-[2rem] bg-coffee-640 px-8 py-12 lg:items-end;
   }
   .about-slide-title {
-    @apply absolute -top-8 left-12 font-dancing text-5xl font-bold capitalize text-coffee-70 shadow-coffee-650 text-shadow-lg sm:left-auto;
+    @apply absolute -top-8 left-12 font-dancing text-5xl capitalize text-coffee-70 shadow-coffee-650 text-shadow-lg sm:left-auto;
   }
   .about-slide-img {
     @apply lg:absolute lg:-top-16 lg:left-0;
   }
   .about-slide-caption {
-    @apply box-border justify-self-end text-justify text-sm capitalize  text-white md:text-lg md:leading-10 lg:w-1/2;
+    @apply box-border justify-self-end text-sm capitalize  text-white md:text-lg md:leading-10 lg:w-1/2;
   }
   .about-slide-btn {
     @apply cursor-pointer self-end text-white underline;
@@ -104,7 +104,7 @@
     @apply mb-6 flex flex-col items-center gap-12;
   }
   .services-title {
-    @apply gradient-text font-dancing text-6xl font-bold capitalize;
+    @apply gradient-text font-dancing text-6xl capitalize;
   }
   .services-container {
     @apply flex flex-wrap justify-center gap-4 xl:gap-10 2xl:gap-20;
@@ -113,16 +113,16 @@
     @apply flex flex-col items-center rounded-[2rem] bg-coffee-270 px-8 py-10 capitalize text-coffee-70;
   }
   .offer-section {
-    @apply relative py-40;
+    @apply relative max-w-full py-40;
   }
   .offer-card {
-    @apply offer-card-glow relative m-auto flex flex-col-reverse bg-coffee-640 sm:flex-row lg:w-2/3 lg:rounded-lg;
+    @apply offer-card-glow relative m-auto flex flex-col-reverse items-center bg-coffee-640 sm:flex-row lg:w-2/3 lg:rounded-xl;
   }
   .offer-card-title {
-    @apply gradient-text absolute -top-10 left-5 font-dancing text-5xl font-bold capitalize leading-tight;
+    @apply gradient-text absolute -top-10 left-5 font-dancing text-5xl capitalize leading-tight;
   }
   .offer-card-content {
-    @apply flex flex-col items-center gap-4 px-10 py-12 md:items-start;
+    @apply flex flex-col items-center gap-4 px-2 py-12 md:items-start md:px-10;
   }
   .offer-card-content-title {
     @apply whitespace-nowrap text-4xl text-coffee-70;
@@ -131,10 +131,10 @@
     @apply mb-4 text-lg leading-10 text-white;
   }
   .offer-card-btn {
-    @apply lg:w-1/2 xl:w-2/5;
+    @apply w-2/3 sm:w-auto lg:w-2/3 xl:w-2/5;
   }
   .offer-card-img {
-    @apply h-full w-full sm:w-96 lg:w-2/5;
+    @apply h-full w-full sm:w-80 lg:w-2/5;
   }
   .menu-item-1 {
     @apply left-36 top-72;

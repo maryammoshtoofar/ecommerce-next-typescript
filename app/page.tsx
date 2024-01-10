@@ -13,8 +13,8 @@ const Home = () => {
       <AboutSlider />
       <Services />
       <OfferCard />
-      {/*<ReserveTable />
-      <ProductSlider />
+      <ReserveTable />
+      {/*<ProductSlider />
       <Menu />
       <BlogPostsSlider />
       <TestimonialsSlider />
