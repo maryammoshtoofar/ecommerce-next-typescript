@@ -97,6 +97,18 @@
   .about-slide-btn {
     @apply cursor-pointer self-end text-white underline;
   }
+  .services-section {
+    @apply mb-6 flex flex-col items-center gap-12;
+  }
+  .services-title {
+    @apply gradient-text font-dancing text-6xl font-bold capitalize;
+  }
+  .services-container {
+    @apply flex flex-wrap justify-center gap-4 xl:gap-10 2xl:gap-20;
+  }
+  .services-card {
+    @apply flex flex-col items-center rounded-[2rem] bg-coffee-270 px-8 py-10 capitalize text-coffee-70;
+  }
   .offer-card {
     @apply relative m-auto flex w-2/3 rounded-lg bg-coffee-640;
   }
