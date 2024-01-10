@@ -12,8 +12,8 @@ const Home = () => {
     <main className="flex w-full flex-col items-center justify-between">
       <AboutSlider />
       <Services />
-      {/*<OfferCard />
-      <ReserveTable />
+      <OfferCard />
+      {/*<ReserveTable />
       <ProductSlider />
       <Menu />
       <BlogPostsSlider />

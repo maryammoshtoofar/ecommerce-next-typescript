@@ -9,7 +9,7 @@ export type UIComponent = {
 };
 
 export type ButtonProps = UIComponent & {
-  primary?: boolean;
+  mode?: string;
   label: string;
   onClick?: () => void;
 };

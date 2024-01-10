@@ -12,6 +12,9 @@
   .btn-secondary {
     @apply bg-coffee-620;
   }
+  .btn-tertiary {
+    @apply bg-coffee-610;
+  }
   .main {
     @apply bg-[linear-gradient(to_left,_#7C573C_0%_50%,_#221518_14%_50%)];
   }
@@ -77,7 +80,7 @@
     @apply gradient-text whitespace-nowrap font-dancing text-2xl md:text-3xl xl:text-4xl;
   }
   .hero-coffee-card-btn {
-    @apply my-5 border bg-transparent px-2 text-lg font-thin md:absolute md:-bottom-3 md:right-2 md:h-1/5 md:w-24 md:text-xs lg:h-12 lg:w-32 xl:w-40;
+    @apply my-5 border bg-transparent px-2 text-lg font-thin md:absolute md:-bottom-1 md:right-2 md:h-1/5 md:w-24 md:text-xs lg:h-8 lg:w-32 xl:w-40;
   }
   .about-slider-section {
     @apply relative w-5/6 py-12;
@@ -109,8 +112,29 @@
   .services-card {
     @apply flex flex-col items-center rounded-[2rem] bg-coffee-270 px-8 py-10 capitalize text-coffee-70;
   }
+  .offer-section {
+    @apply relative py-40;
+  }
   .offer-card {
-    @apply relative m-auto flex w-2/3 rounded-lg bg-coffee-640;
+    @apply offer-card-glow relative m-auto flex flex-col-reverse bg-coffee-640 sm:flex-row lg:w-2/3 lg:rounded-lg;
+  }
+  .offer-card-title {
+    @apply gradient-text absolute -top-10 left-5 font-dancing text-5xl font-bold capitalize leading-tight;
+  }
+  .offer-card-content {
+    @apply flex flex-col items-center gap-4 px-10 py-12 md:items-start;
+  }
+  .offer-card-content-title {
+    @apply whitespace-nowrap text-4xl text-coffee-70;
+  }
+  .offer-card-caption {
+    @apply mb-4 text-lg leading-10 text-white;
+  }
+  .offer-card-btn {
+    @apply lg:w-1/2 xl:w-2/5;
+  }
+  .offer-card-img {
+    @apply h-full w-full sm:w-96 lg:w-2/5;
   }
   .menu-item-1 {
     @apply left-36 top-72;

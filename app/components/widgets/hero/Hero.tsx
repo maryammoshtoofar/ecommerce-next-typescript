@@ -16,8 +16,8 @@ const Hero = () => {
           </p>
           <p className="hero-para-2">Search for your coffee now</p>
           <div className="hero-button-container">
-            <Button primary label="Shop Now" tailwind="hero-cta" />
-            <Button label="Catalog" />
+            <Button mode="primary" label="Shop Now" tailwind="hero-cta" />
+            <Button mode="secondary" label="Catalog" />
           </div>
         </div>
       </div>

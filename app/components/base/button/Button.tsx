@@ -1,17 +1,22 @@
 import { ButtonProps } from '@/app/types/types';
 
 const Button = ({
-  primary = false,
+  mode = 'primary',
   label,
   tailwind,
   component,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'btn-primary' : 'btn-secondary';
+  const status =
+    mode === 'primary'
+      ? 'btn-primary'
+      : mode === 'secondary'
+        ? 'btn-secondary'
+        : 'btn-tertiary';
   return (
     <button
       type="button"
-      className={['btn', mode, tailwind].join(' ')}
+      className={['btn', status, tailwind].join(' ')}
       {...props}
     >
       {label}

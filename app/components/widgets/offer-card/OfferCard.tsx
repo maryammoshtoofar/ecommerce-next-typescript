@@ -6,25 +6,26 @@ import coffeePackages from '@/app/assets/coffee-packages.png';
 
 const OfferCard = (props: UIComponent) => {
   return (
-    <section className="relative py-40">
-      <Card tailwind="offer-card offer-card-glow">
-        <h1 className="gradient-text absolute -top-10 left-5 font-dancing text-5xl font-bold capitalize leading-tight ">
-          Offer
-        </h1>
-        <div className="flex flex-col items-start gap-4 px-10 py-12">
-          <h1 className="text-4xl text-coffee-70">
+    <section className="offer-section">
+      <Card tailwind="offer-card">
+        <h1 className="offer-card-title">Offer</h1>
+        <div className="offer-card-content">
+          <h1 className="offer-card-content-title">
             Up To <span className="text-5xl">50%</span> Off
           </h1>
-          <p className="mb-4 text-lg leading-loose text-white">
+          <p className="offer-card-caption">
             At our cafe, we take pride in providing our customers with the best
             coffee around. Our carefully-selected coffees come from some of the
             most renowned coffee growing regions in the world, ensuring that
             each cup is unrivaled in flavor and freshness.
           </p>
-          <Button label="Shop Now" />
+          <Button mode="tertiary" label="Shop Now" tailwind="offer-card-btn" />
         </div>
-
-        <Image className="w-2/5 " src={coffeePackages} alt="coffee packages" />
+        <Image
+          className="offer-card-img"
+          src={coffeePackages}
+          alt="coffee packages"
+        />
       </Card>
     </section>
   );
