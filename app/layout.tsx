@@ -2,19 +2,22 @@ import '@/lib/styles/globals.css';
 import Header from '@/app/components/layout/user/header/Header';
 import Footer from '@/app/components/layout/user/footer/Footer';
 import type { Metadata } from 'next';
-import { Playfair_Display, Dancing_Script } from 'next/font/google';
+import {
+  Dancing_Script,
+  Roboto_Slab,
+} from 'next/font/google';
 import Hero from './components/widgets/hero/Hero';
 
-const playfair = Playfair_Display({
+const slab = Roboto_Slab({
   subsets: ['latin'],
-  variable: '--font-playfair-display',
-  weight:"400"
+  variable: '--font-roboto-slab',
+  weight: '100',
 });
 
 const dancingScript = Dancing_Script({
   subsets: ['latin'],
   variable: '--font-dancing-script',
-  weight: "400",
+  weight: '400',
 });
 
 export const metadata: Metadata = {
@@ -23,11 +26,8 @@ export const metadata: Metadata = {
 };
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html
-      lang="en"
-      className={`${playfair.variable} ${dancingScript.variable}`}
-    >
-      <body className="bg-coffee-470 font-playfair">
+    <html lang="en" className={`${slab.variable} ${dancingScript.variable}`}>
+      <body className="bg-coffee-470 font-slab">
         <div className="home-glow">
           <Header />
           <Hero />

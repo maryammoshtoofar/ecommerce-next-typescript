@@ -8,7 +8,7 @@ export default {
     extend: {
       colors,
       fontFamily: {
-        playfair: ['var(--font-playfair-display)'],
+        slab: ['var(--font-roboto-slab)'],
         dancing: ['var(--font-dancing-script)'],
       },
       textShadow: {
