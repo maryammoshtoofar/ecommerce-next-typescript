@@ -7,7 +7,7 @@ import TitleFooterMenuItem from '../footer-menu-items/TitleFooterMenuItem';
 
 const FooterMenu = () => {
   return (
-    <div className="col-span-3 grid grid-cols-4 text-coffee-20 text-lg w-full items-center pe-5 z-50">
+    <div className="z-50 col-span-3 grid w-full grid-cols-4 items-center pe-5 text-lg text-coffee-20">
       <ul className="flex flex-col gap-4">
         <TitleFooterMenuItem>About</TitleFooterMenuItem>
         <FooterMenuItem>Our Story</FooterMenuItem>

@@ -13,7 +13,7 @@ const ProductSlider = () => {
   return (
     <section className="relative py-12 ">
       <div className="container">
-        <h1 className="gradient-text text-5xl capitalize font-dancing w-full text-center mb-9">
+        <h1 className="gradient-text mb-9 w-full text-center font-dancing text-5xl capitalize">
           recommended
         </h1>
 

@@ -3,11 +3,11 @@ import Button from '@/app/components/base/button/Button';
 import { GoBell } from 'react-icons/go';
 const NewsletterForm = () => {
   return (
-    <section className="bg-coffee-640 w-full flex flex-col items-center gap-10 py-10 mt-32 newsletter-form-glow">
-      <h1 className="capitalize text-coffee-70 text-xl">
+    <section className="newsletter-form-glow mt-32 flex w-full flex-col items-center gap-10 bg-coffee-640 py-10">
+      <h1 className="text-xl capitalize text-coffee-70">
         subscribe to our newsletter, discounts and promotions
       </h1>
-      <form className="flex flex-col gap-10 w-1/3 items-center">
+      <form className="flex w-1/3 flex-col items-center gap-10">
         <Input
           type="text"
           placeholder="Your Email Address"

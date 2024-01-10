@@ -8,8 +8,8 @@ import { BsArrowDownRightSquare } from 'react-icons/bs';
 
 const Menu = (props: UIComponent) => {
   return (
-    <section className="flex flex-col items-center relative w-full menu-glow ">
-      <h1 className="gradient-text text-5xl capitalize font-dancing  text-center ">
+    <section className="menu-glow relative flex w-full flex-col items-center ">
+      <h1 className="gradient-text text-center font-dancing text-5xl  capitalize ">
         Popular Menu
       </h1>
       <Image src={menuPic} alt="people drinking coffee" />
@@ -36,8 +36,8 @@ const Menu = (props: UIComponent) => {
         <li dir="right" className="menu-item-7" />
         <li dir="right" className="menu-item-8" />
       </ul>
-      <span className="self-end text-coffee-70 absolute -bottom-8 right-5  inline-flex gap-5 pe-12  text-3xl items-center">
-        Our Menu <BsArrowDownRightSquare className='cursor-pointer' />
+      <span className="absolute -bottom-8 right-5 inline-flex items-center  gap-5 self-end pe-12  text-3xl text-coffee-70">
+        Our Menu <BsArrowDownRightSquare className="cursor-pointer" />
       </span>
     </section>
   );

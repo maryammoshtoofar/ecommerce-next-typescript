@@ -13,14 +13,14 @@ import Image from 'next/image';
 
 const BlogPostsSlider = () => {
   return (
-    <section className="first-letter:mt-12 relative w-full bg-coffee-290 mt-24">
+    <section className="relative mt-24 w-full bg-coffee-290 first-letter:mt-12">
       <Image
         src={blogBg}
         alt="blog post background"
         className="absolute bottom-0 h-full"
       />
       <div className="container m-auto">
-        <h1 className="gradient-text text-5xl capitalize font-dancing text-center mb-9 absolute -top-10">
+        <h1 className="gradient-text absolute -top-10 mb-9 text-center font-dancing text-5xl capitalize">
           our blog
         </h1>
         <Swiper
@@ -33,7 +33,7 @@ const BlogPostsSlider = () => {
         >
           {blogPosts.map((slide) => (
             <SwiperSlide key={slide.id} className="py-10">
-              <Slide slide={slide} /> 
+              <Slide slide={slide} />
             </SwiperSlide>
           ))}
         </Swiper>

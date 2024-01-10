@@ -12,3 +12,9 @@ export const fillRatingStars = (rating: number) => {
   }
   return stars;
 };
+
+export const generateCaptionLength = (screenWidth: number) => {
+  if (screenWidth < 480) return 97;
+  else if (screenWidth < 650) return 197;
+  else return 397;
+};

@@ -9,9 +9,9 @@ import { testimonials } from '@/lib/testimonials';
 
 const TestimonialsSlider = () => {
   return (
-    <section className="first-letter:mt-12 relative w-11/12 mt-24 ">
+    <section className="relative mt-24 w-11/12 first-letter:mt-12 ">
       <div className="testimonials m-auto bg-testimonials">
-        <h1 className="gradient-text text-5xl capitalize font-dancing w-full text-center mb-9 absolute -top-10">
+        <h1 className="gradient-text absolute -top-10 mb-9 w-full text-center font-dancing text-5xl capitalize">
           customer review
         </h1>
         <Swiper

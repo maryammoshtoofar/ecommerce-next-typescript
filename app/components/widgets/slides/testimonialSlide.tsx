@@ -12,19 +12,21 @@ const TestimonialSlide = (props: TestimonialsSlideProps) => {
       tailwind="bg-coffee-680 rounded-xl rounded-b-none flex flex-col items-center border-4 border-coffee-100 border-b-0 h-full w-full"
     >
       <FaQuoteRight
-        className=" invisible absolute right-5 -top-6 text-coffee-20 q-mark"
+        className=" q-mark invisible absolute -top-6 right-5 text-coffee-20"
         size="2.5em"
       />
       <Image
         src={img}
         alt={alt}
-        className="rounded-full w-1/4 mt-5 border-4 border-coffee-70 "
+        className="mt-5 w-1/4 rounded-full border-4 border-coffee-70 "
       />
-      <h1 className="capitalize text-white text-2xl pt-3">{title}</h1>
-      <h2 className="capitalize text-white text-2xl pb-3">{occupation}</h2>
+      <h1 className="pt-3 text-2xl capitalize text-white">{title}</h1>
+      <h2 className="pb-3 text-2xl capitalize text-white">{occupation}</h2>
       <StarRating rating={rating} />
 
-      <p className="text-white capitalize px-12 pb-12 text-center ">{comment}</p>
+      <p className="px-12 pb-12 text-center capitalize text-white ">
+        {comment}
+      </p>
     </Card>
   );
 };

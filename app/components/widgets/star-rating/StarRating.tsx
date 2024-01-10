@@ -6,7 +6,7 @@ import { FaRegStar, FaStar, FaStarHalfAlt } from 'react-icons/fa';
 const StarRating = (props: StarRatingProps) => {
   const starRating = fillRatingStars(props.rating);
   return (
-    <span className="flex text-coffee-70 my-6">
+    <span className="my-6 flex text-coffee-70">
       {starRating.map((star) => {
         switch (star) {
           case 'fill':

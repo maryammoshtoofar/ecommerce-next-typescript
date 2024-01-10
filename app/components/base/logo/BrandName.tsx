@@ -1,6 +1,6 @@
 const BrandName = () => {
   return (
-    <span className="font-dancing text-2xl col-start-4  md:hidden text-coffee-70 whitespace-nowrap">
+    <span className="col-start-4 whitespace-nowrap font-dancing  text-2xl text-coffee-70 md:hidden">
       Eliza Coffee
     </span>
   );

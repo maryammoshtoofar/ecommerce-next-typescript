@@ -11,7 +11,7 @@ const Button = ({
   return (
     <button
       type="button"
-      className={['btn' ,mode, tailwind].join(' ')}
+      className={['btn', mode, tailwind].join(' ')}
       {...props}
     >
       {label}

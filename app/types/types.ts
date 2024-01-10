@@ -26,6 +26,7 @@ export type AboutSlideProps = SlideProps & {
   slide: {
     description: string;
   };
+  screenWidth: number;
 };
 export type ProductSlideProps = SlideProps & {
   slide: {

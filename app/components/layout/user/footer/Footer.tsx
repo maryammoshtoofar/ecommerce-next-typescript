@@ -8,14 +8,14 @@ import FooterCopyRight from '@/app/components/layout/user/footer/footer-copyrigh
 
 const Footer = () => {
   return (
-    <footer className="text-coffee-20 text-lg mt-24">
-      <div className="flex gap-2 justify-end items-center me-10">
+    <footer className="mt-24 text-lg text-coffee-20">
+      <div className="me-10 flex items-center justify-end gap-2">
         <span>Social Media:</span>
         <FaLinkedin size="1.5rem" />
         <FaPinterestSquare size="1.5rem" />
         <FaSquareInstagram size="1.5rem" />
       </div>
-      <div className="relative grid grid-cols-4 gap-3 bg-coffee-300 items-center">
+      <div className="relative grid grid-cols-4 items-center gap-3 bg-coffee-300">
         <Image
           src={footerBg}
           alt="footer-background"
@@ -24,7 +24,7 @@ const Footer = () => {
         <Image
           src={CoffeGrinderVector}
           alt="coffee-grinder"
-          className="w-80 h-96 p-6"
+          className="h-96 w-80 p-6"
         />
         <FooterMenu />
         <FooterCopyRight />

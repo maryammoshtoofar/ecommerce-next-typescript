@@ -2,7 +2,7 @@ export const MenuItems = [
   {
     id: 1,
     name: 'chocolate',
-    price: 40.00,
+    price: 40,
   },
   {
     id: 2,

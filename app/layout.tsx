@@ -2,10 +2,7 @@ import '@/lib/styles/globals.css';
 import Header from '@/app/components/layout/user/header/Header';
 import Footer from '@/app/components/layout/user/footer/Footer';
 import type { Metadata } from 'next';
-import {
-  Dancing_Script,
-  Roboto_Slab,
-} from 'next/font/google';
+import { Dancing_Script, Roboto_Slab } from 'next/font/google';
 import Hero from './components/widgets/hero/Hero';
 
 const slab = Roboto_Slab({

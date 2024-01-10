@@ -9,9 +9,9 @@ import TestimonialsSlider from './components/widgets/sliders/testimonialsSlider'
 import NewsletterForm from './components/widgets/newsletter-form/NewsletterForm';
 const Home = () => {
   return (
-    <main className="flex flex-col items-center justify-between w-full">
-      {/* <AboutSlider />
-      <Services />
+    <main className="flex w-full flex-col items-center justify-between">
+      <AboutSlider />
+      {/*<Services />
       <OfferCard />
       <ReserveTable />
       <ProductSlider />

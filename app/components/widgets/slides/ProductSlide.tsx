@@ -15,7 +15,7 @@ const ProductSlide = (props: ProductSlideProps) => {
       <div className="relative">
         <Icon
           component={
-            <AiOutlineInfoCircle className="absolute top-3 left-5 text-coffee-140 " />
+            <AiOutlineInfoCircle className="absolute left-5 top-3 text-coffee-140 " />
           }
         />
         <Image src={img} alt={alt} className=" -top-16 left-0 " />
@@ -23,12 +23,12 @@ const ProductSlide = (props: ProductSlideProps) => {
           component={
             <FiShoppingCart
               size={'1.5rem'}
-              className="absolute right-3 bottom-3 text-coffee-140 "
+              className="absolute bottom-3 right-3 text-coffee-140 "
             />
           }
         />
       </div>
-      <p className="text-white bg-coffee-660 text-center rounded-b-xl py-5 capitalize w-full text-md  ">
+      <p className="text-md w-full rounded-b-xl bg-coffee-660 py-5 text-center capitalize text-white  ">
         {title} | {type}
       </p>
     </Card>
