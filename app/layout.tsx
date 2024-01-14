@@ -8,7 +8,7 @@ import Hero from './components/widgets/hero/Hero';
 const slab = Roboto_Slab({
   subsets: ['latin'],
   variable: '--font-roboto-slab',
-  weight: '100',
+  weight: '200',
 });
 
 const dancingScript = Dancing_Script({
