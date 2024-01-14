@@ -136,6 +136,25 @@
   .offer-card-img {
     @apply h-full w-full sm:w-80 lg:w-2/5;
   }
+  .reserve-table-section {
+    @apply form-glow relative flex w-full flex-col gap-20 bg-coffee-640 px-5 py-10 sm:flex-row sm:items-center sm:justify-between lg:gap-40 xl:gap-80 xl:px-32;
+  }
+  .reserve-table-title {
+    @apply gradient-text absolute -top-10 left-5 whitespace-nowrap font-dancing text-5xl capitalize;
+  }
+  .reserve-table-img {
+    @apply max-sm:w-full sm:max-md:w-1/2;
+  }
+  .reserve-table-form {
+    @apply flex grow flex-col gap-6;
+  }
+  .reserve-table-inputs-flexed {
+    @apply flex flex-col items-center gap-6 md:flex-row md:gap-3;
+  }
+  .reserve-table-btn {
+    @apply w-1/2 py-2 text-lg;
+  }
+
   .menu-item-1 {
     @apply left-36 top-72;
   }
