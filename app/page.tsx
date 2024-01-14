@@ -14,8 +14,8 @@ const Home = () => {
       <Services />
       <OfferCard />
       <ReserveTable />
-      {/*<ProductSlider />
-      <Menu />
+      <ProductSlider />
+      {/*<Menu />
       <BlogPostsSlider />
       <TestimonialsSlider />
       <NewsletterForm /> */}

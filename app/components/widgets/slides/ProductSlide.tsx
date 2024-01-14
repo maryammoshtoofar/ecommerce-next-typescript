@@ -5,12 +5,13 @@ import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { FiShoppingCart } from 'react-icons/fi';
 import { CiCoffeeBean } from 'react-icons/ci';
 import Icon from '@/app/components/base/icon/Icon';
+import { shortenDescription } from '@/lib/utils/utils';
 const ProductSlide = (props: ProductSlideProps) => {
   const { id, img, alt, type, title } = props.slide;
   return (
     <Card
       key={id}
-      tailwind="flex flex-col w-4/5 items-center rounded-xl  relative bg-coffee-640 slide-glow my-12"
+      tailwind="flex flex-col w-full items-center rounded-xl relative bg-coffee-640 slide-glow my-10 "
     >
       <div className="relative">
         <Icon
@@ -18,7 +19,7 @@ const ProductSlide = (props: ProductSlideProps) => {
             <AiOutlineInfoCircle className="absolute left-5 top-3 text-coffee-140 " />
           }
         />
-        <Image src={img} alt={alt} className=" -top-16 left-0 " />
+        <Image src={img} alt={alt} className="-top-16 left-0" />
         <Icon
           component={
             <FiShoppingCart
@@ -28,8 +29,9 @@ const ProductSlide = (props: ProductSlideProps) => {
           }
         />
       </div>
-      <p className="text-md w-full rounded-b-xl bg-coffee-660 py-5 text-center capitalize text-white  ">
-        {title} | {type}
+      <p className="text-md w-full rounded-b-xl bg-coffee-660 py-5 text-center capitalize text-white">
+        {shortenDescription(`${title} | ${type}`, 20)}
+        {/* {title} | {type} */}
       </p>
     </Card>
   );
