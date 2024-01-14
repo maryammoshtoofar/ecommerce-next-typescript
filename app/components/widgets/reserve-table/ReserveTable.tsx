@@ -3,8 +3,6 @@ import Image from 'next/image';
 import cupAndPeople from '@/app/assets/cup-and-people.png';
 import Input from '@/app/components/base/input/Input';
 import { MdOutlineCalendarToday } from 'react-icons/md';
-import { CiClock2 } from 'react-icons/ci';
-import { FaRegClock } from 'react-icons/fa';
 import { MdOutlineWatchLater } from 'react-icons/md';
 import { LuUsers2 } from 'react-icons/lu';
 import { AiOutlineUser } from 'react-icons/ai';

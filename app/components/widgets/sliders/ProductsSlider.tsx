@@ -11,10 +11,8 @@ import { recommendedProducts } from '@/lib/recommendedProducts';
 
 const ProductSlider = () => {
   return (
-    <section className="relative w-5/6 py-12">
-      <h1 className="gradient-text mb-9 w-full text-center font-dancing text-5xl capitalize">
-        recommended
-      </h1>
+    <section className="product-slider-section">
+      <h1 className="product-slider-title">recommended</h1>
       {/* Main slides */}
       <Swiper
         slidesPerView={4}
@@ -41,7 +39,7 @@ const ProductSlider = () => {
         grabCursor={true}
         pagination={{ clickable: true }}
         onSwiper={(swiper: SwiperOptions) => console.log(swiper)}
-        className="w-full px-8"
+        className="product-slider"
       >
         {recommendedProducts.map((slide) => (
           <SwiperSlide key={slide.id}>
