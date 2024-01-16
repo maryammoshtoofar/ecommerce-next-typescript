@@ -9,15 +9,27 @@ import { testimonials } from '@/lib/testimonials';
 
 const TestimonialsSlider = () => {
   return (
-    <section className="relative mt-24 w-11/12 first-letter:mt-12 ">
-      <div className="testimonials m-auto bg-testimonials">
-        <h1 className="gradient-text absolute -top-10 mb-9 w-full text-center font-dancing text-5xl capitalize">
-          customer review
-        </h1>
+    <section className="testimonials-section">
+      <div className="testimonials ">
+        <h1 className="testimonials-title">customer review</h1>
         <Swiper
-          initialSlide={3}
+          initialSlide={4}
           slidesPerView={3}
-          spaceBetween={75}
+          breakpoints={{
+            280: {
+              slidesPerView: 1.3,
+            },
+            640: {
+              slidesPerView: 1.5,
+            },
+            1024: {
+              slidesPerView: 2.5,
+            },
+            1280: {
+              slidesPerView: 3,
+            },
+          }}
+          spaceBetween={25}
           effect={'creative'}
           grabCursor={true}
           centeredSlides={true}
@@ -27,7 +39,7 @@ const TestimonialsSlider = () => {
               translate: ['-110%', 270, -1],
             },
             next: {
-              translate: ['110%', 270, 0],
+              translate: ['110%', 270, 1],
             },
             perspective: true,
           }}
@@ -35,7 +47,7 @@ const TestimonialsSlider = () => {
           modules={[EffectCreative, Pagination, Navigation]}
         >
           {testimonials.map((slide) => (
-            <SwiperSlide key={slide.id} className="pt-32">
+            <SwiperSlide key={slide.id} className="pt-8 sm:pt-32">
               <Slide slide={slide} />
             </SwiperSlide>
           ))}

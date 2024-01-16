@@ -10,11 +10,11 @@ const StarRating = (props: StarRatingProps) => {
       {starRating.map((star) => {
         switch (star) {
           case 'fill':
-            return <FaStar size="1.5rem" />;
+            return <FaStar />;
           case 'half':
-            return <FaStarHalfAlt size="1.5rem" />;
+            return <FaStarHalfAlt />;
           case 'empty':
-            return <FaRegStar size="1.5rem" />;
+            return <FaRegStar />;
         }
       })}
     </span>

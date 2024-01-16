@@ -17,8 +17,8 @@ const Home = () => {
       <ProductSlider />
       <Menu />
       <BlogPostsSlider />
-      {/*<TestimonialsSlider />
-      <NewsletterForm /> */}
+      <TestimonialsSlider />
+      <NewsletterForm />
     </main>
   );
 };
