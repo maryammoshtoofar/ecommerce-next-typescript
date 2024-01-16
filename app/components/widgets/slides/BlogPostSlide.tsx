@@ -1,17 +1,24 @@
 import Image from 'next/image';
 import { BlogPostSlideProps } from '@/app/types/types';
 import Card from '../card/Card';
-import { shortenDescription } from '@/lib/utils/utils';
+import { generateCaptionLength, shortenDescription } from '@/lib/utils/utils';
+import { useEffect, useState } from 'react';
 
 const BlogPostSlide = (props: BlogPostSlideProps) => {
   const { id, title, caption, img, alt } = props.slide;
+  const { screenWidth } = props;
+  const [captionLength, setCaptionLength] = useState(250);
+
+  useEffect(() => {
+    setCaptionLength(generateCaptionLength(screenWidth, 'blogPost'));
+  }, [screenWidth]);
   return (
-    <Card key={id} tailwind="bg-coffee-160 h-full rounded-xl ">
-      <h1 className="p-6 text-2xl capitalize text-white">{title}</h1>
-      <p className="px-12  capitalize  leading-10 text-white ">
-        {shortenDescription(caption, 250)}
+    <Card key={id} tailwind="blog-post-card">
+      <h1 className="blog-post-title">{title}</h1>
+      <p className="blog-post-caption">
+        {shortenDescription(caption, captionLength)}
       </p>
-      <Image src={img} alt={alt} className="mb-2 ms-10 mt-10" />
+      <Image src={img} alt={alt} className="blog-post-img" />
     </Card>
   );
 };

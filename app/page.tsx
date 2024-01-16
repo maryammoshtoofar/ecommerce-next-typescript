@@ -16,8 +16,8 @@ const Home = () => {
       <ReserveTable />
       <ProductSlider />
       <Menu />
-      {/*<BlogPostsSlider />
-      <TestimonialsSlider />
+      <BlogPostsSlider />
+      {/*<TestimonialsSlider />
       <NewsletterForm /> */}
     </main>
   );

@@ -24,7 +24,7 @@ export type SlideProps = UIComponent & {
 };
 export type AboutSlideProps = SlideProps & {
   slide: {
-    description: string;
+    caption: string;
   };
   screenWidth: number;
 };
@@ -38,6 +38,7 @@ export type BlogPostSlideProps = SlideProps & {
   slide: {
     caption: string;
   };
+  screenWidth: number;
 };
 
 export type TestimonialsSlideProps = SlideProps & {

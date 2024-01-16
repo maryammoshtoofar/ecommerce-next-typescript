@@ -13,8 +13,9 @@ export const fillRatingStars = (rating: number) => {
   return stars;
 };
 
-export const generateCaptionLength = (screenWidth: number) => {
+export const generateCaptionLength = (screenWidth: number, type: string) => {
   if (screenWidth < 480) return 97;
   else if (screenWidth < 650) return 197;
+  else if (type === 'blogPost') return 250;
   else return 397;
 };

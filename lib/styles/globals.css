@@ -307,6 +307,28 @@
   .menu-link {
     @apply absolute -bottom-8 right-5 inline-flex items-center  gap-5 self-end pe-12  text-coffee-70 sm:text-2xl lg:text-3xl;
   }
+  .blog-posts-section {
+    @apply relative mt-24 w-full bg-coffee-290 first-letter:mt-12;
+  }
+  .blog-posts-bg {
+    @apply absolute bottom-0 hidden h-full w-full sm:block;
+  }
+  .blog-posts-title {
+    @apply gradient-text absolute -top-10 mb-9 text-center font-dancing text-5xl capitalize;
+  }
+  .blog-post-card {
+    @apply mx-4 h-full rounded-xl bg-coffee-160 sm:mx-0;
+  }
+  .blog-post-title {
+    @apply p-6 text-2xl capitalize text-white;
+  }
+  .blog-post-caption {
+    @apply px-4 capitalize  leading-10  text-white sm:px-12;
+  }
+  .blog-post-img {
+    @apply my-2 sm:ms-10 sm:mt-10
+  }
+
   .testimonials {
     @apply rounded-[38.979px] bg-cover bg-no-repeat;
   }
