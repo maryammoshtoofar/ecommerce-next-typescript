@@ -2,6 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .gradient-text {
+    background: var(
+      --stroke,
+      linear-gradient(
+        251deg,
+        #e0a872 13.76%,
+        #f8e4be 49.91%,
+        #fff3e0 58.47%,
+        #e0a872 95.09%
+      )
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .menu-glow {
+    background-image: radial-gradient(
+      ellipse at 50% 48%,
+      #775142 -80%,
+      transparent 60%
+    );
+    background-size: 100% 100%;
+  }
+  .gradient-border {
+    background:
+      linear-gradient(#4a2721, #4a2721) padding-box,
+      radial-gradient(circle at center, #f8e4be 20%, #4a2721d9 89%);
+    border: 4px solid transparent;
+  }
+  .offer-card-glow {
+    background-image: radial-gradient(
+      ellipse at 25% -25%,
+      #7d5647 0%,
+      transparent 40%
+    );
+    background-size: 100% 100%;
+  }
+
+  .newsletter-form-glow {
+    background-image: radial-gradient(
+      ellipse at 5% 5%,
+      #7d5647 10%,
+      transparent 70%
+    );
+    background-size: 100% 100%;
+  }
+
+  .slide-glow {
+    background-image: radial-gradient(
+      ellipse at 85% 10%,
+      #775142 0%,
+      transparent 40%
+    );
+    background-size: 100% 100%;
+  }
+
+  .home-glow {
+    background-image: radial-gradient(
+      ellipse at 1% 1%,
+      #3f2f2a 0%,
+      transparent 25%
+    );
+  }
+
+  .form-glow {
+    background-image: radial-gradient(
+      ellipse at 25% -25%,
+      #7d5647 0%,
+      transparent 50%
+    );
+    background-size: 100% 220%;
+  }
+}
+
 @layer components {
   .btn {
     @apply inline-flex w-full items-center justify-center gap-2 rounded-[3rem] border-2 border-coffee-610 px-9 py-2 font-slab  text-sm capitalize text-coffee-70 md:text-xl;
@@ -166,30 +241,71 @@
   .product-slider {
     @apply w-full px-8;
   }
-
+  .menu-section {
+    @apply lg:menu-glow relative flex w-full flex-col items-center;
+  }
+  .menu-title {
+    @apply gradient-text text-center font-dancing text-5xl capitalize;
+  }
+  .menu-container {
+    @apply m-5 flex;
+  }
+  .menu-images {
+    @apply tablet:flex hidden items-baseline  gap-80 lg:gap-10;
+  }
+  .menu-image-woman {
+    @apply tablet:opacity-40 opacity-10 xl:opacity-100;
+  }
+  .menu-image-man {
+    @apply tablet:opacity-40 opacity-20 xl:opacity-100;
+  }
+  .menu-list {
+    @apply flex flex-col gap-8;
+  }
+  .menu-item {
+    @apply tablet:absolute tablet:text-4xl flex flex-col font-dancing text-2xl text-coffee-70;
+  }
+  .menu-item-text {
+    @apply flex w-full flex-row-reverse justify-between;
+  }
+  .menu-item-price {
+    @apply text-lg sm:text-2xl;
+  }
+  .menu-item-name {
+    @apply whitespace-nowrap capitalize;
+  }
+  .menu-underline {
+    @apply max-w-full;
+  }
+  .menu-item-left {
+    @apply items-end;
+  }
   .menu-item-1 {
-    @apply left-36 top-72;
+    @apply menu-item left-16 top-72  lg:left-36;
   }
   .menu-item-3 {
-    @apply bottom-96 left-16;
+    @apply menu-item bottom-96 left-16;
   }
   .menu-item-5 {
-    @apply bottom-52 left-36;
+    @apply menu-item bottom-52 left-16 lg:left-24;
   }
   .menu-item-7 {
-    @apply bottom-10 left-48;
+    @apply menu-item bottom-10 left-16 lg:left-36;
   }
   .menu-item-2 {
-    @apply right-36 top-72 flex flex-col items-end;
+    @apply menu-item menu-item-left right-16 top-72 lg:right-36;
   }
   .menu-item-4 {
-    @apply bottom-96 right-16 flex flex-col items-end;
+    @apply menu-item menu-item-left bottom-96 right-16;
   }
   .menu-item-6 {
-    @apply bottom-52 right-36 flex flex-col items-end;
+    @apply menu-item menu-item-left bottom-52 right-16 lg:right-24;
   }
   .menu-item-8 {
-    @apply bottom-10 right-48 flex flex-col items-end;
+    @apply menu-item menu-item-left bottom-10 right-16 lg:right-36;
+  }
+  .menu-link {
+    @apply absolute -bottom-8 right-5 inline-flex items-center  gap-5 self-end pe-12  text-coffee-70 sm:text-2xl lg:text-3xl;
   }
   .testimonials {
     @apply rounded-[38.979px] bg-cover bg-no-repeat;
@@ -197,28 +313,7 @@
 }
 
 /* pure css rules */
-.gradient-text {
-  background: var(
-    --storke,
-    linear-gradient(
-      251deg,
-      #e0a872 13.76%,
-      #f8e4be 49.91%,
-      #fff3e0 58.47%,
-      #e0a872 95.09%
-    )
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
-.gradient-border {
-  background:
-    linear-gradient(#4a2721, #4a2721) padding-box,
-    radial-gradient(circle at center, #f8e4be 20%, #4a2721d9 89%);
-  border: 4px solid transparent;
-}
 .swiper-slide {
   height: auto !important;
 }
@@ -245,57 +340,4 @@
 }
 .testimonials .swiper-slide-active .q-mark {
   visibility: visible;
-}
-
-.offer-card-glow {
-  background-image: radial-gradient(
-    ellipse at 25% -25%,
-    #7d5647 0%,
-    transparent 40%
-  );
-  background-size: 100% 100%;
-}
-
-.newsletter-form-glow {
-  background-image: radial-gradient(
-    ellipse at 5% 5%,
-    #7d5647 10%,
-    transparent 70%
-  );
-  background-size: 100% 100%;
-}
-
-.slide-glow {
-  background-image: radial-gradient(
-    ellipse at 85% 10%,
-    #775142 0%,
-    transparent 40%
-  );
-  background-size: 100% 100%;
-}
-
-.home-glow {
-  background-image: radial-gradient(
-    ellipse at 1% 1%,
-    #3f2f2a 0%,
-    transparent 25%
-  );
-}
-
-.form-glow {
-  background-image: radial-gradient(
-    ellipse at 25% -25%,
-    #7d5647 0%,
-    transparent 50%
-  );
-  background-size: 100% 220%;
-}
-
-.menu-glow {
-  background-image: radial-gradient(
-    ellipse at 50% 58%,
-    #775142 -40%,
-    transparent 50%
-  );
-  background-size: 100% 100%;
 }

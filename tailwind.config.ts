@@ -51,6 +51,16 @@ export default {
         '17': '17',
         '18': '18',
       },
+      screens: {
+        tablet: '850px',
+        // => @media (min-width: 8500px) { ... }
+
+        laptop: '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        desktop: '1280px',
+        // => @media (min-width: 1280px) { ... }
+      },
     },
   },
   plugins: [

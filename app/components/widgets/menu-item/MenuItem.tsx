@@ -4,14 +4,18 @@ import UnderLineRight from './underlineRight';
 
 const MenuItem = (props: MenuItemProps) => {
   return (
-    <li
-      className={`absolute w-1/2 font-dancing text-4xl text-coffee-70 ${props.tailwind}`}
-    >
-      <div className="flex gap-32 px-4 ">
-        <span className="text-2xl">${props.price}.00</span>
-        <span className="capitalize">{props.name}</span>
+    <li className={props.tailwind}>
+      <div
+        className={`menu-item-text  ${
+          props.dir === 'left' ? ' ps-6 lg:flex-row' : 'pe-6'
+        }`}
+      >
+        <span className="menu-item-price">${props.price}.00</span>
+        <span className="menu-item-name">{props.name}</span>
       </div>
-      {props.dir === 'left' ? <UnderlineLeft /> : <UnderLineRight />}
+      <div className="menu-underline">
+        {props.dir === 'left' ? <UnderlineLeft /> : <UnderLineRight />}
+      </div>
     </li>
   );
 };
