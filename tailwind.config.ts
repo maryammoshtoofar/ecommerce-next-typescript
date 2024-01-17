@@ -1,5 +1,5 @@
 // import type { Config } from 'tailwindcss';
-import { colors } from './lib/styles/colors';
+import { colors } from './app/_lib/styles/colors';
 import plugin from 'tailwindcss/plugin';
 
 export default {
