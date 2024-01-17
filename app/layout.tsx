@@ -23,14 +23,8 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={`${slab.variable} ${dancingScript.variable}`}>
-      <body className="home-glow bg-coffee-470 font-slab">
-        <div className="">
-          <Header />
-
-        </div>
-
+      <body className="font-slab">
         {children}
-        <Footer />
       </body>
     </html>
   );
