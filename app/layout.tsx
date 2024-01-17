@@ -30,7 +30,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <Hero />
         </div>
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

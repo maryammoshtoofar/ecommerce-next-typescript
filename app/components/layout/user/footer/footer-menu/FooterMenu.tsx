@@ -7,26 +7,34 @@ import TitleFooterMenuItem from '../footer-menu-items/TitleFooterMenuItem';
 
 const FooterMenu = () => {
   return (
-    <div className="z-50 col-span-3 grid w-full grid-cols-4 items-center pe-5 text-lg text-coffee-20">
-      <ul className="flex flex-col gap-4">
+    <div className="footer-menu">
+      <ul className="footer-menu-col-1">
         <TitleFooterMenuItem>About</TitleFooterMenuItem>
         <FooterMenuItem>Our Story</FooterMenuItem>
         <FooterMenuItem>FAQ</FooterMenuItem>
         <FooterMenuItem>Careers</FooterMenuItem>
       </ul>
-      <ul className="flex flex-col gap-4">
-        <TitleFooterMenuItem>Customer Resources</TitleFooterMenuItem>
+      <ul className="footer-menu-col-1">
+        <TitleFooterMenuItem>
+          <span className="hidden lg:inline">Customer</span> Resources
+        </TitleFooterMenuItem>
         <FooterMenuItem>Menu</FooterMenuItem>
         <FooterMenuItem>Locations</FooterMenuItem>
         <FooterMenuItem>Support</FooterMenuItem>
       </ul>
-      <ul className="flex flex-col gap-4">
+      <ul className="footer-menu-col-2">
         <TitleFooterMenuItem>Services</TitleFooterMenuItem>
         <FooterMenuItem>Payment Options</FooterMenuItem>
-        <FooterMenuItem>Refunds and Exchanges</FooterMenuItem>
-        <FooterMenuItem>Limitation of Liablitiy</FooterMenuItem>
+        <FooterMenuItem>
+          <span className="hidden lg:inline">Refunds and</span>
+          Exchanges
+        </FooterMenuItem>
+        <FooterMenuItem>
+          <span className="hidden lg:inline">Limitation of</span>
+          Liablitiy
+        </FooterMenuItem>
       </ul>
-      <ul className="flex flex-col gap-4">
+      <ul className="footer-menu-col-3">
         <IconedFooterMenuItem component={<FaLocationDot />}>
           12 Jhon Ave - NYC
         </IconedFooterMenuItem>
