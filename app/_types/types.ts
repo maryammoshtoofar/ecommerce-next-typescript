@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image';
-import { ReactElement } from 'react';
+import { Dispatch, ReactElement, SetStateAction } from 'react';
 
 export type UIComponent = {
   children?: React.ReactNode;
@@ -54,6 +54,11 @@ export type InputProps = UIComponent & {
   placeholder: string;
 };
 
+export type TabProps = UIComponent & {
+  active?: boolean;
+  setActiveTab: Dispatch<SetStateAction<number>>;
+  tabNumber: number;
+};
 export type MenuItemProps = UIComponent & {
   name: string;
   price: number;
@@ -63,3 +68,4 @@ export type MenuItemProps = UIComponent & {
 export type StarRatingProps = UIComponent & {
   rating: number;
 };
+export type ImageArray = StaticImageData[];
