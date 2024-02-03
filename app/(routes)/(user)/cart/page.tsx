@@ -2,8 +2,8 @@ import React from 'react';
 
 type Props = {};
 
-const cart = (props: Props) => {
+const Cart = (props: Props) => {
   return <div>cart</div>;
 };
 
-export default cart;
+export default Cart;

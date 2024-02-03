@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="home-glow bg-coffee-470 ">
+    <div className="home-glow bg-coffee-470">
       <Header />
       {children}
       <Footer />

@@ -3,12 +3,12 @@ import NavButton from '@/app/_components/layout/user/navigation/nav-button/nav-b
 const NavMenu = () => {
   return (
     <nav className="nav-menu">
-      <NavButton title="Home" />
-      <NavButton title="Menu" />
-      <NavButton title="Services" />
-      <NavButton title="Product" />
-      <NavButton title="Blog" />
-      <NavButton title="Contact" />
+      <NavButton title="home" />
+      <NavButton title="menu" />
+      <NavButton title="services" />
+      <NavButton title="products" />
+      <NavButton title="blog" />
+      <NavButton title="contact" />
     </nav>
   );
 };

@@ -1,8 +1,14 @@
+import { HOME } from '@/app/_config/routes';
+import Link from 'next/link';
+
 const BrandName = () => {
   return (
-    <span className="col-start-4 whitespace-nowrap font-dancing  text-2xl text-coffee-70 md:hidden">
+    <Link
+      className="col-start-4 whitespace-nowrap font-dancing  text-2xl text-coffee-70 md:hidden"
+      href={HOME}
+    >
       Eliza Coffee
-    </span>
+    </Link>
   );
 };
 

@@ -11,9 +11,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="social-media-links">
         <span>Social Media:</span>
-        <FaLinkedin size="1.5rem" />
-        <FaPinterestSquare size="1.5rem" />
-        <FaSquareInstagram size="1.5rem" />
+        <FaLinkedin size="1.5rem" className="cursor-pointer" />
+        <FaPinterestSquare size="1.5rem" className="cursor-pointer" />
+        <FaSquareInstagram size="1.5rem" className="cursor-pointer" />
       </div>
       <div className="footer-menu-container">
         <Image

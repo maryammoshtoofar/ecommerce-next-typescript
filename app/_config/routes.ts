@@ -1,0 +1,14 @@
+export const HOME = '/';
+export const AUTH = '/auth';
+export const CART = '/cart';
+export const MENU = '/menu';
+export const SERVICES = '/services';
+export const PRODUCTS = '/products';
+export const BLOG = '/blog';
+export const CONTACT = '/contact';
+export const CATALOG = '/catalog';
+export const ORDER = '/order';
+export const STORY = '/our-story';
+export const FAQ = '/faq';
+export const CAREERS = '/careers';
+export const LOCATIONS = "locations"

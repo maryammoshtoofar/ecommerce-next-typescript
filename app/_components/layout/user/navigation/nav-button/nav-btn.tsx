@@ -1,12 +1,16 @@
+import Link from 'next/link';
+
 type NavButtonProps = {
   title: string;
   active?: boolean;
 };
 const NavButton = ({ title }: NavButtonProps) => {
+  const navLink =
+    title === 'home' ? './' : title === 'services' ? '#' + title : title;
   return (
-    <button className="nav-menu-btn">
-      <span className="">{title}</span>
-    </button>
+    <Link href={navLink} className="nav-menu-btn capitalize">
+      {title}
+    </Link>
   );
 };
 export default NavButton;
