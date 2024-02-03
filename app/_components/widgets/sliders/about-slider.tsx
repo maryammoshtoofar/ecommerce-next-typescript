@@ -13,6 +13,7 @@ import useWindowDimensions from '@/app/_hooks/useWindowDimensions';
 const AboutSlider = () => {
   const { width } = useWindowDimensions();
 
+
   return (
     <section className="about-slider-section">
       <Bean1 tailwind="absolute -left-32 bottom-0" />

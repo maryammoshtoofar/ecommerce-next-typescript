@@ -21,9 +21,7 @@ const BlogPostsSlider = () => {
         className="blog-posts-bg"
       />
       <div className="container m-auto">
-        <h1 className="blog-posts-title">
-          our blog
-        </h1>
+        <h1 className="blog-posts-title">our blog</h1>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={45}

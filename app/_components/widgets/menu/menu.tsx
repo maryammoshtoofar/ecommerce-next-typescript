@@ -27,6 +27,7 @@ const Menu = (props: UIComponent) => {
           {MenuItems.map((menuItem, index) => {
             return (
               <MenuItem
+                key={menuItem.id}
                 tailwind={`menu-item menu-item-${index + 1}`}
                 name={menuItem.name}
                 price={menuItem.price}
