@@ -4,7 +4,7 @@ import Sidebar from '@/app/_components/layout/admin/sidebar/sidebar';
 
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="admin-glow grid-rows-12 relative sm:grid min-h-screen grid-cols-12 gap-4 bg-coffee-190 sm:grid-flow-col">
+    <main className="admin-glow grid-rows-12 relative sm:grid min-h-screen grid-cols-12 gap-2 bg-coffee-190 sm:grid-flow-col">
       <Sidebar />
       <Header />
       {children}
