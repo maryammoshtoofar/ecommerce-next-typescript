@@ -3,7 +3,7 @@ import React from 'react';
 type Props = {};
 
 const StockPrice = (props: Props) => {
-  return <div>ADMIN StockPrice</div>;
+  return <section>ADMIN StockPrice</section>;
 };
 
 export default StockPrice;

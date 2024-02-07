@@ -10,7 +10,7 @@ import Link from 'next/link';
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hero-content">
+      <article className="hero-content">
         <Image src={title} alt="elza coffee" className="brand-typography" />
         <div className="hero-intro">
           <p className="hero-para-1">
@@ -26,7 +26,7 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </article>
       <Card tailwind="hero-coffee-card">
         <Image src={cup} alt="coffee-cup" className="hero-coffee-card-img" />
         <p className="hero-coffee-card-text">But First Coffee</p>

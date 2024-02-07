@@ -10,7 +10,7 @@ const Menu = (props: UIComponent) => {
   return (
     <section className="menu-section">
       <h1 className="menu-title">Popular Menu</h1>
-      <div className="menu-container">
+      <article className="menu-container">
         <div className="menu-images">
           <Image
             src={menuPicWoman}
@@ -36,7 +36,7 @@ const Menu = (props: UIComponent) => {
             );
           })}
         </ul>
-      </div>
+      </article>
       <ul className="invisible">
         <li dir="left" className="menu-item-1" />
         <li dir="left" className="menu-item-2" />

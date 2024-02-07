@@ -3,7 +3,7 @@ import React from 'react';
 type Props = {};
 
 const Inventory = (props: Props) => {
-  return <div>ADMIN Inventory</div>;
+  return <section>ADMIN Inventory</section>;
 };
 
 export default Inventory;

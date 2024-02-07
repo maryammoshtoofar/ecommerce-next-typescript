@@ -69,3 +69,8 @@ export type StarRatingProps = UIComponent & {
   rating: number;
 };
 export type ImageArray = StaticImageData[];
+
+export type AdminNavItemProps = UIComponent & {
+  active?: boolean;
+  href: string;
+};

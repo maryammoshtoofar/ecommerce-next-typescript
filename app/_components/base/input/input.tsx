@@ -2,7 +2,7 @@ import { InputProps } from '@/app/_types/types';
 
 const Input = (props: InputProps) => {
   return (
-    <div className="relative w-full">
+    <div className={`relative w-full ${props.tailwind}`}>
       <span className="absolute left-2 top-3 text-coffee-130">
         {props.component}
       </span>

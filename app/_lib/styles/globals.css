@@ -67,6 +67,22 @@
     );
   }
 
+  .admin-glow {
+    background-image: radial-gradient(
+      ellipse at 25% 50%,
+      #dabb9e 0%,
+      transparent 100%
+    );
+  }
+
+  .admin-nav-glow {
+    background-image: radial-gradient(
+      ellipse at 99% 50%,
+      #dabb9e 0%,
+      transparent 100%
+    );
+  }
+
   .form-glow {
     background-image: radial-gradient(
       ellipse at 25% -25%,
@@ -365,7 +381,7 @@
     @apply flex w-2/3 flex-col items-stretch gap-10 sm:w-1/3 sm:items-center;
   }
   .footer {
-    @apply mt-24 hidden text-lg text-coffee-20 lg:block;
+    @apply hidden bg-coffee-470 pt-24 text-lg text-coffee-20 lg:block;
   }
   .social-media-links {
     @apply me-10 flex items-center justify-end gap-2;

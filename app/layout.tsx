@@ -1,6 +1,4 @@
 import '@/app/_lib/styles/globals.css';
-import Header from '@/app/_components/layout/user/header/header';
-import Footer from '@/app/_components/layout/user/footer/footer';
 import type { Metadata } from 'next';
 import { Dancing_Script, Roboto_Slab } from 'next/font/google';
 

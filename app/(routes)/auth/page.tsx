@@ -20,7 +20,7 @@ const page = (props: Props) => {
   const [activeTab, setActiveTab] = useState<number>(1);
 
   return (
-    <main className="flex min-h-screen w-full flex-col gap-4 bg-coffee-500 lg:max-h-screen lg:flex-row lg:gap-0">
+    <>
       <section className="overflow-hidden md:h-1/2 lg:h-auto lg:w-1/2">
         {activeTab === 1 && (
           <Image
@@ -92,7 +92,7 @@ const page = (props: Props) => {
           </div>
         </form>
       </section>
-    </main>
+    </>
   );
 };
 

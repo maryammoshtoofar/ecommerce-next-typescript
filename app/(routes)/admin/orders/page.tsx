@@ -3,7 +3,7 @@ import React from 'react';
 type Props = {};
 
 const Orders = (props: Props) => {
-  return <div>ADMIN Orders</div>;
+  return <section>ADMIN Orders</section>;
 };
 
 export default Orders;

@@ -1,14 +1,23 @@
+// user routes
 export const HOME = '/';
-export const AUTH = '/auth';
 export const CART = '/cart';
 export const MENU = '/menu';
-export const SERVICES = '/services';
 export const PRODUCTS = '/products';
-export const BLOG = '/blog';
 export const CONTACT = '/contact';
 export const CATALOG = '/catalog';
 export const ORDER = '/order';
 export const STORY = '/our-story';
+export const BLOG = '/blog';
 export const FAQ = '/faq';
 export const CAREERS = '/careers';
-export const LOCATIONS = "locations"
+export const LOCATIONS = '/locations';
+
+// admin routes
+export const DASHBOARD = '/admin/dashboard';
+export const INVENTORY = '/admin/inventory';
+export const ORDERS = '/admin/orders';
+export const STOCKPRICE = '/admin/stock-price';
+export const USERS = '/admin/users';
+export const SETTINGS = '/admin/settings';
+
+export const AUTH = '/auth';

@@ -2,8 +2,8 @@ import React from 'react';
 
 type Props = {};
 
-const Dashboard = (props: Props) => {
-  return <div>ADMIN DASHBOARD</div>;
+const Settings = (props: Props) => {
+  return <section>ADMIN Settings</section>;
 };
 
-export default Dashboard;
+export default Settings;

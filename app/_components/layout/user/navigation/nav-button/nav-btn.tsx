@@ -1,3 +1,4 @@
+import { Route } from 'next';
 import Link from 'next/link';
 
 type NavButtonProps = {
@@ -6,9 +7,9 @@ type NavButtonProps = {
 };
 const NavButton = ({ title }: NavButtonProps) => {
   const navLink =
-    title === 'home' ? './' : title === 'services' ? '#' + title : title;
+    title === 'home' ? '/' : title === 'services' ? '#' + title : title;
   return (
-    <Link href={navLink} className="nav-menu-btn capitalize">
+    <Link href={navLink as Route} className="nav-menu-btn capitalize">
       {title}
     </Link>
   );

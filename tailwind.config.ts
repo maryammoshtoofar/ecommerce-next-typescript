@@ -1,4 +1,3 @@
-// import type { Config } from 'tailwindcss';
 import { colors } from './app/_lib/styles/colors';
 import plugin from 'tailwindcss/plugin';
 

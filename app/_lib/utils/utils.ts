@@ -28,6 +28,5 @@ export const getRandomImages = (imgArray: ImageArray) => {
   while (firstNum === secondNum) {
     secondNum = Math.floor(Math.random() * (8 - 1 + 1)) + 1;
   }
-  console.log(firstNum, secondNum);
   return { firstNum, secondNum };
 };
