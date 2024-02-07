@@ -1,3 +1,4 @@
+import { numberSeparator } from '@/app/_lib/utils/utils';
 import { UIComponent } from '@/app/_types/types';
 
 type Props = UIComponent & {
@@ -27,7 +28,7 @@ const Card = ({ title, component, percentage, amount, progress }: Props) => {
         </div>
       </div>
       <div className="flex w-full items-center gap-4">
-        <span className="text-4xl font-bold">{amount}</span>
+        <span className="text-4xl font-bold">{numberSeparator(amount)}</span>
         <div className="h-2.5 w-full rounded-full bg-gray-200 dark:bg-coffee-100">
           <div
             className={`h-2.5 rounded-full bg-coffee-200`}
