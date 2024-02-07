@@ -9,7 +9,7 @@ type Props = UIComponent & {
 
 const Card = ({ title, component, percentage, amount, progress }: Props) => {
   return (
-    <article className="flex w-1/3 flex-col gap-4 rounded-lg bg-coffee-10 p-4 text-coffee-190">
+    <article className="col-span-full -flex  flex-col gap-4 rounded-lg bg-coffee-10 p-4 text-coffee-190 sm:col-span-6 md:col-span-4">
       <div className="flex items-center gap-2">
         <span className="rounded-lg bg-coffee-640 p-4 text-2xl text-slate-600">
           {component}

@@ -7,8 +7,8 @@ type Props = {};
 
 const Dashboard = (props: Props) => {
   return (
-    <section className="col-span-12 row-start-2 w-full sm:col-span-9 ">
-      <div className="flex w-full justify-between gap-4">
+    <section className="col-span-12 row-start-2 w-full p-4 ">
+      <div className="grid w-full grid-cols-12 gap-4">
         <Card
           title="total orders"
           percentage={-2.33}
