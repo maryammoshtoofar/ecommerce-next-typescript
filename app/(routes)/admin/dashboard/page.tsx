@@ -1,13 +1,12 @@
 import Card from '@/app/_components/widgets/admin-dashboard-card/admin-dashboard-card';
+import SalesChart from '@/app/_components/widgets/admin-sales-chart/admin-sales-chart';
 import React from 'react';
 import { FiShoppingBag } from 'react-icons/fi';
 import { FiUser } from 'react-icons/fi';
 import { FiShoppingCart } from 'react-icons/fi';
-type Props = {};
-
-const Dashboard = (props: Props) => {
+const Dashboard = () => {
   return (
-    <section className="col-span-12 row-start-2 w-full p-4 ">
+    <section className="col-span-12 row-start-2 w-full p-4 grid ">
       <div className="grid w-full grid-cols-12 gap-4">
         <Card
           title="total orders"
@@ -31,6 +30,7 @@ const Dashboard = (props: Props) => {
           progress={55}
         />
       </div>
+      <SalesChart />
     </section>
   );
 };

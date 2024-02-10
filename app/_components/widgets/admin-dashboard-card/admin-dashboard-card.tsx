@@ -10,7 +10,7 @@ type Props = UIComponent & {
 
 const Card = ({ title, component, percentage, amount, progress }: Props) => {
   return (
-    <article className="col-span-full -flex  flex-col gap-4 rounded-lg bg-coffee-10 p-4 text-coffee-190 sm:col-span-6 md:col-span-4">
+    <article className="col-span-full flex  flex-col gap-6 rounded-lg bg-coffee-10 p-4 text-coffee-190 sm:col-span-6 md:col-span-4">
       <div className="flex items-center gap-2">
         <span className="rounded-lg bg-coffee-640 p-4 text-2xl text-slate-600">
           {component}
@@ -28,7 +28,7 @@ const Card = ({ title, component, percentage, amount, progress }: Props) => {
         </div>
       </div>
       <div className="flex w-full items-center gap-4">
-        <span className="text-4xl font-bold">{numberSeparator(amount)}</span>
+        <span className="text-4xl ">{numberSeparator(amount)}</span>
         <div className="h-2.5 w-full rounded-full bg-gray-200 dark:bg-coffee-100">
           <div
             className={`h-2.5 rounded-full bg-coffee-200`}

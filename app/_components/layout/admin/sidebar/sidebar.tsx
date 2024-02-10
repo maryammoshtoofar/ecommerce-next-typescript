@@ -27,7 +27,6 @@ const Sidebar = (props: Props) => {
   const pathname = usePathname();
 
   const isActive = (path: string): boolean => {
-    console.log(path, pathname);
     return pathname === path ? true : false;
   };
   return (

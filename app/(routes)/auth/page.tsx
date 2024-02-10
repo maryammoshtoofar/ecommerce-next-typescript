@@ -1,7 +1,5 @@
 'use client';
-import Image from 'next/Image';
-import loginBg from '@/public/img/auth-1.jpg';
-import registerBg from '@/public/img/auth-2.jpg';
+import Image from 'next/image';
 import Input from '@/app/_components/base/input/input';
 import Tab from '@/app/_components/base/tab/tab';
 import { FaEnvelope } from 'react-icons/fa';
@@ -9,7 +7,7 @@ import { FaLock } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';
 import { FaGoogle } from 'react-icons/fa';
 import Button from '@/app/_components/base/button/button';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { authImages } from '@/app/_lib/auth-images';
 import { getRandomImages } from '@/app/_lib/utils/utils';
 
