@@ -1,13 +1,14 @@
-import Card from '@/app/_components/widgets/admin-dashboard-card/admin-dashboard-card';
-import SalesChart from '@/app/_components/widgets/admin-sales-chart/admin-sales-chart';
+import Card from '@/app/_components/widgets/admin/dashboard-card/dashboard-card';
+import SalesChart from '@/app/_components/widgets/admin/sales-chart/sales-chart';
+import TrendingProducts from '@/app/_components/widgets/admin/trending-products/trending-products';
 import React from 'react';
 import { FiShoppingBag } from 'react-icons/fi';
 import { FiUser } from 'react-icons/fi';
 import { FiShoppingCart } from 'react-icons/fi';
 const Dashboard = () => {
   return (
-    <section className="col-span-12 row-start-2 w-full p-4 grid ">
-      <div className="grid w-full grid-cols-12 gap-4">
+    <section className="col-span-12 row-start-2 grid p-4">
+      <div className="grid grid-cols-12 gap-4">
         <Card
           title="total orders"
           percentage={-2.33}
@@ -30,7 +31,10 @@ const Dashboard = () => {
           progress={55}
         />
       </div>
-      <SalesChart />
+      <div className="mt-6 flex flex-col justify-between gap-4 lg:flex-row">
+        <SalesChart />
+        <TrendingProducts />
+      </div>
     </section>
   );
 };

@@ -2,9 +2,7 @@ import { colors } from './app/_lib/styles/colors';
 import plugin from 'tailwindcss/plugin';
 
 export default {
-  content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
       colors,
@@ -55,11 +53,11 @@ export default {
       screens: {
         tablet: '850px',
         // => @media (min-width: 8500px) { ... }
-
         laptop: '1024px',
         // => @media (min-width: 1024px) { ... }
-
         desktop: '1280px',
+        // => @media (min-width: 1280px) { ... }
+        smmobile: '335px',
         // => @media (min-width: 1280px) { ... }
       },
     },

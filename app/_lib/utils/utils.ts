@@ -34,3 +34,16 @@ export const getRandomImages = (imgArray: ImageArray) => {
 export const numberSeparator = (num: number): string => {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };
+
+export const priceFormatter = (price: number): string => {
+  if (Number.isInteger(price)) {
+    return price.toFixed(2);
+  } else {
+    const decimalCount = price.toString().split('.')[1].length;
+    if (decimalCount === 1) return price.toFixed(2);
+    else {
+      return price.toString();
+    }
+  }
+  return '';
+};

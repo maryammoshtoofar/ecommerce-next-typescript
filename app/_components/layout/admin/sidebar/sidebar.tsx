@@ -1,6 +1,6 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import Item from '@/app/_components/widgets/admin-nav-item/admin-nav-item';
+import Item from '@/app/_components/widgets/admin/nav-item/nav-item';
 import {
   FaShop,
   FaGear,
@@ -20,17 +20,31 @@ import {
   STOCKPRICE,
   USERS,
 } from '@/app/_config/routes';
+import { useEffect, useState } from 'react';
 
-type Props = {};
-
-const Sidebar = (props: Props) => {
+const Sidebar = () => {
   const pathname = usePathname();
-
   const isActive = (path: string): boolean => {
     return pathname === path ? true : false;
   };
+  const [scrolled, setScrolled] = useState(false);
+  const handleScroll = () => {
+    if (window.scrollY > 100) setScrolled(true);
+    else setScrolled(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <nav className="sm:admin-nav-glow relative col-span-2 flex min-h-full justify-between px-8 py-2 pt-6 transition-all sm:row-span-3 sm:flex-col sm:items-center sm:justify-normal  sm:gap-6 sm:bg-coffee-190 sm:px-0 sm:py-8 lg:col-span-3 2xl:items-start 2xl:ps-10">
+    <nav
+      className={`sm:admin-nav-glow sticky top-0 col-span-2 flex justify-between px-2 py-2 pt-6 transition-all sm:row-span-3 sm:h-screen sm:flex-col sm:items-center sm:justify-normal  sm:gap-6 sm:bg-coffee-190 sm:px-0 sm:py-8 lg:col-span-3 2xl:items-start 2xl:ps-10 ${
+        scrolled ? 'bg-coffee-690' : ''
+      }`}
+    >
       <Logo className="m-auto w-20 lg:w-32" adminStyle="hidden sm:inline" />
       <Item
         active={isActive(DASHBOARD)}
@@ -60,10 +74,18 @@ const Sidebar = (props: Props) => {
       >
         Stock - Price
       </Item>
-      <Item active={isActive(USERS)} component={<FaUsers />} href={USERS}>
+      <Item
+        active={isActive(USERS)}
+        component={<FaUsers />}
+        href={USERS}
+      >
         Users
       </Item>
-      <Item active={isActive(SETTINGS)} component={<FaGear />} href={SETTINGS}>
+      <Item
+        active={isActive(SETTINGS)}
+        component={<FaGear />}
+        href={SETTINGS}
+      >
         Settings
       </Item>
       <Item

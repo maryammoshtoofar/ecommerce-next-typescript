@@ -404,6 +404,9 @@
 }
 
 /* pure css rules */
+* {
+  box-sizing: border-box;
+}
 
 .swiper-slide {
   height: auto !important;
