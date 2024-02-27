@@ -22,6 +22,7 @@ const Table = (props: UIComponent) => {
             <TableHeadCell>
               <Checkbox />
             </TableHeadCell>
+            <TableHeadCell component={MdOutlineImage}>image</TableHeadCell>
             <TableHeadCell component={FaHashtag}>ID</TableHeadCell>
             <TableHeadCell component={MdOutlineSubtitles}>name</TableHeadCell>
             <TableHeadCell component={MdOutlineCategory}>

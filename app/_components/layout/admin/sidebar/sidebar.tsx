@@ -67,13 +67,13 @@ const Sidebar = () => {
       >
         Orders
       </Item>
-      <Item
+      {/* <Item
         active={isActive(STOCK)}
         component={<MdDiscount />}
         href={STOCK}
       >
         Stock
-      </Item>
+      </Item> */}
       <Item active={isActive(USERS)} component={<FaUsers />} href={USERS}>
         Users
       </Item>

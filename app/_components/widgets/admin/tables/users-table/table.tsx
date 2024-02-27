@@ -1,12 +1,15 @@
 import { UIComponent } from '@/app/_types/types';
 import {
+  MdOutlineInventory,
   MdOutlineAttachMoney,
-  MdOutlineAccountCircle,
+  MdOutlineImage,
+  MdOutlineSubtitles,
+  MdOutlineCategory,
   MdGridOn,
 } from 'react-icons/md';
-import { GrStatusInfo } from 'react-icons/gr';
-import { MdDateRange } from 'react-icons/md';
 import { FaHashtag } from 'react-icons/fa';
+import { GoNumber } from 'react-icons/go';
+import { FaRegStar } from 'react-icons/fa';
 import TableHeadCell from '../../../../base/admin/table-head-cell/table-head-cell';
 import Checkbox from '@/app/_components/base/checkbox/checkbox';
 
@@ -19,16 +22,12 @@ const Table = (props: UIComponent) => {
             <TableHeadCell>
               <Checkbox />
             </TableHeadCell>
-
             <TableHeadCell component={FaHashtag}>ID</TableHeadCell>
-            <TableHeadCell component={MdDateRange}>date</TableHeadCell>
-            <TableHeadCell component={MdOutlineAccountCircle}>
-              user
+            <TableHeadCell component={MdOutlineImage}>user</TableHeadCell>
+            <TableHeadCell component={MdOutlineImage}>user name</TableHeadCell>
+            <TableHeadCell component={MdOutlineCategory}>
+              email
             </TableHeadCell>
-            <TableHeadCell component={MdOutlineAttachMoney}>
-              total price
-            </TableHeadCell>
-            <TableHeadCell component={GrStatusInfo}>status</TableHeadCell>
             <TableHeadCell component={MdGridOn}>actions</TableHeadCell>
           </tr>
         </thead>

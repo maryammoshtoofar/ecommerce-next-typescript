@@ -1,5 +1,5 @@
 import Title from '@/app/_components/base/admin/section-title/section-title';
-import Section from '@/app/_components/widgets/admin/section/section';
+import Section from '@/app/_components/base/containers/section/section';
 import React from 'react';
 
 type Props = {};
