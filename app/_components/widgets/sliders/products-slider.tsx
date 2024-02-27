@@ -6,7 +6,7 @@ import { SwiperOptions } from 'swiper/types/swiper-options';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Slide from '../slides/product-slide';
+import Slide from '@/app/_components/widgets/slides/product-slide';
 import { recommendedProducts } from '@/app/_lib/recommended-products';
 
 const ProductSlider = () => {

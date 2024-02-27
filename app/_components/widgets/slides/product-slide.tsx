@@ -31,7 +31,6 @@ const ProductSlide = (props: ProductSlideProps) => {
       </div>
       <p className="text-md w-full rounded-b-xl bg-coffee-660 py-5 text-center capitalize text-white">
         {shortenDescription(`${title} | ${type}`, 20)}
-        {/* {title} | {type} */}
       </p>
     </Card>
   );
