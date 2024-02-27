@@ -4,12 +4,12 @@ import React from 'react';
 
 type Props = {};
 
-const Users = (props: Props) => {
+const StockPrice = (props: Props) => {
   return (
     <Section>
-      <Title>Users</Title>
+      <Title>stock-price</Title>
     </Section>
   );
 };
 
-export default Users;
+export default StockPrice;

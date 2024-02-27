@@ -23,7 +23,7 @@ const Header = (props: Props) => {
   }, []);
   return (
     <header
-      className={`sticky top-20  grid grid-cols-12 items-center gap-4 pb-6 ps-2 sm:top-0  sm:col-span-12 sm:pt-4 lg:top-0 xl:gap-12 ${
+      className={`sticky top-20 z-50  grid grid-cols-12 items-center gap-4 pb-6 ps-2 sm:top-0  sm:col-span-12 sm:pt-4 lg:top-0 xl:gap-12 ${
         scrolled ? ' bg-coffee-690' : ''
       }`}
     >

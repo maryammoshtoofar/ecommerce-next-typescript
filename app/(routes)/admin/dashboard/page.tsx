@@ -1,14 +1,18 @@
+import Container from '@/app/_components/base/containers/dashboard-cards-container/cards-container';
 import Card from '@/app/_components/widgets/admin/dashboard-card/dashboard-card';
 import SalesChart from '@/app/_components/widgets/admin/sales-chart/sales-chart';
+import Title from '@/app/_components/base/admin/section-title/section-title';
+import Section from '@/app/_components/base/containers/section/section';
 import TrendingProducts from '@/app/_components/widgets/admin/trending-products/trending-products';
-import React from 'react';
+import WidgetsContainer from '@/app/_components/base/containers/dashboard-widgets-container/widgets-container';
 import { FiShoppingBag } from 'react-icons/fi';
 import { FiUser } from 'react-icons/fi';
 import { FiShoppingCart } from 'react-icons/fi';
 const Dashboard = () => {
   return (
-    <section className="col-span-12 row-start-2 grid p-4">
-      <div className="grid grid-cols-12 gap-4">
+    <Section>
+      <Title>dashboard</Title>
+      <Container>
         <Card
           title="total orders"
           percentage={-2.33}
@@ -30,12 +34,12 @@ const Dashboard = () => {
           component={<FiShoppingCart />}
           progress={55}
         />
-      </div>
-      <div className="mt-6 flex flex-col justify-between gap-4 lg:flex-row">
+      </Container>
+      <WidgetsContainer>
         <SalesChart />
         <TrendingProducts />
-      </div>
-    </section>
+      </WidgetsContainer>
+    </Section>
   );
 };
 

@@ -17,7 +17,7 @@ import {
   INVENTORY,
   ORDERS,
   SETTINGS,
-  STOCKPRICE,
+  STOCK,
   USERS,
 } from '@/app/_config/routes';
 import { useEffect, useState } from 'react';
@@ -41,7 +41,7 @@ const Sidebar = () => {
   }, []);
   return (
     <nav
-      className={`sm:admin-nav-glow sticky top-0 col-span-2 flex justify-between px-2 py-2 pt-6 transition-all sm:row-span-3 sm:h-screen sm:flex-col sm:items-center sm:justify-normal  sm:gap-6 sm:bg-coffee-190 sm:px-0 sm:py-8 lg:col-span-3 2xl:items-start 2xl:ps-10 ${
+      className={`sm:admin-nav-glow sticky top-0 z-50 col-span-2 flex justify-between px-2 py-2 pt-6 transition-all sm:row-span-3 sm:h-screen sm:flex-col sm:items-center sm:justify-normal  sm:gap-6 sm:bg-coffee-190 sm:px-0 sm:py-8 lg:col-span-3 2xl:items-start 2xl:ps-10 ${
         scrolled ? 'bg-coffee-690' : ''
       }`}
     >
@@ -68,24 +68,16 @@ const Sidebar = () => {
         Orders
       </Item>
       <Item
-        active={isActive(STOCKPRICE)}
+        active={isActive(STOCK)}
         component={<MdDiscount />}
-        href={STOCKPRICE}
+        href={STOCK}
       >
-        Stock - Price
+        Stock
       </Item>
-      <Item
-        active={isActive(USERS)}
-        component={<FaUsers />}
-        href={USERS}
-      >
+      <Item active={isActive(USERS)} component={<FaUsers />} href={USERS}>
         Users
       </Item>
-      <Item
-        active={isActive(SETTINGS)}
-        component={<FaGear />}
-        href={SETTINGS}
-      >
+      <Item active={isActive(SETTINGS)} component={<FaGear />} href={SETTINGS}>
         Settings
       </Item>
       <Item

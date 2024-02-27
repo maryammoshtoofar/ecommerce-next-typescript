@@ -1,12 +1,11 @@
 import { StarRatingProps } from '@/app/_types/types';
 import { fillRatingStars } from '@/app/_lib/utils/utils';
-import React from 'react';
 import { FaRegStar, FaStar, FaStarHalfAlt } from 'react-icons/fa';
 
 const StarRating = (props: StarRatingProps) => {
   const starRating = fillRatingStars(props.rating);
   return (
-    <span className="my-6 flex text-coffee-70">
+    <span className={`my-6 flex text-coffee-70 ${props.tailwind} `}>
       {starRating.map((star, index) => {
         switch (star) {
           case 'fill':

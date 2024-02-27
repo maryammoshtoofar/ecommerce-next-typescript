@@ -44,8 +44,9 @@ const SalesChart = (props: Props) => {
           See all
         </span>
       </div>
-      {/* <Line data={data} /> */}
+      <Line data={data} />
     </article>
+    
   );
 };
 

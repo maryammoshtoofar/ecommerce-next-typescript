@@ -1,9 +1,12 @@
-import React from 'react';
+import Title from '@/app/_components/base/admin/section-title/section-title';
+import Section from '@/app/_components/widgets/admin/section/section';
 
-type Props = {};
-
-const Settings = (props: Props) => {
-  return <section>ADMIN Settings</section>;
+const Settings = () => {
+  return (
+    <Section>
+      <Title>settings</Title>
+    </Section>
+  );
 };
 
 export default Settings;

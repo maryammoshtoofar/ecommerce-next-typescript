@@ -16,7 +16,7 @@ export const LOCATIONS = '/locations';
 export const DASHBOARD = '/admin/dashboard';
 export const INVENTORY = '/admin/inventory';
 export const ORDERS = '/admin/orders';
-export const STOCKPRICE = '/admin/stock-price';
+export const STOCK = '/admin/stock';
 export const USERS = '/admin/users';
 export const SETTINGS = '/admin/settings';
 
