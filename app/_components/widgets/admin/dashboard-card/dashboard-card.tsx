@@ -1,5 +1,5 @@
 import { numberSeparator } from '@/app/_lib/utils/utils';
-import { UIComponent } from '@/app/_types/types';
+import { UIComponent } from '@/app/_types/componenet-types';
 import clsx from 'clsx';
 
 type Props = UIComponent & {

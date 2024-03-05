@@ -1,4 +1,4 @@
-import { InputProps } from '@/app/_types/types';
+import { InputProps } from '@/app/_types/componenet-types';
 
 const Input = (props: InputProps) => {
   return (

@@ -1,8 +1,8 @@
-import { StarRatingProps } from '@/app/_types/types';
+import { StarRatingProps } from '@/app/_types/componenet-types';
 import { fillRatingStars } from '@/app/_lib/utils/utils';
 import { FaRegStar, FaStar, FaStarHalfAlt } from 'react-icons/fa';
 
-const StarRating = ({rating,tailwind}: StarRatingProps) => {
+const StarRating = ({ rating, tailwind }: StarRatingProps) => {
   const starRating = fillRatingStars(rating);
   return (
     <span className={`my-6 flex text-coffee-70 ${tailwind} `}>

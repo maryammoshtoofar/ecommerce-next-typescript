@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { AboutSlideProps } from '@/app/_types/types';
+import { AboutSlideProps } from '@/app/_types/componenet-types';
 import Card from '../card/card';
 import {
   generateCaptionLength,

@@ -1,4 +1,4 @@
-import { TabProps } from '@/app/_types/types';
+import { TabProps } from '@/app/_types/componenet-types';
 import clsx from 'clsx';
 
 const Tab = (props: TabProps) => {
@@ -11,7 +11,7 @@ const Tab = (props: TabProps) => {
         onClick={() => changeActiveTab(props.tabNumber)}
         className={clsx(
           ' cursor-pointer border-coffee-70 pb-2 text-3xl text-coffee-70',
-         { 'border-b-2': props.active,}
+          { 'border-b-2': props.active },
         )}
       >
         {props.children}

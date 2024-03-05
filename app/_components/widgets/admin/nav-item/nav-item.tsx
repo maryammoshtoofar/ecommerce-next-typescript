@@ -1,4 +1,4 @@
-import { AdminNavItemProps } from '@/app/_types/types';
+import { AdminNavItemProps } from '@/app/_types/componenet-types';
 import { Route } from 'next';
 import Link from 'next/link';
 import clsx from 'clsx';

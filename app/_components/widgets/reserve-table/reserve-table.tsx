@@ -1,4 +1,4 @@
-import { UIComponent } from '@/app/_types/types';
+import { UIComponent } from '@/app/_types/componenet-types';
 import Image from 'next/image';
 import cupAndPeople from '@/app/_assets/cup-and-people.png';
 import Input from '@/app/_components/base/input/input';

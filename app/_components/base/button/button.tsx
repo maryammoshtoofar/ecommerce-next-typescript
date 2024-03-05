@@ -1,4 +1,4 @@
-import { ButtonProps } from '@/app/_types/types';
+import { ButtonProps } from '@/app/_types/componenet-types';
 import clsx from 'clsx';
 
 const Button = ({

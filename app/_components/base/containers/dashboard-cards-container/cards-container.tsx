@@ -1,4 +1,4 @@
-import { UIComponent } from '@/app/_types/types';
+import { UIComponent } from '@/app/_types/componenet-types';
 
 const Container = (props: UIComponent) => {
   return <div className="grid grid-cols-12 gap-4">{props.children}</div>;

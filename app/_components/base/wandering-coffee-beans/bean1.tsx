@@ -1,4 +1,4 @@
-import { UIComponent } from '@/app/_types/types';
+import { UIComponent } from '@/app/_types/componenet-types';
 
 const Bean1 = (props: UIComponent) => {
   return (

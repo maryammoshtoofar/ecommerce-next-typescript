@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { TestimonialsSlideProps } from '@/app/_types/types';
+import { TestimonialsSlideProps } from '@/app/_types/componenet-types';
 import Card from '../card/card';
 import StarRating from '../star-rating/star-rating';
 import { FaQuoteRight } from 'react-icons/fa';

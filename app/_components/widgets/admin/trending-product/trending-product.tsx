@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
-import { UIComponent } from '@/app/_types/types';
+import { UIComponent } from '@/app/_types/componenet-types';
 import { priceFormatter } from '@/app/_lib/utils/utils';
 
 type Props = UIComponent & {

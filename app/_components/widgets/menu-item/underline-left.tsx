@@ -1,4 +1,4 @@
-import { UIComponent } from '@/app/_types/types';
+import { UIComponent } from '@/app/_types/componenet-types';
 import Image from 'next/image';
 import underlineLeft from '@/public/img/underline-left.png';
 const UnderLineLeft = (props: UIComponent) => {

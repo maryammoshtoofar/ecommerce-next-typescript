@@ -1,4 +1,4 @@
-import { UIComponent } from '@/app/_types/types';
+import { UIComponent } from '@/app/_types/componenet-types';
 import {
   MdOutlineInventory,
   MdOutlineAttachMoney,
@@ -25,9 +25,7 @@ const Table = (props: UIComponent) => {
             <TableHeadCell component={FaHashtag}>ID</TableHeadCell>
             <TableHeadCell component={MdOutlineImage}>user</TableHeadCell>
             <TableHeadCell component={MdOutlineImage}>user name</TableHeadCell>
-            <TableHeadCell component={MdOutlineCategory}>
-              email
-            </TableHeadCell>
+            <TableHeadCell component={MdOutlineCategory}>email</TableHeadCell>
             <TableHeadCell component={MdGridOn}>actions</TableHeadCell>
           </tr>
         </thead>

@@ -1,4 +1,4 @@
-import { UIComponent } from '@/app/_types/types';
+import { UIComponent } from '@/app/_types/componenet-types';
 import Image from 'next/image';
 import menuPicMan from '@/public/img/menu-pic-man.png';
 import menuPicWoman from '@/public/img/menu-pic-woman.png';

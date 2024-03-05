@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { UIComponent } from '@/app/_types/types';
+import { UIComponent } from '@/app/_types/componenet-types';
 import Card from '../card/card';
 import Button from '@/app/_components/base/button/button';
 import coffeePackages from '@/app/_assets/coffee-packages.png';
