@@ -1,6 +1,6 @@
 import Title from '@/app/_components/base/admin/section-title/section-title';
 import Section from '@/app/_components/base/containers/section/section';
-import SettingItem from '@/app/_components/widgets/admin/setting-item/setting-item';
+import Item from '@/app/_components/widgets/admin/setting-item/setting-item';
 import SettingsSection from '@/app/_components/widgets/admin/settings-section/settings-section';
 import { TbArrowsRightLeft } from 'react-icons/tb';
 import {
@@ -20,27 +20,25 @@ const Settings = () => {
     <Section>
       <Title>settings</Title>
       <SettingsSection title="system">
-        <SettingItem component={<FaGears />}>general</SettingItem>
-        <SettingItem component={<TbArrowsRightLeft />}>routes</SettingItem>
-        <SettingItem component={<FaRegEnvelope />}>email</SettingItem>
-        <SettingItem component={<MdOutlineOutlet />}>plugins</SettingItem>
+        <Item component={<FaGears />}>general</Item>
+        <Item component={<TbArrowsRightLeft />}>routes</Item>
+        <Item component={<FaRegEnvelope />}>email</Item>
+        <Item component={<MdOutlineOutlet />}>plugins</Item>
       </SettingsSection>
       <SettingsSection title="content">
-        <SettingItem component={<FaRegEdit />}>fields</SettingItem>
-        <SettingItem component={<IoNewspaperOutline />}>sections</SettingItem>
-        <SettingItem component={<IoMdImages />}>assets</SettingItem>
-        <SettingItem component={<BsGlobe />}>globals</SettingItem>
-        <SettingItem component={<IoFileTrayStacked />}>categories</SettingItem>
-        <SettingItem component={<BsFillTagsFill />}>tags</SettingItem>
+        <Item component={<FaRegEdit />}>fields</Item>
+        <Item component={<IoNewspaperOutline />}>sections</Item>
+        <Item component={<IoMdImages />}>assets</Item>
+        <Item component={<BsGlobe />}>globals</Item>
+        <Item component={<IoFileTrayStacked />}>categories</Item>
+        <Item component={<BsFillTagsFill />}>tags</Item>
       </SettingsSection>
       <SettingsSection title="tools">
-        <SettingItem component={<IoMdImages />}>update asset</SettingItem>
-        <SettingItem component={<FaRegTrashAlt />}>clear cache</SettingItem>
-        <SettingItem component={<FaDatabase />}>backup</SettingItem>
-        <SettingItem component={<BsMagic />}>find & replace</SettingItem>
-        <SettingItem component={<FaSearch />}>
-          search
-        </SettingItem>
+        <Item component={<IoMdImages />}>update asset</Item>
+        <Item component={<FaRegTrashAlt />}>clear cache</Item>
+        <Item component={<FaDatabase />}>backup</Item>
+        <Item component={<BsMagic />}>find & replace</Item>
+        <Item component={<FaSearch />}>search</Item>
       </SettingsSection>
     </Section>
   );

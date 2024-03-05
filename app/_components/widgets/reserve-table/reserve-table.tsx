@@ -49,7 +49,6 @@ const ReserveTable = (props: UIComponent) => {
           />
           <Button
             label="Reserve"
-            tailwind="reserve-table-btn"
             mode="secondary"
             component={<TbReservedLine />}
           />

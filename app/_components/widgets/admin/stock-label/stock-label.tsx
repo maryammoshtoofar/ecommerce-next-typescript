@@ -1,8 +1,17 @@
 import { UIComponent } from '@/app/_types/types';
-const StockLabel = (props: UIComponent) => {
+import clsx from 'clsx';
+type Props = UIComponent & {
+  stock: boolean;
+};
+const StockLabel = ({ stock, children, tailwind }: Props) => {
   return (
-    <span className={`uppercase rounded-lg text-sm ${props.tailwind} `}>
-      {props.children}
+    <span
+      className={clsx(`rounded-lg text-sm uppercase ${tailwind} `, {
+        'text-green-400 ': stock,
+        'text-red-500': !stock,
+      })}
+    >
+      {children}
     </span>
   );
 };

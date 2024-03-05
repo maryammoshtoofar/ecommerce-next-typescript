@@ -94,18 +94,7 @@
 }
 
 @layer components {
-  .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-[3rem] border-2 border-coffee-610 px-9 py-2 font-slab  text-sm capitalize text-coffee-70 md:text-xl;
-  }
-  .btn-primary {
-    @apply bg-coffee-600;
-  }
-  .btn-secondary {
-    @apply bg-coffee-620;
-  }
-  .btn-tertiary {
-    @apply bg-coffee-610;
-  }
+
   .main {
     @apply bg-[linear-gradient(to_left,_#7C573C_0%_50%,_#221518_14%_50%)];
   }
@@ -117,12 +106,6 @@
   }
   .nav-menu {
     @apply hidden md:col-start-10 md:col-end-18 md:flex lg:text-lg xl:text-2xl;
-  }
-  .nav-menu-btn {
-    @apply hover:nav-menu-btn-hover flex h-20 w-full items-end justify-center rounded-b-3xl py-5 pe-2 ps-1 text-coffee-10 transition-colors delay-150 duration-300 ease-in-out lg:px-3;
-  }
-  .nav-menu-btn-hover {
-    @apply bg-[linear-gradient(94deg,_rgba(223,195,157,0.40)_-9.94%,_rgba(248,228,190,0.40)_19.83%,_rgba(223,195,157,0.40)_50.71%,_rgba(248,228,190,0.40)_81.26%,_rgba(248,228,190,0.40)_111.66%)] backdrop-blur-sm;
   }
   .nav-icons-menu {
     @apply col-start-17 mt-2 flex gap-1 justify-self-end md:col-start-9 md:justify-self-start;
@@ -170,9 +153,6 @@
   .hero-coffee-card-text {
     @apply gradient-text whitespace-nowrap font-dancing text-2xl md:text-3xl xl:text-4xl;
   }
-  .hero-coffee-card-btn {
-    @apply my-5 border bg-transparent px-2 text-lg font-thin md:absolute md:-bottom-1 md:right-2 md:h-1/5 md:w-24 md:text-xs lg:h-8 lg:w-32 xl:w-40;
-  }
   .about-slider-section {
     @apply relative w-5/6 py-12;
   }
@@ -188,9 +168,7 @@
   .about-slide-caption {
     @apply box-border justify-self-end text-sm capitalize  text-white md:text-lg md:leading-10 lg:w-1/2;
   }
-  .about-slide-btn {
-    @apply cursor-pointer self-end text-white underline;
-  }
+
   .services-section {
     @apply mb-6 flex flex-col items-center gap-12;
   }
@@ -221,9 +199,6 @@
   .offer-card-caption {
     @apply mb-4 text-lg leading-10 text-white;
   }
-  .offer-card-btn {
-    @apply w-2/3 sm:w-auto lg:w-2/3 xl:w-2/5;
-  }
   .offer-card-img {
     @apply h-full w-full sm:w-80 lg:w-2/5;
   }
@@ -241,9 +216,6 @@
   }
   .reserve-table-inputs-flexed {
     @apply flex flex-col items-center gap-6 md:flex-row md:gap-3;
-  }
-  .reserve-table-btn {
-    @apply w-1/2 py-2 text-lg;
   }
   .product-slider-section {
     @apply relative w-5/6 py-12;

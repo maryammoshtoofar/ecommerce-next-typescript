@@ -4,6 +4,7 @@ import Input from '@/app/_components/base/input/input';
 import ProfileSection from '@/app/_components/widgets/admin/profile-section/profile-section';
 import { FiSearch } from 'react-icons/fi';
 import { useEffect, useState } from 'react';
+import clsx from 'clsx';
 
 type Props = {};
 
@@ -22,14 +23,17 @@ const Header = (props: Props) => {
     };
   }, []);
   return (
-    <header
-      className={`sticky top-20 z-50  grid grid-cols-12 items-center gap-4 pb-6 ps-2 sm:top-0  sm:col-span-12 sm:pt-4 lg:top-0 xl:gap-12 ${
-        scrolled ? ' bg-coffee-690' : ''
-      }`}
-    >
+      <header
+        className={clsx(
+          'sticky top-20 z-50  grid grid-cols-12 items-center gap-4 pb-6 ps-2 sm:top-0  sm:col-span-12 sm:pt-4 lg:top-0 xl:gap-12',
+          {
+            'bg-coffee-690': scrolled,
+          },
+        )}
+      >
       <div className="col-span-6 xl:col-span-4">
         <h1
-          className={`smmobile:text-2xl font-dancing text-xl font-bold capitalize text-coffee-360  sm:text-3xl lg:text-4xl `}
+          className={`font-dancing text-xl font-bold capitalize text-coffee-360 smmobile:text-2xl  sm:text-3xl lg:text-4xl `}
         >
           brewmaster's hub
         </h1>

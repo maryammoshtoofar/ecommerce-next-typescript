@@ -21,6 +21,7 @@ import {
   USERS,
 } from '@/app/_config/routes';
 import { useEffect, useState } from 'react';
+import clsx from 'clsx';
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -41,9 +42,10 @@ const Sidebar = () => {
   }, []);
   return (
     <nav
-      className={`sm:admin-nav-glow sticky top-0 z-50 col-span-2 flex justify-between px-2 py-2 pt-6 transition-all sm:row-span-3 sm:h-screen sm:flex-col sm:items-center sm:justify-normal  sm:gap-6 sm:bg-coffee-190 sm:px-0 sm:py-8 lg:col-span-3 2xl:items-start 2xl:ps-10 ${
-        scrolled ? 'bg-coffee-690' : ''
-      }`}
+      className={clsx(
+        'sm:admin-nav-glow sticky top-0 z-50 col-span-2 flex justify-between px-2 py-2 pt-6 transition-all sm:row-span-3 sm:h-screen sm:flex-col sm:items-center sm:justify-normal  sm:gap-6 sm:bg-coffee-190 sm:px-0 sm:py-8 lg:col-span-3 2xl:items-start 2xl:ps-10',
+        { 'bg-coffee-690': scrolled },
+      )}
     >
       <Logo className="m-auto w-20 lg:w-32" adminStyle="hidden sm:inline" />
       <Item
@@ -87,7 +89,7 @@ const Sidebar = () => {
       >
         Log Out
       </Item>
-      <span className="absolute bottom-2 hidden rounded-full bg-coffee-80 p-3  sm:-right-4  sm:inline lg:hidden ">
+      <span className="absolute bottom-2 hidden rounded-full bg-coffee-80 p-3 sm:-right-4 sm:inline lg:hidden ">
         <FaChevronRight />
       </span>
     </nav>

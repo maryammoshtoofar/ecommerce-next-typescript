@@ -19,7 +19,11 @@ const Hero = () => {
           <p className="hero-para-2">Search for your coffee now</p>
           <div className="hero-button-container">
             <Link href={PRODUCTS}>
-              <Button mode="primary" label="Shop Now" tailwind="hero-cta" />
+              <Button
+                mode="primary"
+                label="Shop Now"
+                tailwind="hidden whitespace-nowrap md:block"
+              />
             </Link>
             <Link href={CATALOG}>
               <Button mode="secondary" label="Catalog" />
@@ -33,7 +37,7 @@ const Hero = () => {
         <Link href={ORDER}>
           <Button
             label="Hurry Up"
-            tailwind="hero-coffee-card-btn"
+            tailwind="my-5 border bg-transparent px-2 text-lg font-thin md:absolute md:-bottom-1 md:right-2 md:h-1/5 md:w-24 md:text-xs lg:h-8 lg:w-32 xl:w-40;"
             component={<FaMotorcycle />}
           />
         </Link>

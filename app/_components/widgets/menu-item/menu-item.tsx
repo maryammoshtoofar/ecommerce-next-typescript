@@ -1,20 +1,22 @@
 import { MenuItemProps } from '@/app/_types/types';
+import clsx from 'clsx';
 import UnderlineLeft from './underline-left';
 import UnderLineRight from './underline-right';
 
-const MenuItem = (props: MenuItemProps) => {
+const MenuItem = ({ dir, tailwind, price, name }: MenuItemProps) => {
   return (
-    <li className={props.tailwind}>
+    <li className={tailwind}>
       <div
-        className={`menu-item-text  ${
-          props.dir === 'left' ? ' ps-6 lg:flex-row' : 'pe-6'
-        }`}
+        className={clsx('menu-item-text', {
+          'ps-6 lg:flex-row': dir === 'left',
+          'pe-6': dir !== 'left',
+        })}
       >
-        <span className="menu-item-price">${props.price}.00</span>
-        <span className="menu-item-name">{props.name}</span>
+        <span className="menu-item-price">${price}.00</span>
+        <span className="menu-item-name">{name}</span>
       </div>
       <div className="menu-underline">
-        {props.dir === 'left' ? <UnderlineLeft /> : <UnderLineRight />}
+        {dir === 'left' ? <UnderlineLeft /> : <UnderLineRight />}
       </div>
     </li>
   );

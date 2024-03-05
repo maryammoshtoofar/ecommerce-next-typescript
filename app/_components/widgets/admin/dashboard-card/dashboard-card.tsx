@@ -1,5 +1,6 @@
 import { numberSeparator } from '@/app/_lib/utils/utils';
 import { UIComponent } from '@/app/_types/types';
+import clsx from 'clsx';
 
 type Props = UIComponent & {
   title: string;
@@ -18,9 +19,10 @@ const Card = ({ title, component, percentage, amount, progress }: Props) => {
         <div>
           <h2 className="text-xl capitalize">{title}</h2>
           <span
-            className={`${
-              percentage > 0 ? 'text-green-500' : 'text-red-600'
-            } font-bold`}
+            className={clsx(' font-bold', {
+              'text-green-500': percentage > 0,
+              'text-red-600': percentage < 0,
+            })}
           >
             {percentage > 0 && '+'}
             {percentage}%

@@ -36,8 +36,7 @@ const ProductsRow = ({
   quantity,
   rating,
 }: Props) => {
-  const stockLabel = stock ? <FaCheck /> : <ImCross />;
-  const style = stock ? 'text-green-400 ' : 'text-red-500';
+  const stockIcon = stock ? <FaCheck /> : <ImCross />;
   return (
     <Row>
       <Cell>
@@ -58,7 +57,7 @@ const ProductsRow = ({
       </Cell>
       <Cell>
         <Flexbox>
-          <StockLabel tailwind={style}>{stockLabel}</StockLabel>
+          <StockLabel stock={stock}>{stockIcon}</StockLabel>
         </Flexbox>
       </Cell>
       <Cell>
