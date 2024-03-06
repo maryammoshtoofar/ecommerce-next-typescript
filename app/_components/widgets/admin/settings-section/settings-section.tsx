@@ -1,5 +1,5 @@
 import Title from '@/app/_components/base/admin/section-title/section-title';
-import { UIComponent } from '@/app/_types/componenet-types';
+import { UIComponent } from '@/app/_types/component-types';
 import React from 'react';
 
 type Props = UIComponent & {

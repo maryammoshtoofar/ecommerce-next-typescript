@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { UIComponent } from '@/app/_types/componenet-types';
+import { UIComponent } from '@/app/_types/component-types';
 import { services } from '@/app/_lib/services';
 import Card from '../card/card';
 import Bean2 from '@/app/_components/base/wandering-coffee-beans/bean2';

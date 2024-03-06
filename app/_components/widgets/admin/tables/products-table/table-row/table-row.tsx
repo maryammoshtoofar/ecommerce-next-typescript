@@ -1,5 +1,5 @@
 import Row from '@/app/_components/base/admin/table-row/table-row';
-import { UIComponent } from '@/app/_types/componenet-types';
+import { UIComponent } from '@/app/_types/component-types';
 import Image, { StaticImageData } from 'next/image';
 import StockLabel from '../../../stock-label/stock-label';
 import { FaCheck } from 'react-icons/fa';
@@ -14,6 +14,7 @@ import Cell from '../../../../../base/admin/table-cell/table-cell';
 import { TfiMoreAlt } from 'react-icons/tfi';
 import { FaStar } from 'react-icons/fa6';
 import Checkbox from '@/app/_components/base/checkbox/checkbox';
+import Link from 'next/link';
 
 type Props = UIComponent & {
   thumbnail: StaticImageData;
@@ -74,7 +75,10 @@ const ProductsRow = ({
       </Cell>
       <Cell customContainerStyle="flex lg:gap-3 text-lg text-coffee-100 ">
         <BiDetail className="hidden cursor-pointer transition-all hover:text-coffee-340 md:inline" />
-        <LuPencilLine className="hidden cursor-pointer transition-all hover:text-coffee-340  md:inline " />
+        <Link href="?show=true">
+          <LuPencilLine className="hidden cursor-pointer transition-all hover:text-coffee-340  md:inline " />
+        </Link>
+
         <LuTrash className="hidden cursor-pointer transition-all hover:text-red-400 md:inline" />
         <TfiMoreAlt className="cursor-pointer transition-all hover:text-coffee-340 md:hidden" />
       </Cell>

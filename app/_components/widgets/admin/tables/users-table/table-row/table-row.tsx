@@ -1,5 +1,5 @@
 import Row from '@/app/_components/base/admin/table-row/table-row';
-import { UIComponent } from '@/app/_types/componenet-types';
+import { UIComponent } from '@/app/_types/component-types';
 import Image, { StaticImageData } from 'next/image';
 import { BiDetail } from 'react-icons/bi';
 import { LuPencilLine } from 'react-icons/lu';

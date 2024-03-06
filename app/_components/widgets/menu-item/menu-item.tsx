@@ -1,4 +1,4 @@
-import { MenuItemProps } from '@/app/_types/componenet-types';
+import { MenuItemProps } from '@/app/_types/component-types';
 import clsx from 'clsx';
 import UnderlineLeft from './underline-left';
 import UnderLineRight from './underline-right';

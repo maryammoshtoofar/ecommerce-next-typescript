@@ -1,5 +1,5 @@
 import Flexbox from '@/app/_components/base/containers/flexbox/flexbox';
-import { UIComponent } from '@/app/_types/componenet-types';
+import { UIComponent } from '@/app/_types/component-types';
 type Props = UIComponent & {
   customContainerStyle?: string;
 };

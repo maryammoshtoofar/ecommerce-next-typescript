@@ -1,4 +1,4 @@
-import { StarRatingProps } from '@/app/_types/componenet-types';
+import { StarRatingProps } from '@/app/_types/component-types';
 import { fillRatingStars } from '@/app/_lib/utils/utils';
 import { FaRegStar, FaStar, FaStarHalfAlt } from 'react-icons/fa';
 

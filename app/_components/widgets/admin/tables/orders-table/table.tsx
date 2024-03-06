@@ -1,4 +1,4 @@
-import { UIComponent } from '@/app/_types/componenet-types';
+import { UIComponent } from '@/app/_types/component-types';
 import {
   MdOutlineAttachMoney,
   MdOutlineAccountCircle,

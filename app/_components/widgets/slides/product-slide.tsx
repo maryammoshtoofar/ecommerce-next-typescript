@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ProductSlideProps } from '@/app/_types/componenet-types';
+import { ProductSlideProps } from '@/app/_types/component-types';
 import Card from '../card/card';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { FiShoppingCart } from 'react-icons/fi';

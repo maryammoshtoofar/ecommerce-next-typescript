@@ -1,5 +1,5 @@
 import Row from '@/app/_components/base/admin/table-row/table-row';
-import { UIComponent } from '@/app/_types/componenet-types';
+import { UIComponent } from '@/app/_types/component-types';
 import Image, { StaticImageData } from 'next/image';
 import StockLabel from '../../../stock-label/stock-label';
 import { FaCheck } from 'react-icons/fa';

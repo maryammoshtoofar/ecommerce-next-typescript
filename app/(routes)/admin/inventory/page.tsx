@@ -5,10 +5,24 @@ import houseBlend from '@/public/img/thumbnails/house-blend.png';
 import robusta from '@/public/img/thumbnails/robusta.png';
 import Title from '@/app/_components/base/admin/section-title/section-title';
 import Section from '@/app/_components/base/containers/section/section';
-const Inventory = () => {
+import Modal from '@/app/_components/widgets/admin/add-product-modal/add-product-modal';
+import Flexbox from '@/app/_components/base/containers/flexbox/flexbox';
+import Button from '@/app/_components/base/button/button';
+import Link from 'next/link';
+type SearchParamProps = {
+  searchParams: Record<string, string> | null | undefined;
+};
+const Inventory = ({ searchParams }: SearchParamProps) => {
+  const show = searchParams?.show;
   return (
     <Section>
-      <Title>inventory</Title>
+      <Flexbox tailwind="justify-between">
+        <Title>inventory</Title>
+        <Link href="?show=true">
+          <Button label="add new product" />
+        </Link>
+      </Flexbox>
+
       <Table>
         <Row
           id="101-145-234975"
@@ -111,6 +125,7 @@ const Inventory = () => {
           rating={3.5}
         />
       </Table>
+      {show && <Modal />}
     </Section>
   );
 };

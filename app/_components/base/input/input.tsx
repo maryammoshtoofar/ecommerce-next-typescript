@@ -1,4 +1,4 @@
-import { InputProps } from '@/app/_types/componenet-types';
+import { InputProps } from '@/app/_types/component-types';
 
 const Input = (props: InputProps) => {
   return (
@@ -9,7 +9,7 @@ const Input = (props: InputProps) => {
       <input
         type={props.type}
         placeholder={props.placeholder}
-        className="w-full rounded-md py-2 ps-8 placeholder-coffee-150"
+        className="w-full rounded-md py-2 ps-8 placeholder-coffee-150 focus:border focus:outline-none"
       />
     </div>
   );

@@ -8,7 +8,7 @@ export type Product = {
   subcategory: { id: string; name: string };
   price: number;
   quantity: number;
-  rating: 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5;
+  rating: 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | null;
 };
 export type User = {
   id: string;

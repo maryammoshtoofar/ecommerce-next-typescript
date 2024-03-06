@@ -1,4 +1,4 @@
-import { TabProps } from '@/app/_types/componenet-types';
+import { TabProps } from '@/app/_types/component-types';
 import clsx from 'clsx';
 
 const Tab = (props: TabProps) => {
