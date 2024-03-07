@@ -12,6 +12,7 @@ import Link from 'next/link';
 type SearchParamProps = {
   searchParams: Record<string, string> | null | undefined;
 };
+
 const Inventory = ({ searchParams }: SearchParamProps) => {
   const show = searchParams?.show;
   return (
