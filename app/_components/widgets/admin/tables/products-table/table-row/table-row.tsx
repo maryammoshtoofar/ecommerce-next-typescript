@@ -4,7 +4,7 @@ import Image, { StaticImageData } from 'next/image';
 import StockLabel from '../../../stock-label/stock-label';
 import { FaCheck } from 'react-icons/fa';
 import { ImCross } from 'react-icons/im';
-import { priceFormatter } from '@/app/_lib/utils/utils';
+import { priceFormatter } from '@/app/_utils/utils';
 import StarRating from '@/app/_components/widgets/star-rating/star-rating';
 import { BiDetail } from 'react-icons/bi';
 import { LuPencilLine } from 'react-icons/lu';

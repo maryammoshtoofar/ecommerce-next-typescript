@@ -1,10 +1,7 @@
 import Image from 'next/image';
 import { BlogPostSlideProps } from '@/app/_types/component-types';
 import Card from '../card/card';
-import {
-  generateCaptionLength,
-  shortenDescription,
-} from '@/app/_lib/utils/utils';
+import { generateCaptionLength, shortenDescription } from '@/app/_utils/utils';
 import { useEffect, useState } from 'react';
 
 const BlogPostSlide = (props: BlogPostSlideProps) => {

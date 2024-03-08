@@ -1,4 +1,4 @@
-import '@/app/_lib/styles/globals.css';
+import '@/app/_styles/globals.css';
 import type { Metadata } from 'next';
 
 const LoginLayout = ({ children }: { children: React.ReactNode }) => {

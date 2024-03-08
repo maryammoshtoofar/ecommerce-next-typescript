@@ -1,1 +1,1 @@
-import connectMongoDB from '@/app/_lib/mongodb/mongodb';
+import connectMongoDB from '@/app/lib/mongodb/mongodb';

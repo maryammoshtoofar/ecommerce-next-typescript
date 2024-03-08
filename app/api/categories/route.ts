@@ -1,9 +1,13 @@
-import connectMongoDB from '@/app/_lib/mongodb/mongodb';
+import connectMongoDB from '@/app/lib/mongodb/mongodb';
 import Category, { CategoryI } from '@/app/_models/categories';
 import { NextResponse } from 'next/server';
 
-interface ReqI {
+export interface ReqI {
   json: () => PromiseLike<CategoryI> | CategoryI;
+}
+
+interface DeleteReqI {
+  nextUrl: { searchParams: { get: (arg0: string) => any } };
 }
 
 export async function POST(req: ReqI) {
@@ -14,5 +18,14 @@ export async function POST(req: ReqI) {
 }
 
 export async function GET() {
-  return NextResponse.json({ message: 'Category' }, { status: 200 });
+  await connectMongoDB();
+  const categories = await Category.find();
+  return NextResponse.json({ categories }, { status: 200 });
+}
+
+export async function DELETE(req: DeleteReqI) {
+  const id = req.nextUrl.searchParams.get('id');
+  await connectMongoDB();
+  await Category.findByIdAndDelete(id);
+  return NextResponse.json({ message: 'Category deleted' }, { status: 200 });
 }

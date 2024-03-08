@@ -1,5 +1,5 @@
 import { StarRatingProps } from '@/app/_types/component-types';
-import { fillRatingStars } from '@/app/_lib/utils/utils';
+import { fillRatingStars } from '@/app/_utils/utils';
 import { FaRegStar, FaStar, FaStarHalfAlt } from 'react-icons/fa';
 
 const StarRating = ({ rating, tailwind }: StarRatingProps) => {

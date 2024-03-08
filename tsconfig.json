@@ -30,7 +30,7 @@
     "postcss.config.js",
     "tailwind.config.ts",
     "app/utils/sortColors.js",
-    "app/_lib/mongodb/mongodb.ts"
+    "app/lib/mongodb/mongodb.ts"
   ],
   "exclude": ["node_modules"]
 }

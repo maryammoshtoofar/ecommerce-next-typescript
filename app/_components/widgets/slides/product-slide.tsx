@@ -5,7 +5,7 @@ import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { FiShoppingCart } from 'react-icons/fi';
 import { CiCoffeeBean } from 'react-icons/ci';
 import Icon from '@/app/_components/base/icon/icon';
-import { shortenDescription } from '@/app/_lib/utils/utils';
+import { shortenDescription } from '@/app/_utils/utils';
 const ProductSlide = (props: ProductSlideProps) => {
   const { id, img, alt, type, title } = props.slide;
   return (

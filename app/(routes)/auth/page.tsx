@@ -9,7 +9,7 @@ import { FaGoogle } from 'react-icons/fa';
 import Button from '@/app/_components/base/button/button';
 import { useState } from 'react';
 import { authImages } from '@/app/_lib/auth-images';
-import { getRandomImages } from '@/app/_lib/utils/utils';
+import { getRandomImages } from '@/app/_utils/utils';
 
 type Props = {};
 

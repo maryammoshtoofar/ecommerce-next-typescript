@@ -1,14 +1,17 @@
-'use client';
 import Input from '@/app/_components/base/input/input';
 import Label from '@/app/_components/base/label/label';
 import WYSIWYG from '../wysiwyg/wysiwyg';
 import Dropdown from '@/app/_components/base/dropdown/dropdown';
 import Flexbox from '@/app/_components/base/containers/flexbox/flexbox';
 import UploadBox from '../upload-box/upload-box';
-
-const AddProductForm = () => {
-  const categories = ['arabica', 'robusta', 'blend'];
-  const subcategories = ['latte', 'espresso', 'cappuccino'];
+import { getAllCategories } from '@/app/_http/categories/categories';
+import { getSubcategoriesByCategory } from '@/app/_http/subcategories/subcategories';
+const AddProductForm = async () => {
+  // const { data } = useGetCategoriesQuery();
+  const categories = await getAllCategories();
+  const subcategories = await getSubcategoriesByCategory(
+    '65e97b2dab0c99e20cd2f9fd',
+  );
   return (
     <form className="flex flex-col gap-4">
       <Label htmlFor="title" label="title" />

@@ -1,4 +1,4 @@
-import { numberSeparator } from '@/app/_lib/utils/utils';
+import { numberSeparator } from '@/app/_utils/utils';
 import { UIComponent } from '@/app/_types/component-types';
 import clsx from 'clsx';
 

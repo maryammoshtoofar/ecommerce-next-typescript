@@ -1,11 +1,10 @@
 import Card from '@/app/_components/widgets/card/card';
-import Slide from '@/app/_components/widgets/slides/product-slide';
 import Icon from '@/app/_components/base/icon/icon';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { FiShoppingCart } from 'react-icons/fi';
 import { products } from '@/app/_lib/products';
 import Image from 'next/image';
-import { shortenDescription } from '@/app/_lib/utils/utils';
+import { shortenDescription } from '@/app/_utils/utils';
 import Title from '@/app/_components/base/admin/section-title/section-title';
 
 const Products = () => {
@@ -27,7 +26,7 @@ const Products = () => {
             component={
               <FiShoppingCart
                 size={'1.5rem'}
-                className="absolute bottom-3 right-3 text-coffee-140 cursor-pointer "
+                className="absolute bottom-3 right-3 cursor-pointer text-coffee-140 "
               />
             }
           />

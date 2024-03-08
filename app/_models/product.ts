@@ -1,6 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 import { StaticImageData } from 'next/image';
-import { CategoryI, categorySchema } from './categories';
+import {  categorySchema } from './categories';
+import { CategoryI } from '../_types/data-types';
 
 interface ProductI {
   images: StaticImageData[];

@@ -1,9 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-export interface SubcategoryI {
-  category: string;
-  title: string;
-  description: string;
-}
+import { SubcategoryI } from '../_types/data-types';
 
 export const subcategorySchema = new Schema<SubcategoryI>({
   category: String,

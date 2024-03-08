@@ -1,11 +1,12 @@
 'use client';
+import { CategoryI } from '@/app/_models/categories';
 import { UIComponent } from '@/app/_types/component-types';
 import clsx from 'clsx';
 import { useState } from 'react';
 
 type DropDownProps = UIComponent & {
   title: string;
-  items: string[];
+  items: CategoryI[];
 };
 import { FaChevronDown } from 'react-icons/fa';
 const Dropdown = ({ items, title }: DropDownProps) => {
@@ -13,7 +14,6 @@ const Dropdown = ({ items, title }: DropDownProps) => {
   const [selected, setSelected] = useState(title);
 
   const toggleDropdown = () => {
-    console.log(selected);
     setIsOpen(!isOpen);
   };
 
@@ -44,11 +44,11 @@ const Dropdown = ({ items, title }: DropDownProps) => {
       >
         {items.map((item) => (
           <li
-            key={item}
+            key={item.title}
             className="w-full bg-white hover:bg-coffee-10"
-            onClick={() => handleChange(item)}
+            onClick={() => handleChange(item.title)}
           >
-            {item}
+            {item.title}
           </li>
         ))}
       </ul>

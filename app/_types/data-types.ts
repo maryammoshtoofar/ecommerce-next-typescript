@@ -25,3 +25,14 @@ export type Order = {
   total: number;
   status: 'pending' | 'paid' | 'cancelled' | 'delivered';
 };
+
+export interface CategoryI {
+  title: string;
+  description: string;
+}
+
+export interface SubcategoryI {
+  category: string;
+  title: string;
+  description: string;
+}

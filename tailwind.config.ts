@@ -1,4 +1,4 @@
-import { colors } from './app/_lib/styles/colors';
+import { colors } from './app/_styles/colors';
 import plugin from 'tailwindcss/plugin';
 
 export default {

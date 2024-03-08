@@ -1,4 +1,4 @@
-import '@/app/_lib/styles/globals.css';
+import '@/app/_styles/globals.css';
 import type { Metadata } from 'next';
 import { Dancing_Script, Roboto_Slab } from 'next/font/google';
 import { UIComponent } from './_types/component-types';
