@@ -27,11 +27,13 @@ export type Order = {
 };
 
 export interface CategoryI {
+  _id: string;
   title: string;
   description: string;
 }
 
 export interface SubcategoryI {
+  _id: string;
   category: string;
   title: string;
   description: string;

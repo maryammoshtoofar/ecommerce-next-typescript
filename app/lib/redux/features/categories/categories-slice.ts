@@ -1,19 +1,25 @@
-import { getAllCategories } from '@/app/_http/categories/categories';
 import { CategoryI } from '@/app/_types/data-types';
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 interface CategoryState {
-  categories: CategoryI[];
-  status: 'idle' | 'running' | 'complete';
-  error: null | string;
+  allCategories: CategoryI[] | null;
+  selectedCategory: CategoryI | null;
 }
 const initialState: CategoryState = {
-  categories: [],
-  status: 'idle',
-  error: null,
+  allCategories: [],
+  selectedCategory: null,
 };
-const categories = createSlice({
+const categoriesSlice = createSlice({
   name: 'categories',
   initialState: initialState,
-  reducers: {},
-  
+  reducers: {
+    setCategories(state, action) {
+      state.allCategories = action.payload;
+    },
+    selectCategory(state, action) {
+      state.selectedCategory = action.payload;
+    },
+  },
 });
+
+export const { selectCategory, setCategories } = categoriesSlice.actions;
+export default categoriesSlice.reducer;

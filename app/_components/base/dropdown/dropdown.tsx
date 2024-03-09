@@ -1,25 +1,29 @@
 'use client';
-import { CategoryI } from '@/app/_models/categories';
+import { CategoryI, SubcategoryI } from '@/app/_types/data-types';
 import { UIComponent } from '@/app/_types/component-types';
 import clsx from 'clsx';
 import { useState } from 'react';
+import { FaChevronDown } from 'react-icons/fa';
+import { useAppDispatch, useAppSelector } from '@/app/lib/redux/hooks';
+import { RootState } from '@/app/lib/redux/store';
 
+import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 type DropDownProps = UIComponent & {
   title: string;
-  items: CategoryI[];
+  items: CategoryI[] | SubcategoryI[] | null;
+  selectOption: ActionCreatorWithPayload<any, string>;
 };
-import { FaChevronDown } from 'react-icons/fa';
-const Dropdown = ({ items, title }: DropDownProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState(title);
+const Dropdown = ({ items, title, selectOption }: DropDownProps) => {
+  const dispatch = useAppDispatch();
 
+  const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleChange = (value: string) => {
+  const handleChange = (value: CategoryI) => {
     setIsOpen(!isOpen);
-    setSelected(value);
+    dispatch(selectOption(value));
   };
   return (
     <div className="relative capitalize text-coffee-140">
@@ -27,7 +31,7 @@ const Dropdown = ({ items, title }: DropDownProps) => {
         className="top-0 inline-flex w-full items-center justify-between border p-2"
         onClick={toggleDropdown}
       >
-        {selected}
+        {title}
         <FaChevronDown
           className="z-50 cursor-pointer"
           onClick={toggleDropdown}
@@ -42,15 +46,16 @@ const Dropdown = ({ items, title }: DropDownProps) => {
           },
         )}
       >
-        {items.map((item) => (
-          <li
-            key={item.title}
-            className="w-full bg-white hover:bg-coffee-10"
-            onClick={() => handleChange(item.title)}
-          >
-            {item.title}
-          </li>
-        ))}
+        {items &&
+          items.map((item) => (
+            <li
+              key={item._id}
+              className="w-full bg-white hover:bg-coffee-10"
+              onClick={() => handleChange(item)}
+            >
+              {item.title}
+            </li>
+          ))}
       </ul>
     </div>
   );
