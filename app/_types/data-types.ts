@@ -1,15 +1,15 @@
 import { StaticImageData } from 'next/image';
 
-export type Product = {
-  id: string;
+export interface ProductI {
   images: StaticImageData[];
   name: string;
-  category: { id: string; name: string };
-  subcategory: { id: string; name: string };
+  description: string;
+  category: CategoryI;
+  subcategory: CategoryI;
   price: number;
   quantity: number;
   rating: 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | null;
-};
+}
 export type User = {
   id: string;
   username: string;
@@ -21,7 +21,7 @@ export type User = {
 };
 export type Order = {
   id: string;
-  products: Product[];
+  products: ProductI[];
   total: number;
   status: 'pending' | 'paid' | 'cancelled' | 'delivered';
 };

@@ -1,24 +1,25 @@
-"use client"
+'use client';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { useEffect, useState } from 'react';
 
 const WYSIWYG = () => {
+  const [editor, setEditor] = useState<string>('');
+
+  useEffect(() => console.log('yo', editor), [editor]);
+
   return (
     <CKEditor
       editor={ClassicEditor}
       data="<p>Product Description</p>"
-      onReady={(editor) => {
-        // You can store the "editor" and use when it is needed.
-        console.log('Editor is ready to use!', editor);
+      onReady={() => {
+        console.log('Editor is ready to use!');
       }}
-      onChange={(event) => {
-        console.log(event);
+      onChange={(event, editor) => {
+        setEditor(editor.getData());
       }}
       onBlur={(event, editor) => {
-        console.log('Blur.', editor);
-      }}
-      onFocus={(event, editor) => {
-        console.log('Focus.', editor);
+        setEditor(editor.getData());
       }}
     />
   );

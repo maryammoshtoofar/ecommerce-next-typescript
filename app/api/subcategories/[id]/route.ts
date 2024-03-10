@@ -1,5 +1,5 @@
 import connectMongoDB from '@/app/lib/mongodb/mongodb';
-import Subcategory from '@/app/_models/subcategories';
+import Subcategory from '@/app/lib/models/subcategory';
 import { NextResponse } from 'next/server';
 import { ReqI } from '../../categories/route';
 

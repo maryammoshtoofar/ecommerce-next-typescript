@@ -1,5 +1,5 @@
 import connectMongoDB from '@/app/lib/mongodb/mongodb';
-import Category from '@/app/_models/categories';
+import Category from '@/app/lib/models/category';
 import { NextResponse } from 'next/server';
 import { ReqI } from '../route';
 

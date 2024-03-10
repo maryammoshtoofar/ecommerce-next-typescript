@@ -1,22 +1,15 @@
 import mongoose, { Schema } from 'mongoose';
 import { StaticImageData } from 'next/image';
-import {  categorySchema } from './categories';
-import { CategoryI } from '../_types/data-types';
+import { categorySchema } from './category';
+import { CategoryI, ProductI } from '@/app/_types/data-types';
 
-interface ProductI {
-  images: StaticImageData[];
-  name: string;
-  category: CategoryI;
-  subcategory: CategoryI;
-  price: number;
-  quantity: number;
-  rating: 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | null;
-}
+
 
 const productSchema = new Schema<ProductI>(
   {
     images: Array,
     name: String,
+    description: String,
     category: categorySchema,
     subcategory: categorySchema,
     price: Number,

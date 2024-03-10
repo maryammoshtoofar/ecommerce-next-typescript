@@ -1,6 +1,7 @@
 import connectMongoDB from '@/app/lib/mongodb/mongodb';
-import Subcategory, { SubcategoryI } from '@/app/_models/subcategories';
+import Subcategory from '@/app/lib/models/subcategory';
 import { NextResponse } from 'next/server';
+import { SubcategoryI } from '@/app/_types/data-types';
 
 interface ReqI {
   json: () => PromiseLike<SubcategoryI> | SubcategoryI;
