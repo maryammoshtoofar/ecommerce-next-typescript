@@ -24,9 +24,9 @@ export const POST = async (req: Request) => {
       _id: formData.get('subcategory'),
     });
     interface NewProductI {
-      [key: string]: string | File;
+      [key: string]: string | string[] | File;
     }
-    const NewProduct: ProductI | NewProductI = {};
+    const NewProduct: ProductI | NewProductI = { images: [] };
     formData.forEach((value, key) => {
       if (key === 'subcategory') {
         NewProduct[key] = subcategory;
@@ -34,15 +34,17 @@ export const POST = async (req: Request) => {
       } else if (key === 'category') {
         NewProduct[key] = category;
         return;
+      } else if (key === 'images') {
+        NewProduct.images.push(value);
+        return;
       }
       NewProduct[key] = value;
     });
-    
     await Product.create(NewProduct);
 
-    return NextResponse.json({ message: NewProduct }, { status: 201 });
+    return NextResponse.json({ message: 'Product Created' }, { status: 201 });
   } catch (error: any) {
-    return NextResponse.json({ message: error.message }, { status: 400 });
+    return NextResponse.json({ message: error }, { status: error.status });
   }
 };
 

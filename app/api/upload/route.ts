@@ -14,12 +14,15 @@ export const POST = async (req: any, res: any) => {
     }
     const buffer = Buffer.from(await file.arrayBuffer());
     const filename = Date.now() + file.name.replaceAll(' ', '_');
-    console.log(filename);
     await writeFile(
       path.join(process.cwd(), 'public/uploads/' + filename),
       buffer,
     );
-    return NextResponse.json({ Message: 'Success', status: 201 });
+    return NextResponse.json({
+      Message: 'Success',
+      filename: filename,
+      status: 201,
+    });
   } catch (error) {
     console.log('Error occurred ', error);
     return NextResponse.json({ Message: 'Failed', status: 500 });
