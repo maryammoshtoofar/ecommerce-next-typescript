@@ -58,7 +58,7 @@ export default {
         desktop: '1280px',
         // => @media (min-width: 1280px) { ... }
         smmobile: '335px',
-        // => @media (min-width: 1280px) { ... }
+        // => @media (min-width: 335px) { ... }
       },
     },
   },

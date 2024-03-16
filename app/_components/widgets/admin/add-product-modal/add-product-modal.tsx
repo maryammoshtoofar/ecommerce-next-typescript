@@ -9,7 +9,7 @@ type Props = {};
 const AddProductModal = (props: Props) => {
   return (
     <StoreProvider>
-      <Overlay>
+      <Overlay tailwind='items-baseline'>
         <div className="mt-12 flex w-1/3 flex-col rounded-lg bg-white p-4 opacity-100">
           <Link href={INVENTORY} className="self-end">
             <MdClose />

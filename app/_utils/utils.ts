@@ -8,7 +8,6 @@ export const fillRatingStars = (rating: number) => {
   for (let i = 0; i < Math.floor(rating); i++) {
     stars.push('fill');
   }
-  if (!Number.isInteger(rating)) stars.push('half');
   while (stars.length < 5) {
     stars.push('empty');
   }

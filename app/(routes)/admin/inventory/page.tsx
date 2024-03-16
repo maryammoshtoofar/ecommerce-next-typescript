@@ -1,20 +1,21 @@
 import Row from '@/app/_components/widgets/admin/tables/products-table/table-row/table-row';
 import Table from '@/app/_components/widgets/admin/tables/products-table/table';
-import arabica from '@/public/img/thumbnails/arabica.png';
-import houseBlend from '@/public/img/thumbnails/house-blend.png';
-import robusta from '@/public/img/thumbnails/robusta.png';
 import Title from '@/app/_components/base/admin/section-title/section-title';
 import Section from '@/app/_components/base/containers/section/section';
-import Modal from '@/app/_components/widgets/admin/add-product-modal/add-product-modal';
 import Flexbox from '@/app/_components/base/containers/flexbox/flexbox';
 import Button from '@/app/_components/base/button/button';
 import Link from 'next/link';
+import AddProductModal from '@/app/_components/widgets/admin/add-product-modal/add-product-modal';
+import DeleteProductModal from '@/app/_components/widgets/admin/delete-product-modal/delete-product-modal';
+import { getAllProducts } from '@/app/_actions/actions';
 type SearchParamProps = {
   searchParams: Record<string, string> | null | undefined;
 };
 
-const Inventory = ({ searchParams }: SearchParamProps) => {
+const Inventory = async ({ searchParams }: SearchParamProps) => {
+  const products = await getAllProducts();
   const show = searchParams?.show;
+  const del = searchParams?.id;
   return (
     <Section>
       <Flexbox tailwind="justify-between">
@@ -23,110 +24,23 @@ const Inventory = ({ searchParams }: SearchParamProps) => {
           <Button label="add new product" />
         </Link>
       </Flexbox>
-
       <Table>
-        <Row
-          id="101-145-234975"
-          thumbnail={arabica}
-          name="dark roast "
-          category="arabica "
-          stock={true}
-          price={250.0}
-          quantity={760}
-          rating={5}
-        />
-        <Row
-          id="101-145-234975"
-          thumbnail={houseBlend}
-          name="house-blend"
-          category="house blend"
-          stock={true}
-          price={250.0}
-          quantity={760}
-          rating={4.5}
-        />
-        <Row
-          id="101-145-234975"
-          thumbnail={robusta}
-          name="dark roast"
-          category="robusta"
-          stock={false}
-          price={250.0}
-          quantity={760}
-          rating={1.5}
-        />
-        <Row
-          id="101-145-234975"
-          thumbnail={arabica}
-          name="dark roast"
-          category="arabica"
-          stock={true}
-          price={250.0}
-          quantity={760}
-          rating={4}
-        />
-        <Row
-          id="101-145-234975"
-          thumbnail={houseBlend}
-          name="dark roast"
-          category="arabica"
-          stock={false}
-          price={250.0}
-          quantity={760}
-          rating={2.5}
-        />
-        <Row
-          id="101-145-234975"
-          thumbnail={robusta}
-          name="dark roast"
-          category="arabica"
-          stock={true}
-          price={250.0}
-          quantity={760}
-          rating={5}
-        />
-        <Row
-          id="101-145-234975"
-          thumbnail={arabica}
-          name="dark roast"
-          category="arabica"
-          stock={false}
-          price={250.0}
-          quantity={760}
-          rating={4.5}
-        />
-        <Row
-          id="101-145-234975"
-          thumbnail={houseBlend}
-          name="dark roast"
-          category="arabica"
-          stock={true}
-          price={250.0}
-          quantity={760}
-          rating={4}
-        />
-        <Row
-          id="101-145-234975"
-          thumbnail={robusta}
-          name="dark roast"
-          category="arabica"
-          stock={true}
-          price={250.0}
-          quantity={760}
-          rating={1.5}
-        />
-        <Row
-          id="101-145-234975"
-          thumbnail={arabica}
-          name="dark roast"
-          category="arabica"
-          stock={false}
-          price={250.0}
-          quantity={760}
-          rating={3.5}
-        />
+        {products.map((product: any) => (
+          <Row
+            id={product._id}
+            thumbnail={product.images[0]}
+            name={product.name}
+            category={product.category.title}
+            subcategory={product.subcategory.title}
+            stock={product.quantity}
+            price={product.price}
+            quantity={product.quantity}
+            rating={product.rating}
+          />
+        ))}
       </Table>
-      {show && <Modal />}
+      {show && <AddProductModal />}
+      {del && <DeleteProductModal id={del} />}
     </Section>
   );
 };

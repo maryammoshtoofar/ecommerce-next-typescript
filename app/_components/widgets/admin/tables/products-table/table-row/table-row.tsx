@@ -1,6 +1,6 @@
 import Row from '@/app/_components/base/admin/table-row/table-row';
 import { UIComponent } from '@/app/_types/component-types';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import StockLabel from '../../../stock-label/stock-label';
 import { FaCheck } from 'react-icons/fa';
 import { ImCross } from 'react-icons/im';
@@ -17,10 +17,11 @@ import Checkbox from '@/app/_components/base/checkbox/checkbox';
 import Link from 'next/link';
 
 type Props = UIComponent & {
-  thumbnail: StaticImageData;
+  thumbnail: string;
   id: string;
   name: string;
   category: string;
+  subcategory: string;
   stock: boolean;
   price: number;
   quantity: number;
@@ -36,19 +37,27 @@ const ProductsRow = ({
   price,
   quantity,
   rating,
+  subcategory,
 }: Props) => {
   const stockIcon = stock ? <FaCheck /> : <ImCross />;
+
   return (
-    <Row>
+    <Row key={id}>
       <Cell>
         <Checkbox />
       </Cell>
       <Cell>
-        <Image src={thumbnail} alt={name} className="w-20 max-w-none" />
+        <Image
+          src={`http://localhost:3000/uploads/${thumbnail}`}
+          alt={name}
+          className="w-20 max-w-none"
+          width={100}
+          height={100}
+        />
       </Cell>
-      <Cell>{id}</Cell>
       <Cell>{name}</Cell>
       <Cell tailwind="hidden sm:table-cell">{category}</Cell>
+      <Cell tailwind="hidden sm:table-cell">{subcategory}</Cell>
       <Cell>
         <Flexbox>
           <span className="hidden md:inline">$</span>
@@ -78,8 +87,10 @@ const ProductsRow = ({
         <Link href="?show=true">
           <LuPencilLine className="hidden cursor-pointer transition-all hover:text-coffee-340  md:inline " />
         </Link>
+        <Link href={`?id=${id}`}>
+          <LuTrash className="hidden cursor-pointer transition-all hover:text-red-400 md:inline" />
+        </Link>
 
-        <LuTrash className="hidden cursor-pointer transition-all hover:text-red-400 md:inline" />
         <TfiMoreAlt className="cursor-pointer transition-all hover:text-coffee-340 md:hidden" />
       </Cell>
     </Row>

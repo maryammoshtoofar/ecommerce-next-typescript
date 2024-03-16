@@ -24,9 +24,10 @@ export const POST = async (req: Request) => {
       _id: formData.get('subcategory'),
     });
     interface NewProductI {
-      [key: string]: string | string[] | File;
+      [key: string]: FormDataEntryValue | FormDataEntryValue[];
     }
-    const NewProduct: ProductI | NewProductI = { images: [] };
+    const NewProduct: ProductI | NewProductI = {};
+    const images: FormDataEntryValue[] = [];
     formData.forEach((value, key) => {
       if (key === 'subcategory') {
         NewProduct[key] = subcategory;
@@ -35,11 +36,12 @@ export const POST = async (req: Request) => {
         NewProduct[key] = category;
         return;
       } else if (key === 'images') {
-        NewProduct.images.push(value);
+        images.push(value);
         return;
       }
       NewProduct[key] = value;
     });
+    NewProduct.images = images;
     await Product.create(NewProduct);
 
     return NextResponse.json({ message: 'Product Created' }, { status: 201 });
