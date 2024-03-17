@@ -11,6 +11,7 @@ export interface ReqI {
   };
 }
 
+
 interface DeleteReqI {
   nextUrl: { searchParams: { get: (arg0: string) => any } };
 }

@@ -1,15 +1,18 @@
 import { compose, configureStore } from '@reduxjs/toolkit';
 import { shopApi } from './features/api/api-slice';
 import { setupListeners } from '@reduxjs/toolkit/query';
-import categoriesReducer from './features/categories/categories-slice';
 import subcategoriesReducer from './features/subcategories/subcategories-slice';
+import categoriesReducer from './features/categories/categories-slice';
+import productsReducer from './features/products/products-slice';
 const composeEnhancers =
   (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  
 export const makeStore = () => {
   return configureStore({
     reducer: {
       categories: categoriesReducer,
       subcategories: subcategoriesReducer,
+      products: productsReducer,
       [shopApi.reducerPath]: shopApi.reducer,
     },
     middleware: (getDefaultMiddleware) =>

@@ -4,21 +4,23 @@ import Link from 'next/link';
 import { MdClose } from 'react-icons/md';
 import AddProductForm from '../add-product-form/add-product-form';
 import StoreProvider from '@/app/_components/layout/store-provider';
-type Props = {};
 
-const AddProductModal = (props: Props) => {
+type Props = {
+  id: string | undefined;
+};
+const ProductModal = (props: Props) => {
   return (
     <StoreProvider>
-      <Overlay tailwind='items-baseline'>
+      <Overlay tailwind="items-baseline">
         <div className="mt-12 flex w-1/3 flex-col rounded-lg bg-white p-4 opacity-100">
           <Link href={INVENTORY} className="self-end">
             <MdClose />
           </Link>
-          <AddProductForm />
+          <AddProductForm id={props.id} />
         </div>
       </Overlay>
     </StoreProvider>
   );
 };
 
-export default AddProductModal;
+export default ProductModal;

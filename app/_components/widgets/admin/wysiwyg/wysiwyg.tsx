@@ -6,14 +6,14 @@ import { useEffect, useState } from 'react';
 const WYSIWYG = () => {
   const [editor, setEditor] = useState<string>('');
 
-  useEffect(() => console.log('yo', editor), [editor]);
+  // useEffect(() => console.log('yo', editor), [editor]);
 
   return (
     <CKEditor
       editor={ClassicEditor}
       data="<p>Product Description</p>"
       onReady={() => {
-        console.log('Editor is ready to use!');
+        // console.log('Editor is ready to use!');
       }}
       onChange={(event, editor) => {
         setEditor(editor.getData());

@@ -10,7 +10,6 @@ type Props = {
 };
 
 const DeleteProductModal = (props: Props) => {
-  console.log(props.id);
   return (
     <Overlay tailwind="items-center">
       <div className="flex w-full flex-col rounded-lg  bg-white p-4 opacity-100 smmobile:w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4">

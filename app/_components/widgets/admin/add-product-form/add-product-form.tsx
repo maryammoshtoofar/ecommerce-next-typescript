@@ -20,13 +20,18 @@ import {
   setSubcategories,
 } from '@/app/lib/redux/features/subcategories/subcategories-slice';
 import { skipToken } from '@reduxjs/toolkit/query';
-const AddProductForm = () => {
+import { selectProduct } from '@/app/lib/redux/features/products/products-slice';
+type Props = {
+  id: string | undefined;
+};
+const AddProductForm = ({id}: Props) => {
   const dispatch = useAppDispatch();
   const { selectedCategory, allCategories: categories } = useAppSelector(
     (state) => state.categories,
   );
   const { selectedSubcategory, allSubcategories: subcategories } =
     useAppSelector((state) => state.subcategories);
+  const { selectedProduct } = useAppSelector((state) => state.products);
 
   const { data, error, isLoading } = useGetAllCategoriesQuery('categories');
 
@@ -46,13 +51,20 @@ const AddProductForm = () => {
       dispatch(setSubcategories(subData.subcategories));
     }
   }, [selectedCategory, subData]);
+  useEffect(() => {
+    console.log(id)
+    dispatch(selectProduct(id))
+  }, []);
+
+    useEffect(() => {
+      console.log(selectedProduct);
+    }, [selectedProduct]);
 
   return (
     <form className="flex flex-col gap-4">
       <Label htmlFor="title" label="title" />
       <Input type="text" placeholder="Enter Product Title" />
       <Label htmlFor="category" label="category" />
-
       <Dropdown
         selectOption={selectCategory}
         title={selectedCategory?.title || 'category'}

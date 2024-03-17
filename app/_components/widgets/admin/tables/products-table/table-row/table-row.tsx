@@ -6,15 +6,12 @@ import { FaCheck } from 'react-icons/fa';
 import { ImCross } from 'react-icons/im';
 import { priceFormatter } from '@/app/_utils/utils';
 import StarRating from '@/app/_components/widgets/star-rating/star-rating';
-import { BiDetail } from 'react-icons/bi';
-import { LuPencilLine } from 'react-icons/lu';
-import { LuTrash } from 'react-icons/lu';
 import Flexbox from '@/app/_components/base/containers/flexbox/flexbox';
 import Cell from '../../../../../base/admin/table-cell/table-cell';
-import { TfiMoreAlt } from 'react-icons/tfi';
 import { FaStar } from 'react-icons/fa6';
 import Checkbox from '@/app/_components/base/checkbox/checkbox';
-import Link from 'next/link';
+import ActionsCell from '../actions-cell/actions-cell';
+import StoreProvider from '@/app/_components/layout/store-provider';
 
 type Props = UIComponent & {
   thumbnail: string;
@@ -42,7 +39,7 @@ const ProductsRow = ({
   const stockIcon = stock ? <FaCheck /> : <ImCross />;
 
   return (
-    <Row key={id}>
+    <Row>
       <Cell>
         <Checkbox />
       </Cell>
@@ -82,17 +79,9 @@ const ProductsRow = ({
           {rating} <FaStar />
         </span>
       </Cell>
-      <Cell customContainerStyle="flex lg:gap-3 text-lg text-coffee-100 ">
-        <BiDetail className="hidden cursor-pointer transition-all hover:text-coffee-340 md:inline" />
-        <Link href="?show=true">
-          <LuPencilLine className="hidden cursor-pointer transition-all hover:text-coffee-340  md:inline " />
-        </Link>
-        <Link href={`?id=${id}`}>
-          <LuTrash className="hidden cursor-pointer transition-all hover:text-red-400 md:inline" />
-        </Link>
-
-        <TfiMoreAlt className="cursor-pointer transition-all hover:text-coffee-340 md:hidden" />
-      </Cell>
+      <StoreProvider>
+        <ActionsCell id={id} />
+      </StoreProvider>
     </Row>
   );
 };
