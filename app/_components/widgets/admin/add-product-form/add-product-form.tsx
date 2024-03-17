@@ -6,6 +6,7 @@ import WYSIWYG from '../wysiwyg/wysiwyg';
 import Dropdown from '@/app/_components/base/dropdown/dropdown';
 import Flexbox from '@/app/_components/base/containers/flexbox/flexbox';
 import UploadBox from '../upload-box/upload-box';
+import Button from '@/app/_components/base/button/button';
 import {
   useGetAllCategoriesQuery,
   useGetSubcategoriesByCategoryQuery,
@@ -117,6 +118,10 @@ const AddProductForm = () => {
       </Flexbox>
       <WYSIWYG data={selectedProduct?.description} />
       <UploadBox images={selectedProduct?.images} />
+      <Button
+        label="save product"
+        tailwind="bg-green-500 font-extrabold text-coffee-340 border-none self-center"
+      />
     </form>
   );
 };

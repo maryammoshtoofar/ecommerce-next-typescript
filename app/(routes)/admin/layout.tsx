@@ -2,14 +2,9 @@ import Header from '@/app/_components/layout/admin/header/header';
 import Sidebar from '@/app/_components/layout/admin/sidebar/sidebar';
 import AddProductModal from '@/app/_components/widgets/admin/add-product-modal/add-product-modal';
 
-const AdminLayout = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
-
+const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="admin-glow grid-rows-12 ga relative min-h-screen grid-cols-12 bg-coffee-190 sm:grid sm:grid-flow-col">
+    <main className="admin-glow grid-rows-12 relative h-full min-h-screen grid-cols-12 bg-coffee-190 sm:grid sm:grid-flow-col overflow-auto">
       <Sidebar />
       <Header />
       {children}

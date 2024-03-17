@@ -12,7 +12,7 @@ const ProductModal = (props: Props) => {
   return (
     <StoreProvider>
       <Overlay tailwind="items-baseline">
-        <div className="mt-12 flex w-1/3 flex-col rounded-lg bg-white p-4 opacity-100">
+        <div className="flex max-h-full w-full flex-col bg-white p-4 opacity-100 lg:mt-1 lg:w-1/3 lg:rounded-lg">
           <Link href={INVENTORY} className="self-end">
             <MdClose />
           </Link>

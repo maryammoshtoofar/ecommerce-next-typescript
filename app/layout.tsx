@@ -24,9 +24,9 @@ const RootLayout = ({ children }: UIComponent) => {
   return (
     <html
       lang="en"
-      className={`${slab.variable} ${dancingScript.variable} min-h-screen scroll-smooth`}
+      className={`${slab.variable} ${dancingScript.variable} h-full scroll-smooth m-0 p-0`}
     >
-      <body className="min-h-screen font-slab">{children}</body>
+      <body className="h-full font-slab m-0 p-0">{children}</body>
     </html>
   );
 };

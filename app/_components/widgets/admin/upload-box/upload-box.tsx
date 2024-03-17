@@ -3,7 +3,7 @@ import Label from '@/app/_components/base/label/label';
 import { BsPlusSquare } from 'react-icons/bs';
 import UploadCard from '../upload-card/upload-card';
 import UploadArea from '../upload-area/upload-area';
-import Button from '@/app/_components/base/button/button';
+
 import { BASE_URL, UPLOADS_PATH } from '@/app/_config/routes';
 
 type Props = {
@@ -31,10 +31,6 @@ const UploadBox = ({ images }: Props) => {
           ))}
         <UploadArea />
       </div>
-      <Button
-        label="save product"
-        tailwind="bg-coffee-160 text-5xl border-none self-center"
-      />
     </Flexbox>
   );
 };
