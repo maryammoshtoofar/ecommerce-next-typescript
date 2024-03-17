@@ -4,9 +4,7 @@ import { UIComponent } from '@/app/_types/component-types';
 import clsx from 'clsx';
 import { useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
-import { useAppDispatch, useAppSelector } from '@/app/lib/redux/hooks';
-import { RootState } from '@/app/lib/redux/store';
-
+import { useAppDispatch } from '@/app/lib/redux/hooks';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 type DropDownProps = UIComponent & {
   title: string;

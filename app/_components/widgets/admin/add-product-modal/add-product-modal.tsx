@@ -16,7 +16,7 @@ const ProductModal = (props: Props) => {
           <Link href={INVENTORY} className="self-end">
             <MdClose />
           </Link>
-          <AddProductForm id={props.id} />
+          <AddProductForm />
         </div>
       </Overlay>
     </StoreProvider>

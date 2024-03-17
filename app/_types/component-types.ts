@@ -52,6 +52,7 @@ export type TestimonialsSlideProps = SlideProps & {
 export type InputProps = UIComponent & {
   type: string;
   placeholder: string;
+  value?: string | number;
 };
 
 export type TabProps = UIComponent & {

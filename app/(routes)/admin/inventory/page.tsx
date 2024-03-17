@@ -8,7 +8,6 @@ import Link from 'next/link';
 import AddProductModal from '@/app/_components/widgets/admin/add-product-modal/add-product-modal';
 import DeleteProductModal from '@/app/_components/widgets/admin/delete-product-modal/delete-product-modal';
 import { getAllProducts } from '@/app/_actions/actions';
-import { useAppDispatch } from '@/app/lib/redux/hooks';
 type SearchParamProps = {
   searchParams: Record<string, string> | null | undefined;
 };
@@ -17,6 +16,7 @@ const Inventory = async ({ searchParams }: SearchParamProps) => {
   const products = await getAllProducts();
   const show = searchParams?.show;
   const id = searchParams?.id;
+  const del = id && !show;
   return (
     <Section>
       <Flexbox tailwind="justify-between">
@@ -42,7 +42,7 @@ const Inventory = async ({ searchParams }: SearchParamProps) => {
         ))}
       </Table>
       {show && <AddProductModal id={id} />}
-      {id && <DeleteProductModal id={id} />}
+      {del && <DeleteProductModal id={id} />}
     </Section>
   );
 };

@@ -1,3 +1,6 @@
+export const BASE_URL = 'http://localhost:3000';
+export const UPLOADS_PATH = '/uploads';
+
 // user routes
 export const HOME = '/';
 export const CART = '/cart';

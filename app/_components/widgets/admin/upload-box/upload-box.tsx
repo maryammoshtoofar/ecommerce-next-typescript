@@ -2,15 +2,16 @@ import Flexbox from '@/app/_components/base/containers/flexbox/flexbox';
 import Label from '@/app/_components/base/label/label';
 import { BsPlusSquare } from 'react-icons/bs';
 import UploadCard from '../upload-card/upload-card';
-import arabica from '@/public/img/thumbnails/arabica.png';
-import robusta from '@/public/img/thumbnails/robusta.png';
-import blend from '@/public/img/thumbnails/house-blend.png';
 import UploadArea from '../upload-area/upload-area';
 import Button from '@/app/_components/base/button/button';
+import { BASE_URL, UPLOADS_PATH } from '@/app/_config/routes';
 
-type Props = {};
+type Props = {
+  images?: string[];
+};
 
-const UploadBox = (props: Props) => {
+const UploadBox = ({ images }: Props) => {
+  console.log(images);
   return (
     <Flexbox tailwind="flex-col gap-4 w-full items-stretch">
       <Flexbox tailwind="justify-between">
@@ -21,9 +22,13 @@ const UploadBox = (props: Props) => {
         </span>
       </Flexbox>
       <div className="flex w-full gap-6 overflow-x-auto rounded-lg border-2 border-dashed border-coffee-80 bg-coffee-60 p-6">
-        <UploadCard src={arabica} alt="something" />
-        <UploadCard src={robusta} alt="something" />
-        <UploadCard src={blend} alt="something" />
+        {images &&
+          images.map((image) => (
+            <UploadCard
+              src={`${BASE_URL}${UPLOADS_PATH}/${image}`}
+              alt={image}
+            />
+          ))}
         <UploadArea />
       </div>
       <Button

@@ -2,11 +2,11 @@ import { ProductI } from '@/app/_types/data-types';
 import { createSlice } from '@reduxjs/toolkit';
 interface ProductState {
   allProducts: ProductI[] | null;
-  selectedProduct: string;
+  selectedProduct: ProductI | null;
 }
 const initialState: ProductState = {
   allProducts: [],
-  selectedProduct: 'gfhgh',
+  selectedProduct: null,
 };
 const productsSlice = createSlice({
   name: 'products',
@@ -16,7 +16,6 @@ const productsSlice = createSlice({
       state.allProducts = action.payload;
     },
     selectProduct(state, action) {
-      console.log(action.payload);
       state.selectedProduct = action.payload;
     },
   },
