@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import title from '@/app/_assets/title.png';
 import cup from '@/app//_assets/Cup1.png';
-import Button from '@/app/_components/base/button/button';
-import Card from '../card/card';
+import { Button } from '@/app/_components/base/';
+import { Card } from '@/app/_components/widgets';
 import { FaMotorcycle } from 'react-icons/fa6';
 import { CATALOG, ORDER, PRODUCTS } from '@/app/_config/routes';
 import Link from 'next/link';
 
-const Hero = () => {
+export const Hero = () => {
   return (
     <section className="hero">
       <article className="hero-content">
@@ -45,4 +45,3 @@ const Hero = () => {
     </section>
   );
 };
-export default Hero;

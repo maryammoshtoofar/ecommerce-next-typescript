@@ -1,7 +1,7 @@
 import { ButtonProps } from '@/app/_types/component-types';
 import clsx from 'clsx';
 
-const Button = ({
+export const Button = ({
   mode = 'primary',
   label,
   tailwind,
@@ -28,4 +28,3 @@ const Button = ({
     </button>
   );
 };
-export default Button;

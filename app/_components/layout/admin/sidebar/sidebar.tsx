@@ -1,6 +1,6 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import Item from '@/app/_components/widgets/admin/nav-item/nav-item';
+import { AdminNavItem as Item } from '@/app/_components/widgets';
 import {
   FaShop,
   FaGear,
@@ -11,7 +11,7 @@ import {
   FaChevronRight,
 } from 'react-icons/fa6';
 import { MdDiscount } from 'react-icons/md';
-import Logo from '@/app/_components/base/logo/logo';
+import { Logo } from '@/app/_components/base';
 import {
   DASHBOARD,
   INVENTORY,
@@ -23,7 +23,7 @@ import {
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 
-const Sidebar = () => {
+export const Sidebar = () => {
   const pathname = usePathname();
   const isActive = (path: string): boolean => {
     return pathname === path ? true : false;
@@ -95,5 +95,3 @@ const Sidebar = () => {
     </nav>
   );
 };
-
-export default Sidebar;

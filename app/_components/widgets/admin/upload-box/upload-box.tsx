@@ -1,8 +1,6 @@
-import Flexbox from '@/app/_components/base/containers/flexbox/flexbox';
-import Label from '@/app/_components/base/label/label';
+import { Flexbox, Label } from '@/app/_components/base';
 import { BsPlusSquare } from 'react-icons/bs';
-import UploadCard from '../upload-card/upload-card';
-import UploadArea from '../upload-area/upload-area';
+import { UploadArea, UploadCard } from '@/app/_components/widgets';
 
 import { BASE_URL, UPLOADS_PATH } from '@/app/_config/routes';
 
@@ -10,7 +8,7 @@ type Props = {
   images?: string[];
 };
 
-const UploadBox = ({ images }: Props) => {
+export const UploadBox = ({ images }: Props) => {
   console.log(images);
   return (
     <Flexbox tailwind="flex-col gap-4 w-full items-stretch">
@@ -34,5 +32,3 @@ const UploadBox = ({ images }: Props) => {
     </Flexbox>
   );
 };
-
-export default UploadBox;

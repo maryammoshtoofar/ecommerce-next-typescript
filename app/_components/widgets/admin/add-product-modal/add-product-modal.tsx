@@ -1,14 +1,14 @@
-import Overlay from '@/app/_components/base/overlay/overlay';
+import { Overlay } from '@/app/_components/base';
 import { INVENTORY } from '@/app/_config/routes';
 import Link from 'next/link';
 import { MdClose } from 'react-icons/md';
-import AddProductForm from '../add-product-form/add-product-form';
-import StoreProvider from '@/app/_components/layout/store-provider';
+import { AddProductForm } from '@/app/_components/widgets';
+import { StoreProvider } from '@/app/_components/layout';
 
 type Props = {
   id: string | undefined;
 };
-const ProductModal = (props: Props) => {
+export const ProductModal = (props: Props) => {
   return (
     <StoreProvider>
       <Overlay tailwind="items-baseline">
@@ -22,5 +22,3 @@ const ProductModal = (props: Props) => {
     </StoreProvider>
   );
 };
-
-export default ProductModal;

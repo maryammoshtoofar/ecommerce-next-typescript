@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 import { InputProps } from '@/app/_types/component-types';
 
-const Input = (props: InputProps) => {
+export const Input = (props: InputProps) => {
   const [value, setValue] = useState<string | number>('');
   useEffect(() => {
     if (props.value) {
@@ -20,12 +20,10 @@ const Input = (props: InputProps) => {
       </span>
       <input
         onChange={(e) => handleChange(e.target.value)}
-        type={props.type}
-        placeholder={props.placeholder}
         className="w-full rounded-md py-2 ps-8 placeholder-coffee-150 focus:border focus:outline-none"
         value={value}
+        {...props}
       />
     </div>
   );
 };
-export default Input;

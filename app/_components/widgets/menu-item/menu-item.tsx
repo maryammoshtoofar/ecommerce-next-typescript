@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import UnderlineLeft from './underline-left';
 import UnderLineRight from './underline-right';
 
-const MenuItem = ({ dir, tailwind, price, name }: MenuItemProps) => {
+export const MenuItem = ({ dir, tailwind, price, name }: MenuItemProps) => {
   return (
     <li className={tailwind}>
       <div
@@ -21,5 +21,3 @@ const MenuItem = ({ dir, tailwind, price, name }: MenuItemProps) => {
     </li>
   );
 };
-
-export default MenuItem;

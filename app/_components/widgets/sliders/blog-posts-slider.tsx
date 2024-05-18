@@ -11,7 +11,7 @@ import { blogPosts } from '@/app/_lib/blog-posts';
 import Image from 'next/image';
 import useWindowDimensions from '@/app/_hooks/useWindowDimensions';
 
-const BlogPostsSlider = () => {
+export const BlogPostsSlider = () => {
   const { width } = useWindowDimensions();
   return (
     <section className="blog-posts-section">
@@ -52,5 +52,3 @@ const BlogPostsSlider = () => {
     </section>
   );
 };
-
-export default BlogPostsSlider;

@@ -1,15 +1,14 @@
 'use client';
-import Overlay from '@/app/_components/base/overlay/overlay';
+import { Overlay, Button } from '@/app/_components/base/';
 import { INVENTORY } from '@/app/_config/routes';
 import Link from 'next/link';
 import { MdClose } from 'react-icons/md';
-import Button from '@/app/_components/base/button/button';
-import { deleteProductById } from '@/app/_actions/actions';
+import { deleteProductById } from '@/app/api/actions/actions';
 type Props = {
   id: string;
 };
 
-const DeleteProductModal = (props: Props) => {
+export const DeleteProductModal = (props: Props) => {
   return (
     <Overlay tailwind="items-center">
       <div className="flex w-full flex-col rounded-lg  bg-white p-4 opacity-100 smmobile:w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4">
@@ -38,5 +37,3 @@ const DeleteProductModal = (props: Props) => {
     </Overlay>
   );
 };
-
-export default DeleteProductModal;

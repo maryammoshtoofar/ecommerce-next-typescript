@@ -1,7 +1,6 @@
-import Button from '@/app/_components/base/button/button';
+import {Button} from '@/app/_components/base';
 import { PRODUCTS } from '@/app/_config/routes';
 import Link from 'next/link';
-import React from 'react';
 
 type Props = {};
 

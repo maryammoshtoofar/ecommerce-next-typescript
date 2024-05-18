@@ -1,6 +1,6 @@
-type Props = {};
 import { GrCloudUpload } from 'react-icons/gr';
-const UploadArea = (props: Props) => {
+
+export const UploadArea = () => {
   return (
     <div>
       <label
@@ -14,5 +14,3 @@ const UploadArea = (props: Props) => {
     </div>
   );
 };
-
-export default UploadArea;

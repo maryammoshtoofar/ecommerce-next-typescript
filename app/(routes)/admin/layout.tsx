@@ -1,6 +1,5 @@
 import Header from '@/app/_components/layout/admin/header/header';
 import Sidebar from '@/app/_components/layout/admin/sidebar/sidebar';
-import AddProductModal from '@/app/_components/widgets/admin/add-product-modal/add-product-modal';
 
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   return (

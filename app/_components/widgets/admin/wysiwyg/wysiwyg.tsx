@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 type Props = {
   data?: string;
 };
-const WYSIWYG = ({ data }: Props) => {
+export const WYSIWYG = ({ data }: Props) => {
   const [editor, setEditor] = useState<string>('');
 
   // useEffect(() => console.log('yo', editor), [editor]);
@@ -27,5 +27,3 @@ const WYSIWYG = ({ data }: Props) => {
     />
   );
 };
-
-export default WYSIWYG;

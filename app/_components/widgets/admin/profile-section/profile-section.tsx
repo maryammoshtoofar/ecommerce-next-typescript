@@ -2,7 +2,7 @@ import Image from 'next/image';
 import profilePhoto from '@/public/img/admin-profile.png';
 import { FaRegBell, FaDoorOpen } from 'react-icons/fa6';
 
-const ProfileSection = () => {
+export const ProfileSection = () => {
   return (
     <article className="col-span-6 flex items-center justify-evenly gap-3 pe-2 sm:col-span-6 sm:text-coffee-360 xl:col-span-4">
       <div className="flex gap-2">
@@ -29,5 +29,3 @@ const ProfileSection = () => {
     </article>
   );
 };
-
-export default ProfileSection;

@@ -23,7 +23,10 @@ ChartJS.register(
 );
 
 const labels = ['9:00 A.M', '12:00 P.M', '4:00 P.M', '8:00 P.M', '12:00 A.M'];
-const SalesChart = (props: Props) => {
+
+
+
+export const SalesChart = (props: Props) => {
   const data = {
     labels,
     datasets: [
@@ -49,5 +52,3 @@ const SalesChart = (props: Props) => {
     
   );
 };
-
-export default SalesChart;

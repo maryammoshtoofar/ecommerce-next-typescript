@@ -3,7 +3,7 @@ import latte from '@/public/img/latte.png';
 import frappe from '@/public/img/frappe.png';
 import mocha from '@/public/img/mocha.png';
 import americano from '@/public/img/americano.png';
-import Product from '../trending-product/trending-product';
+import { TrendingProduct as Product } from '@/app/_components/widgets';
 
 const TrendingProducts = () => {
   return (

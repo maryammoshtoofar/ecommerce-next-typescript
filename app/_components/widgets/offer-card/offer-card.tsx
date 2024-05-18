@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { UIComponent } from '@/app/_types/component-types';
-import Card from '../card/card';
-import Button from '@/app/_components/base/button/button';
+import { Card } from '../card/card';
+import { Button } from '@/app/_components/base';
 import coffeePackages from '@/app/_assets/coffee-packages.png';
 
-const OfferCard = (props: UIComponent) => {
+export const OfferCard = (props: UIComponent) => {
   return (
     <section className="offer-section">
       <Card tailwind="offer-card">
@@ -34,5 +34,3 @@ const OfferCard = (props: UIComponent) => {
     </section>
   );
 };
-
-export default OfferCard;

@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import Slide from '@/app/_components/widgets/slides/product-slide';
 import { recommendedProducts } from '@/app/_lib/recommended-products';
 
-const ProductSlider = () => {
+export const ProductSlider = () => {
   return (
     <section className="product-slider-section">
       <h1 className="product-slider-title">recommended</h1>
@@ -51,5 +51,3 @@ const ProductSlider = () => {
     </section>
   );
 };
-
-export default ProductSlider;

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Button } from '../app/_components/base/button/button';
 import './header.css';
 

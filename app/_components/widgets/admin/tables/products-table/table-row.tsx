@@ -1,17 +1,12 @@
-import Row from '@/app/_components/base/admin/table-row/table-row';
+import { TableRow, Flexbox, Cell, Checkbox } from '@/app/_components/base';
 import { UIComponent } from '@/app/_types/component-types';
 import Image from 'next/image';
-import StockLabel from '../../../stock-label/stock-label';
+import { StockLabel, StarRating, ActionsCell } from '@/app/_components/widgets';
 import { FaCheck } from 'react-icons/fa';
 import { ImCross } from 'react-icons/im';
 import { priceFormatter } from '@/app/_utils/utils';
-import StarRating from '@/app/_components/widgets/star-rating/star-rating';
-import Flexbox from '@/app/_components/base/containers/flexbox/flexbox';
-import Cell from '../../../../../base/admin/table-cell/table-cell';
 import { FaStar } from 'react-icons/fa6';
-import Checkbox from '@/app/_components/base/checkbox/checkbox';
-import ActionsCell from '../actions-cell/actions-cell';
-import StoreProvider from '@/app/_components/layout/store-provider';
+import { StoreProvider } from '@/app/_components/layout';
 
 type Props = UIComponent & {
   thumbnail: string;
@@ -25,7 +20,7 @@ type Props = UIComponent & {
   rating: number;
 };
 
-const ProductsRow = ({
+export const ProductsRow = ({
   thumbnail,
   id,
   name,
@@ -39,7 +34,7 @@ const ProductsRow = ({
   const stockIcon = stock ? <FaCheck /> : <ImCross />;
 
   return (
-    <Row>
+    <TableRow>
       <Cell>
         <Checkbox />
       </Cell>
@@ -82,8 +77,6 @@ const ProductsRow = ({
       <StoreProvider>
         <ActionsCell id={id} />
       </StoreProvider>
-    </Row>
+    </TableRow>
   );
 };
-
-export default ProductsRow;

@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { AboutSlideProps } from '@/app/_types/component-types';
-import Card from '../card/card';
+import { Card } from '@/app/_components/widgets';
 import { generateCaptionLength, shortenDescription } from '@/app/_utils/utils';
 import { useEffect, useState } from 'react';
 
-const AboutSlide = (props: AboutSlideProps) => {
+export const AboutSlide = (props: AboutSlideProps) => {
   const { id, img, alt, title, caption } = props.slide;
   const { screenWidth } = props;
   const [captionLength, setCaptionLength] = useState(397);
@@ -27,4 +27,3 @@ const AboutSlide = (props: AboutSlideProps) => {
   );
 };
 
-export default AboutSlide;

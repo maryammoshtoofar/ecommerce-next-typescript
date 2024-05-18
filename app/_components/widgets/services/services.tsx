@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { UIComponent } from '@/app/_types/component-types';
 import { services } from '@/app/_lib/services';
-import Card from '../card/card';
-import Bean2 from '@/app/_components/base/wandering-coffee-beans/bean2';
+import { Card } from '../card/card';
+import { Bean2 } from '@/app/_components/base';
 
-const Services = (props: UIComponent) => {
+export const Services = (props: UIComponent) => {
   return (
     <section className="mb-6 flex flex-col items-center gap-12" id="services">
       {/* <Bean2 tailwind="absolute -right-28 bottom-0 bg-red-600" /> */}

@@ -1,17 +1,17 @@
 'use client';
-import { getProductById } from '@/app/_actions/actions';
-import Cell from '@/app/_components/base/admin/table-cell/table-cell';
+import { getProductById } from '@/app/api/actions/actions';
+import { Cell } from '@/app/_components/base';
 import { selectProduct } from '@/app/lib/redux/features/products/products-slice';
 import { useAppDispatch } from '@/app/lib/redux/hooks';
 import Link from 'next/link';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { BiDetail } from 'react-icons/bi';
 import { LuPencilLine, LuTrash } from 'react-icons/lu';
 import { TfiMoreAlt } from 'react-icons/tfi';
 
 type Props = { id: string };
 
-const ActionsCell = ({ id }: Props) => {
+export const ActionsCell = ({ id }: Props) => {
   const dispatch = useAppDispatch();
 
   return (
@@ -27,5 +27,3 @@ const ActionsCell = ({ id }: Props) => {
     </Cell>
   );
 };
-
-export default ActionsCell;

@@ -1,10 +1,10 @@
 import { UIComponent } from '@/app/_types/component-types';
-import TableHeadCell from '@/app/_components/base/admin/table-head-cell/table-head-cell';
+import { TableHeadCell } from '@/app/_components/base/admin/table-head-cell/table-head-cell';
 import Checkbox from '@/app/_components/base/checkbox/checkbox';
 type TableProps = UIComponent & {
   theads: React.ReactNode;
 };
-const Table = (props: TableProps) => {
+export const Table = (props: TableProps) => {
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full table-auto bg-coffee-10 font-semibold text-coffee-240">
@@ -21,5 +21,3 @@ const Table = (props: TableProps) => {
     </div>
   );
 };
-
-export default Table;

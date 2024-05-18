@@ -9,7 +9,13 @@ type Props = UIComponent & {
   progress: number;
 };
 
-const Card = ({ title, component, percentage, amount, progress }: Props) => {
+export const DashboardCard = ({
+  title,
+  component,
+  percentage,
+  amount,
+  progress,
+}: Props) => {
   return (
     <article className="col-span-full flex  flex-col gap-6 rounded-lg bg-coffee-10 p-4 text-coffee-190 sm:col-span-6 md:col-span-4">
       <div className="flex items-center gap-2">
@@ -41,5 +47,3 @@ const Card = ({ title, component, percentage, amount, progress }: Props) => {
     </article>
   );
 };
-
-export default Card;

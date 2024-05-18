@@ -1,7 +1,6 @@
-import Input from '@/app/_components/base/input/input';
-import Button from '@/app/_components/base/button/button';
+import { Input, Button } from '@/app/_components/base/';
 import { GoBell } from 'react-icons/go';
-const NewsletterForm = () => {
+export const NewsletterForm = () => {
   return (
     <section className="newsletter-section">
       <h1 className="newsletter-title">
@@ -19,5 +18,3 @@ const NewsletterForm = () => {
     </section>
   );
 };
-
-export default NewsletterForm;

@@ -1,6 +1,6 @@
-import NavButton from '@/app/_components/layout/user/navigation/nav-button/nav-btn';
+import { NavButton } from '@/app/_components/layout';
 
-const NavMenu = () => {
+export const NavMenu = () => {
   return (
     <nav className="nav-menu">
       <NavButton title="home" />
@@ -12,4 +12,3 @@ const NavMenu = () => {
     </nav>
   );
 };
-export default NavMenu;

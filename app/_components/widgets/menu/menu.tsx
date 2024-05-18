@@ -2,11 +2,11 @@ import { UIComponent } from '@/app/_types/component-types';
 import Image from 'next/image';
 import menuPicMan from '@/public/img/menu-pic-man.png';
 import menuPicWoman from '@/public/img/menu-pic-woman.png';
-import MenuItem from '../menu-item/menu-item';
+import { MenuItem } from '@/app/_components/widgets';
 import { MenuItems } from '@/app/_lib/menu-items';
 import { BsArrowDownRightSquare } from 'react-icons/bs';
 
-const Menu = (props: UIComponent) => {
+export const Menu = (props: UIComponent) => {
   return (
     <section className="menu-section">
       <h1 className="menu-title">Popular Menu</h1>
@@ -53,5 +53,3 @@ const Menu = (props: UIComponent) => {
     </section>
   );
 };
-
-export default Menu;

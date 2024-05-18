@@ -1,18 +1,21 @@
 'use client';
 import { useSearchParams } from 'next/navigation';
-import Input from '@/app/_components/base/input/input';
-import Label from '@/app/_components/base/label/label';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import {
+  Input,
+  Label,
+  Dropdown,
+  Flexbox,
+  Button,
+} from '@/app/_components/base/';
 import WYSIWYG from '../wysiwyg/wysiwyg';
-import Dropdown from '@/app/_components/base/dropdown/dropdown';
-import Flexbox from '@/app/_components/base/containers/flexbox/flexbox';
 import UploadBox from '../upload-box/upload-box';
-import Button from '@/app/_components/base/button/button';
 import {
   useGetAllCategoriesQuery,
   useGetSubcategoriesByCategoryQuery,
   useGetProductByIdQuery,
 } from '@/app/lib/redux/features/api/api-slice';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/app/lib/redux/hooks';
 import {
   selectCategory,
@@ -24,7 +27,13 @@ import {
   setSubcategories,
 } from '@/app/lib/redux/features/subcategories/subcategories-slice';
 import { skipToken } from '@reduxjs/toolkit/query';
-const AddProductForm = () => {
+type Inputs = {
+  name: string;
+  price: number;
+  quantity: number;
+};
+export const AddProductForm = () => {
+  const processForm: SubmitHandler<Inputs> = (data) => setData(data);
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
   const dispatch = useAppDispatch();
@@ -49,14 +58,17 @@ const AddProductForm = () => {
     selectedCategory?._id ? selectedCategory._id : skipToken,
   );
 
-  const { data, error, isLoading } = useGetProductByIdQuery(id!);
+  const {
+    data: prodData,
+    error: prodError,
+    isLoading: prodIsLoading,
+  } = useGetProductByIdQuery(id!);
 
   useEffect(() => {
-    if (data) {
-      dispatch(selectProduct(data.product));
+    if (prodData) {
+      dispatch(selectProduct(prodData.product));
     }
-    console.log('data', data);
-  }, [data]);
+  }, [prodData]);
 
   useEffect(() => {
     if (!catIsLoading && !catError && catData)
@@ -68,16 +80,33 @@ const AddProductForm = () => {
     }
   }, [selectedCategory, subData]);
 
+  const [data, setData] = useState<Inputs>();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>({
+    defaultValues: {
+      name: selectedProduct?.name,
+      price: selectedProduct?.price,
+      quantity: selectedProduct?.quantity,
+    },
+  });
+
   return (
-    <form className="flex flex-col gap-4">
+    <form className="flex flex-col gap-4" onSubmit={handleSubmit(processForm)}>
       <Label htmlFor="title" label="title" />
       <Input
         type="text"
         placeholder="Enter Product Title"
-        value={selectedProduct?.name}
+        {...(register('name'), { required: 'Name is Required' })}
       />
-      <Label htmlFor="category" label="category" />
-      <Dropdown
+      {errors.name?.message && (
+        <p className="text-sm text-red-400">{errors.name.message}</p>
+      )}
+      {/* <Label htmlFor="category" label="category" /> */}
+      {/* <Dropdown
         selectOption={selectCategory}
         title={
           selectedCategory?.title ||
@@ -85,9 +114,9 @@ const AddProductForm = () => {
           'category'
         }
         items={categories}
-      />
-      <Label htmlFor="subcategory" label="subcategory" />
-      {subcategories && (
+      /> */}
+      {/* <Label htmlFor="subcategory" label="subcategory" /> */}
+      {/* {subcategories && (
         <Dropdown
           selectOption={selectSubcategory}
           title={
@@ -97,33 +126,39 @@ const AddProductForm = () => {
           }
           items={subcategories}
         />
-      )}
+      )} */}
       <Flexbox tailwind="justify-between">
         <div>
           <Label htmlFor="price" label="price" />
           <Input
             type="number"
             placeholder="Enter Price"
-            value={selectedProduct?.price}
+            {...(register('price'), { required: 'Price is Required' })}
           />
+          {errors.price?.message && (
+            <p className="text-sm text-red-400">{errors.price.message}</p>
+          )}
         </div>
         <div>
           <Label htmlFor="quantity" label="quantity" />
           <Input
             type="number"
             placeholder="Enter Quantity"
-            value={selectedProduct?.quantity}
+            {...(register('quantity'), { required: 'Quantity is Required' })}
           />
+          {errors.quantity?.message && (
+            <p className="text-sm text-red-400">{errors.quantity.message}</p>
+          )}
         </div>
       </Flexbox>
-      <WYSIWYG data={selectedProduct?.description} />
-      <UploadBox images={selectedProduct?.images} />
-      <Button
-        label="save product"
-        tailwind="bg-green-500 font-extrabold text-coffee-340 border-none self-center"
-      />
+      {/* <WYSIWYG data={selectedProduct?.description} /> */}
+      {/* <UploadBox images={selectedProduct?.images} /> */}
+      <button
+        type="submit"
+        className="self-center border-none bg-green-500 font-extrabold text-coffee-340"
+      >
+        Save Product
+      </button>
     </form>
   );
 };
-
-export default AddProductForm;

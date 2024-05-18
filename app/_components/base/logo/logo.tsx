@@ -7,11 +7,10 @@ type LogoProps = {
   className: string;
   adminStyle?: string;
 };
-const Logo = ({ className, adminStyle }: LogoProps) => {
+export const Logo = ({ className, adminStyle }: LogoProps) => {
   return (
     <Link href={HOME} className={adminStyle}>
       <Image src={logo} alt="logo" className={className} priority={true} />
     </Link>
   );
 };
-export default Logo;

@@ -11,7 +11,7 @@ type DropDownProps = UIComponent & {
   items: CategoryI[] | SubcategoryI[] | null;
   selectOption: ActionCreatorWithPayload<any, string>;
 };
-const Dropdown = ({ items, title, selectOption }: DropDownProps) => {
+export const Dropdown = ({ items, title, selectOption }: DropDownProps) => {
   const dispatch = useAppDispatch();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -58,5 +58,3 @@ const Dropdown = ({ items, title, selectOption }: DropDownProps) => {
     </div>
   );
 };
-
-export default Dropdown;

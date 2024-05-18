@@ -9,7 +9,7 @@ type Props = UIComponent & {
   amount: number;
 };
 
-const Product = ({ img, name, price, amount }: Props) => {
+export const TrendingProduct = ({ img, name, price, amount }: Props) => {
   const formattedPrice = priceFormatter(price);
   return (
     <li className="flex w-full items-center py-1">
@@ -24,5 +24,3 @@ const Product = ({ img, name, price, amount }: Props) => {
     </li>
   );
 };
-
-export default Product;

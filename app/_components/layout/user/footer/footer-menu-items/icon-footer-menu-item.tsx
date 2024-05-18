@@ -1,6 +1,6 @@
 import { UIComponent } from '@/app/_types/component-types';
 
-const IconedFooterMenuItem = ({ children, component }: UIComponent) => {
+export const IconFooterMenuItem = ({ children, component }: UIComponent) => {
   return (
     <li className="flex items-center gap-3">
       {component}
@@ -8,4 +8,3 @@ const IconedFooterMenuItem = ({ children, component }: UIComponent) => {
     </li>
   );
 };
-export default IconedFooterMenuItem;

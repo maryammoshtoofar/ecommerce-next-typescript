@@ -3,7 +3,7 @@ import { Route } from 'next';
 import Link from 'next/link';
 import clsx from 'clsx';
 
-const AdminNavItem = ({
+export const AdminNavItem = ({
   component,
   active,
   children,
@@ -36,5 +36,3 @@ const AdminNavItem = ({
     </Link>
   );
 };
-
-export default AdminNavItem;

@@ -1,12 +1,11 @@
-import Title from '@/app/_components/base/admin/section-title/section-title';
+import { Title } from '@/app/_components/base';
 import { UIComponent } from '@/app/_types/component-types';
-import React from 'react';
 
 type Props = UIComponent & {
   title: string;
 };
 
-const SettingsSection = ({ title, children }: Props) => {
+export const SettingsSection = ({ title, children }: Props) => {
   return (
     <>
       <Title tailwind="text-xl font-slab text-coffee-270">{title}</Title>
@@ -17,5 +16,3 @@ const SettingsSection = ({ title, children }: Props) => {
     </>
   );
 };
-
-export default SettingsSection;

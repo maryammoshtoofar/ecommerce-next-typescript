@@ -2,7 +2,6 @@
 module.exports = {
   experimental: {
     typedRoutes: true,
-    serverActions: true,
   },
   typescript: {
     // additional TypeScript options

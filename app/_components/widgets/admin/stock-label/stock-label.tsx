@@ -3,7 +3,7 @@ import clsx from 'clsx';
 type Props = UIComponent & {
   stock: boolean;
 };
-const StockLabel = ({ stock, children, tailwind }: Props) => {
+export const StockLabel = ({ stock, children, tailwind }: Props) => {
   return (
     <span
       className={clsx(`rounded-lg text-sm uppercase ${tailwind} `, {
@@ -15,5 +15,3 @@ const StockLabel = ({ stock, children, tailwind }: Props) => {
     </span>
   );
 };
-
-export default StockLabel;

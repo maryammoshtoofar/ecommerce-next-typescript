@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import { ProductSlideProps } from '@/app/_types/component-types';
-import Card from '../card/card';
+import { Card } from '@/app/_components/widgets';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { FiShoppingCart } from 'react-icons/fi';
 import { CiCoffeeBean } from 'react-icons/ci';
-import Icon from '@/app/_components/base/icon/icon';
+import { Icon } from '@/app/_components/base';
 import { shortenDescription } from '@/app/_utils/utils';
-const ProductSlide = (props: ProductSlideProps) => {
+
+export const ProductSlide = (props: ProductSlideProps) => {
   const { id, img, alt, type, title } = props.slide;
   return (
     <Card
@@ -35,5 +36,3 @@ const ProductSlide = (props: ProductSlideProps) => {
     </Card>
   );
 };
-
-export default ProductSlide;

@@ -1,7 +1,7 @@
 import { TabProps } from '@/app/_types/component-types';
 import clsx from 'clsx';
 
-const Tab = (props: TabProps) => {
+export const Tab = (props: TabProps) => {
   const changeActiveTab = (tab: number) => {
     props.setActiveTab(tab);
   };
@@ -19,4 +19,3 @@ const Tab = (props: TabProps) => {
     </>
   );
 };
-export default Tab;

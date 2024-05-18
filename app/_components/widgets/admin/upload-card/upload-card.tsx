@@ -5,7 +5,7 @@ type Props = UIComponent & {
   src: StaticImageData | string;
   alt: string;
 };
-const UploadCard = (props: Props) => {
+export const UploadCard = (props: Props) => {
   return (
     <div className="relative flex items-center justify-center rounded-lg bg-white">
       <Image className="w-32 max-w-none" {...props} width={128} height={128} />
@@ -15,5 +15,3 @@ const UploadCard = (props: Props) => {
     </div>
   );
 };
-
-export default UploadCard;

@@ -1,9 +1,12 @@
 import { FaLocationDot } from 'react-icons/fa6';
 import { FaEnvelope } from 'react-icons/fa';
 import { MdOutlinePhoneIphone } from 'react-icons/md';
-import FooterMenuItem from '../footer-menu-items/footer-menu-item';
-import IconedFooterMenuItem from '../footer-menu-items/icon-footer-menu-item';
-import TitleFooterMenuItem from '../footer-menu-items/title-footer-menu-item';
+import {
+  FooterMenuItem,
+  IconFooterMenuItem,
+  TitleFooterMenuItem,
+} from '@/app/_components/layout';
+
 import {
   CAREERS,
   CONTACT,
@@ -14,7 +17,7 @@ import {
 } from '@/app/_config/routes';
 import Link from 'next/link';
 
-const FooterMenu = () => {
+export const FooterMenu = () => {
   return (
     <div className="footer-menu">
       <ul className="footer-menu-col-1">
@@ -56,17 +59,16 @@ const FooterMenu = () => {
         </FooterMenuItem>
       </ul>
       <ul className="footer-menu-col-3">
-        <IconedFooterMenuItem component={<FaLocationDot />}>
+        <IconFooterMenuItem component={<FaLocationDot />}>
           12 Jhon Ave - NYC
-        </IconedFooterMenuItem>
-        <IconedFooterMenuItem component={<FaEnvelope />}>
+        </IconFooterMenuItem>
+        <IconFooterMenuItem component={<FaEnvelope />}>
           elizacoffee@coffee.com
-        </IconedFooterMenuItem>
-        <IconedFooterMenuItem component={<MdOutlinePhoneIphone />}>
+        </IconFooterMenuItem>
+        <IconFooterMenuItem component={<MdOutlinePhoneIphone />}>
           +1-222-34-eliza
-        </IconedFooterMenuItem>
+        </IconFooterMenuItem>
       </ul>
     </div>
   );
 };
-export default FooterMenu;

@@ -10,10 +10,9 @@ import {
 import { FaHashtag } from 'react-icons/fa';
 import { GoNumber } from 'react-icons/go';
 import { FaRegStar } from 'react-icons/fa';
-import TableHeadCell from '../../../../base/admin/table-head-cell/table-head-cell';
-import Checkbox from '@/app/_components/base/checkbox/checkbox';
+import { TableHeadCell, Checkbox } from '@/app/_components/base';
 
-const Table = (props: UIComponent) => {
+export const UsersTable = (props: UIComponent) => {
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full table-auto bg-coffee-10 font-semibold text-coffee-240">
@@ -34,5 +33,3 @@ const Table = (props: UIComponent) => {
     </div>
   );
 };
-
-export default Table;

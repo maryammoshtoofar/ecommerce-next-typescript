@@ -3,8 +3,7 @@ import footerBg from '@/app/_assets/footer-bg.png';
 import CoffeeGrinderVector from '@/app/_assets/Vector.png';
 import { FaPinterestSquare, FaLinkedin } from 'react-icons/fa';
 import { FaSquareInstagram } from 'react-icons/fa6';
-import FooterMenu from '@/app/_components/layout/user/footer/footer-menu/footer-menu';
-import FooterCopyRight from '@/app/_components/layout/user/footer/footer-copyright/footer-copyright';
+import { FooterMenu, FooterCopyRight } from '@/app/_components/layout';
 
 const Footer = () => {
   return (

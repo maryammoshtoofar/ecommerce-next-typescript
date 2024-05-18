@@ -1,7 +1,7 @@
 'use server';
 import { revalidatePath } from 'next/cache';
 import connectMongoDB from '@/app/lib/mongodb/mongodb';
-import Product from '../lib/models/product';
+import Product from '../../lib/models/product';
 import { NextResponse } from 'next/server';
 
 export async function getAllProducts() {

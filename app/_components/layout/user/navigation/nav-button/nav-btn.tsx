@@ -5,7 +5,7 @@ type NavButtonProps = {
   title: string;
   active?: boolean;
 };
-const NavButton = ({ title }: NavButtonProps) => {
+export const NavButton = ({ title }: NavButtonProps) => {
   const navLink =
     title === 'home' ? '/' : title === 'services' ? '#' + title : title;
   return (
@@ -17,4 +17,3 @@ const NavButton = ({ title }: NavButtonProps) => {
     </Link>
   );
 };
-export default NavButton;

@@ -1,4 +1,4 @@
-import Row from '@/app/_components/widgets/admin/tables/orders-table/table-row/table-row';
+import Row from '@/app/_components/widgets/admin/tables/orders-table/table-row';
 import Table from '@/app/_components/widgets/admin/tables/orders-table/table';
 import arabica from '@/public/img/thumbnails/arabica.png';
 import houseBlend from '@/public/img/thumbnails/house-blend.png';

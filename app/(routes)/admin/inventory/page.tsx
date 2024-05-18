@@ -1,4 +1,4 @@
-import Row from '@/app/_components/widgets/admin/tables/products-table/table-row/table-row';
+import Row from '@/app/_components/widgets/admin/tables/products-table/table-row';
 import Table from '@/app/_components/widgets/admin/tables/products-table/table';
 import Title from '@/app/_components/base/admin/section-title/section-title';
 import Section from '@/app/_components/base/containers/section/section';
@@ -7,7 +7,7 @@ import Button from '@/app/_components/base/button/button';
 import Link from 'next/link';
 import AddProductModal from '@/app/_components/widgets/admin/add-product-modal/add-product-modal';
 import DeleteProductModal from '@/app/_components/widgets/admin/delete-product-modal/delete-product-modal';
-import { getAllProducts } from '@/app/_actions/actions';
+import { getAllProducts } from '@/app/api/actions/actions';
 type SearchParamProps = {
   searchParams: Record<string, string> | null | undefined;
 };
