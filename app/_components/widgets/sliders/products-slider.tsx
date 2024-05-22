@@ -2,11 +2,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { SwiperOptions } from 'swiper/types/swiper-options';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Slide from '@/app/_components/widgets/slides/product-slide';
+import { ProductSlide as Slide } from '@/app/_components/widgets';
 import { recommendedProducts } from '@/app/_lib/recommended-products';
 
 export const ProductSlider = () => {

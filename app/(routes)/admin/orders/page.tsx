@@ -1,10 +1,11 @@
-import Row from '@/app/_components/widgets/admin/tables/orders-table/table-row';
-import Table from '@/app/_components/widgets/admin/tables/orders-table/table';
+import {
+  OrdersRow as Row,
+  OrdersTable as Table,
+} from '@/app/_components/widgets';
 import arabica from '@/public/img/thumbnails/arabica.png';
 import houseBlend from '@/public/img/thumbnails/house-blend.png';
 import robusta from '@/public/img/thumbnails/robusta.png';
-import Title from '@/app/_components/base/admin/section-title/section-title';
-import Section from '@/app/_components/base/containers/section/section';
+import { Title, Section } from '@/app/_components/base';
 const Inventory = () => {
   return (
     <Section>

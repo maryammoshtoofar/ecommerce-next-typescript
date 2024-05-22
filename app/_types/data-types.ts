@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image';
 
 export interface ProductI {
-  id: string;
+  _id: string;
   images: string[];
   name: string;
   description: string;
@@ -10,8 +10,32 @@ export interface ProductI {
   price: number;
   quantity: number;
   rating: 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | null;
+  comments: Comment[] | null;
+  questions: Question[] | null;
+  relatedProducts: ProductI[] | null;
 }
-export type User = {
+
+export interface Comment {
+  _id: string;
+  user: User;
+  caption: string;
+  images: string[] | null;
+  rating: 1 | 2 | 3 | 4 | 5;
+}
+export interface Question {
+  _id: string;
+  user: User;
+  caption: string;
+  answers: Answer[] | null;
+}
+
+export interface Answer {
+  _id: string;
+  user: User;
+  caption: string;
+}
+
+export interface User {
   id: string;
   username: string;
   hashedPassword: string;
@@ -19,18 +43,21 @@ export type User = {
   phoneNumber: string;
   profile: StaticImageData;
   orders: Order[];
-};
-export type Order = {
-  id: string;
+}
+
+export interface Order {
+  _id: string;
   products: ProductI[];
   total: number;
   status: 'pending' | 'paid' | 'cancelled' | 'delivered';
-};
+}
 
 export interface CategoryI {
   _id: string;
   title: string;
   description: string;
+  image: string;
+  subcategories: SubcategoryI[];
 }
 
 export interface SubcategoryI {

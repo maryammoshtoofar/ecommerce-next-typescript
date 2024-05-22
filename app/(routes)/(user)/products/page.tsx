@@ -1,11 +1,10 @@
-import Card from '@/app/_components/widgets/card/card';
-import Icon from '@/app/_components/base/icon/icon';
+import {Card} from '@/app/_components/widgets';
+import {Icon , Title} from '@/app/_components/base';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { FiShoppingCart } from 'react-icons/fi';
 import { products } from '@/app/_lib/products';
 import Image from 'next/image';
 import { shortenDescription } from '@/app/_utils/utils';
-import Title from '@/app/_components/base/admin/section-title/section-title';
 
 const Products = () => {
   return (

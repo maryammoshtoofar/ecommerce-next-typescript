@@ -5,12 +5,12 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { SwiperOptions } from 'swiper/types/swiper-options';
-import Slide from '../slides/about-slide';
+import {AboutSlide as Slide} from '../slides/about-slide';
 import { aboutSlides } from '@/app/_lib/about-slides';
 import {Bean1} from '@/app/_components/base';
 import useWindowDimensions from '@/app/_hooks/useWindowDimensions';
 
-const AboutSlider = () => {
+export const AboutSlider = () => {
   const { width } = useWindowDimensions();
 
 
@@ -36,5 +36,3 @@ const AboutSlider = () => {
     </section>
   );
 };
-
-export default AboutSlider;

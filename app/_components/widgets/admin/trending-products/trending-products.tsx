@@ -5,7 +5,7 @@ import mocha from '@/public/img/mocha.png';
 import americano from '@/public/img/americano.png';
 import { TrendingProduct as Product } from '@/app/_components/widgets';
 
-const TrendingProducts = () => {
+export const TrendingProducts = () => {
   return (
     <article className="rounded-lg bg-coffee-10 px-4 pt-3 lg:w-1/3 ">
       <div className="flex w-full items-baseline justify-between py-2">
@@ -24,5 +24,3 @@ const TrendingProducts = () => {
     </article>
   );
 };
-
-export default TrendingProducts;

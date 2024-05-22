@@ -1,7 +1,6 @@
 import mongoose, { Schema } from 'mongoose';
-import { StaticImageData } from 'next/image';
 import { categorySchema } from './category';
-import { CategoryI, ProductI } from '@/app/_types/data-types';
+import { ProductI } from '@/app/_types/data-types';
 
 
 

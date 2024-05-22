@@ -5,7 +5,7 @@ import { FaPinterestSquare, FaLinkedin } from 'react-icons/fa';
 import { FaSquareInstagram } from 'react-icons/fa6';
 import { FooterMenu, FooterCopyRight } from '@/app/_components/layout';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="footer">
       <div className="social-media-links">
@@ -31,4 +31,3 @@ const Footer = () => {
     </footer>
   );
 };
-export default Footer;

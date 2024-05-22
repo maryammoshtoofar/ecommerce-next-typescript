@@ -1,10 +1,12 @@
-import Row from '@/app/_components/widgets/admin/tables/users-table/table-row';
-import Table from '@/app/_components/widgets/admin/tables/users-table/table';
+import {
+  UsersRow as Row,
+  UsersTable as Table,
+} from '@/app/_components/widgets';
 import user from '@/public/img/admin-profile.png';
 import houseBlend from '@/public/img/thumbnails/house-blend.png';
 import robusta from '@/public/img/thumbnails/robusta.png';
-import Title from '@/app/_components/base/admin/section-title/section-title';
-import Section from '@/app/_components/base/containers/section/section';
+import { Title, Section } from '@/app/_components/base';
+
 const Users = () => {
   return (
     <Section>

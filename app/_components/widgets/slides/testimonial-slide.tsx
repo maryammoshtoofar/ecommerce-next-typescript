@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { TestimonialsSlideProps } from '@/app/_types/component-types';
-import { Card } from '@/app/_components/widgets';
-import StarRating from '../star-rating/star-rating';
+import { StarRating, Card } from '@/app/_components/widgets';
 import { FaQuoteRight } from 'react-icons/fa';
 
 export const TestimonialSlide = (props: TestimonialsSlideProps) => {
@@ -17,4 +16,3 @@ export const TestimonialSlide = (props: TestimonialsSlideProps) => {
     </Card>
   );
 };
-

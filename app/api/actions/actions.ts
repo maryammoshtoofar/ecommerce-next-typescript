@@ -21,11 +21,9 @@ export async function deleteProductById(id: string) {
 }
 
 export async function getProductById(id: string) {
-  console.log('iddd', id);
   try {
     await connectMongoDB();
     const product = await Product.findOne({ _id: id });
-    console.log(product);
     return NextResponse.json({ product }, { status: 200 });
   } catch (error) {
     return { message: 'something went wrong' };

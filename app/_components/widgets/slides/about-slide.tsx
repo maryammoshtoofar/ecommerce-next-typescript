@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image';
 import { AboutSlideProps } from '@/app/_types/component-types';
 import { Card } from '@/app/_components/widgets';

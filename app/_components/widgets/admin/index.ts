@@ -10,6 +10,7 @@ export * from './settings-section';
 export * from './stock-label';
 export * from './tables';
 export * from './trending-product';
+export * from './trending-products';
 export * from './upload-area';
 export * from './upload-box';
 export * from './upload-card';

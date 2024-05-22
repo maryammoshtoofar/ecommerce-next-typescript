@@ -4,7 +4,7 @@ import { Navigation, Pagination, EffectCreative } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Slide from '../slides/testimonial-slide';
+import { TestimonialSlide as Slide } from '../slides/testimonial-slide';
 import { testimonials } from '@/app/_lib/testimonials';
 
 export const TestimonialsSlider = () => {

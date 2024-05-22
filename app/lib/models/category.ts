@@ -1,11 +1,13 @@
 import mongoose, { Schema } from 'mongoose';
-import { CategoryI, SubcategoryI } from "@/app/_types/data-types"
-
+import { CategoryI, SubcategoryI } from '@/app/_types/data-types';
+import { subcategorySchema } from './subcategory';
 
 export const categorySchema = new Schema<CategoryI>(
   {
     title: String,
     description: String,
+    image: String,
+    subcategories: [subcategorySchema],
   },
   { timestamps: true },
 );

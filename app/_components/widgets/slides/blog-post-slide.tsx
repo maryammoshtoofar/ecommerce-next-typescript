@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import { BlogPostSlideProps } from '@/app/_types/component-types';
 import { Card } from '@/app/_components/widgets';
@@ -22,4 +23,3 @@ export const BlogPostSlide = (props: BlogPostSlideProps) => {
     </Card>
   );
 };
-

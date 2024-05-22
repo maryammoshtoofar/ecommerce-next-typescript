@@ -1,7 +1,8 @@
-import Title from '@/app/_components/base/admin/section-title/section-title';
-import Section from '@/app/_components/base/containers/section/section';
-import Item from '@/app/_components/widgets/admin/setting-item/setting-item';
-import SettingsSection from '@/app/_components/widgets/admin/settings-section/settings-section';
+import { Title, Section } from '@/app/_components/base';
+import {
+  SettingItem as Item,
+  SettingsSection,
+} from '@/app/_components/widgets';
 import { TbArrowsRightLeft } from 'react-icons/tb';
 import {
   FaRegEnvelope,

@@ -1,10 +1,14 @@
-import Container from '@/app/_components/base/containers/dashboard-cards-container/cards-container';
-import Card from '@/app/_components/widgets/admin/dashboard-card/dashboard-card';
-import SalesChart from '@/app/_components/widgets/admin/sales-chart/sales-chart';
-import Title from '@/app/_components/base/admin/section-title/section-title';
-import Section from '@/app/_components/base/containers/section/section';
-import TrendingProducts from '@/app/_components/widgets/admin/trending-products/trending-products';
-import WidgetsContainer from '@/app/_components/base/containers/dashboard-widgets-container/widgets-container';
+import {
+  CardsContainer as Container,
+  Title,
+  Section,
+  WidgetsContainer,
+} from '@/app/_components/base';
+import {
+  DashboardCard as Card,
+  SalesChart,
+  TrendingProducts,
+} from '@/app/_components/widgets';
 import { FiShoppingBag } from 'react-icons/fi';
 import { FiUser } from 'react-icons/fi';
 import { FiShoppingCart } from 'react-icons/fi';

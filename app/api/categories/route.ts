@@ -11,17 +11,17 @@ interface DeleteReqI {
   nextUrl: { searchParams: { get: (arg0: string) => any } };
 }
 
-export async function POST(req: ReqI) {
-  const { title, description } = await req.json();
-  await connectMongoDB();
-  await Category.create({ title, description });
-  return NextResponse.json({ message: 'Category Created' }, { status: 201 });
-}
-
 export async function GET() {
   await connectMongoDB();
   const categories = await Category.find();
   return NextResponse.json({ categories }, { status: 200 });
+}
+
+export async function POST(req: ReqI) {
+  const { title, description, image } = await req.json();
+  await connectMongoDB();
+  await Category.create({ title, description, image });
+  return NextResponse.json({ message: 'Category Created' }, { status: 201 });
 }
 
 export async function DELETE(req: DeleteReqI) {

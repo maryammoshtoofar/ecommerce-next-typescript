@@ -12,9 +12,9 @@ interface DeleteReqI {
 }
 
 export async function POST(req: ReqI) {
-  const { title, description, category } = await req.json();
+  const { title, description } = await req.json();
   await connectMongoDB();
-  await Subcategory.create({ title, description, category });
+  await Subcategory.create({ title, description });
   return NextResponse.json({ message: 'Subcategory Created' }, { status: 201 });
 }
 
