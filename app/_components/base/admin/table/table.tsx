@@ -1,6 +1,6 @@
 import { UIComponent } from '@/app/_types/component-types';
 import { TableHeadCell } from '@/app/_components/base/admin/table-head-cell/table-head-cell';
-import Checkbox from '@/app/_components/base/checkbox/checkbox';
+import {Checkbox} from '@/app/_components/base/';
 type TableProps = UIComponent & {
   theads: React.ReactNode;
 };

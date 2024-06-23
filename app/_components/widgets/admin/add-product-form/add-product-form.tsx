@@ -1,4 +1,5 @@
 'use client';
+
 import { useSearchParams } from 'next/navigation';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import {
@@ -8,8 +9,7 @@ import {
   Flexbox,
   Button,
 } from '@/app/_components/base/';
-import WYSIWYG from '../wysiwyg/wysiwyg';
-import UploadBox from '../upload-box/upload-box';
+import { UploadBox } from '../upload-box';
 import {
   useGetAllCategoriesQuery,
   useGetSubcategoriesByCategoryQuery,
@@ -33,6 +33,7 @@ type Inputs = {
   quantity: number;
 };
 export const AddProductForm = () => {
+  console.log('hihhhhh');
   const processForm: SubmitHandler<Inputs> = (data) => setData(data);
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
@@ -50,6 +51,8 @@ export const AddProductForm = () => {
     isLoading: catIsLoading,
   } = useGetAllCategoriesQuery('categories');
 
+  console.log('catData', catError);
+
   const {
     data: subData,
     error: subError,
@@ -63,6 +66,8 @@ export const AddProductForm = () => {
     error: prodError,
     isLoading: prodIsLoading,
   } = useGetProductByIdQuery(id!);
+
+  console.log('prodData', prodData);
 
   useEffect(() => {
     if (prodData) {
@@ -151,7 +156,6 @@ export const AddProductForm = () => {
           )}
         </div>
       </Flexbox>
-      {/* <WYSIWYG data={selectedProduct?.description} /> */}
       {/* <UploadBox images={selectedProduct?.images} /> */}
       <button
         type="submit"

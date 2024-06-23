@@ -4,9 +4,7 @@ import { setupListeners } from '@reduxjs/toolkit/query';
 import subcategoriesReducer from './features/subcategories/subcategories-slice';
 import categoriesReducer from './features/categories/categories-slice';
 import productsReducer from './features/products/products-slice';
-const composeEnhancers =
-  (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-  
+
 export const makeStore = () => {
   return configureStore({
     reducer: {

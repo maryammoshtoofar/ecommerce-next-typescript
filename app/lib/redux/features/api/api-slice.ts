@@ -40,5 +40,8 @@ export const shopApi = createApi({
   }),
 });
 
-export const { useGetAllCategoriesQuery, useGetSubcategoriesByCategoryQuery, useGetProductByIdQuery } =
-  shopApi;
+export const {
+  useGetAllCategoriesQuery,
+  useGetSubcategoriesByCategoryQuery,
+  useGetProductByIdQuery,
+} = shopApi;

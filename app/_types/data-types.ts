@@ -5,14 +5,14 @@ export interface ProductI {
   images: string[];
   name: string;
   description: string;
-  category: CategoryI;
-  subcategory: CategoryI;
+  category: string;
+  subcategory: string;
   price: number;
   quantity: number;
   rating: 1 | 1.5 | 2 | 2.5 | 3 | 3.5 | 4 | 4.5 | 5 | null;
-  comments: Comment[] | null;
-  questions: Question[] | null;
-  relatedProducts: ProductI[] | null;
+  // comments: Comment[] | null;
+  // questions: Question[] | null;
+  // relatedProducts: ProductI[] | null;
 }
 
 export interface Comment {
@@ -27,6 +27,12 @@ export interface Question {
   user: User;
   caption: string;
   answers: Answer[] | null;
+}
+
+export interface OrderedProduct {
+  product: ProductI;
+  quantity: number;
+  totalPrice: number;
 }
 
 export interface Answer {
@@ -47,7 +53,7 @@ export interface User {
 
 export interface Order {
   _id: string;
-  products: ProductI[];
+  products: OrderedProduct[];
   total: number;
   status: 'pending' | 'paid' | 'cancelled' | 'delivered';
 }
@@ -64,5 +70,5 @@ export interface SubcategoryI {
   _id: string;
   category: string;
   title: string;
-  description: string;
+  image: string;
 }

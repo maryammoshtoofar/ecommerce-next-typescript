@@ -3,8 +3,14 @@ import { ImageArray } from '@/app/_types/component-types';
 export const shortenDescription = (str: string, n: number) => {
   return str.length > n ? str.slice(0, n - 1) + '...' : str;
 };
-export const fillRatingStars = (rating: number) => {
+export const fillRatingStars = (rating: number | null) => {
   const stars = [];
+  if (!rating) {
+    for (let i = 0; i < 5; i++) {
+      stars.push('empty');
+    }
+    return stars;
+  }
   for (let i = 0; i < Math.floor(rating); i++) {
     stars.push('fill');
   }

@@ -7,7 +7,7 @@ export const categorySchema = new Schema<CategoryI>(
     title: String,
     description: String,
     image: String,
-    subcategories: [subcategorySchema],
+    subcategories: [String],
   },
   { timestamps: true },
 );

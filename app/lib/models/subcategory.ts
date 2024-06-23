@@ -3,7 +3,7 @@ import { SubcategoryI } from '@/app/_types/data-types';
 export const subcategorySchema = new Schema<SubcategoryI>({
   category: String,
   title: String,
-  description: String,
+  image:String
 });
 
 const Subcategory =

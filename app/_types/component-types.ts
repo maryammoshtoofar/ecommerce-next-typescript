@@ -67,7 +67,7 @@ export type MenuItemProps = UIComponent & {
 };
 
 export type StarRatingProps = UIComponent & {
-  rating: number;
+  rating: number | null;
 };
 export type ImageArray = StaticImageData[];
 

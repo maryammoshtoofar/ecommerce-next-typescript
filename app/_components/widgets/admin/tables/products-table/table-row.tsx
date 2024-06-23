@@ -17,7 +17,7 @@ type Props = UIComponent & {
   stock: boolean;
   price: number;
   quantity: number;
-  rating: number;
+  rating: number | null;
 };
 
 export const ProductsRow = ({
@@ -32,7 +32,7 @@ export const ProductsRow = ({
   subcategory,
 }: Props) => {
   const stockIcon = stock ? <FaCheck /> : <ImCross />;
-
+  console.log('category in cell', category);
   return (
     <TableRow>
       <Cell>
@@ -48,8 +48,8 @@ export const ProductsRow = ({
         />
       </Cell>
       <Cell>{name}</Cell>
-      <Cell tailwind="hidden sm:table-cell">{category}</Cell>
-      <Cell tailwind="hidden sm:table-cell">{subcategory}</Cell>
+      <Cell tailwind="table-cell">{category}</Cell>
+      <Cell tailwind="table-cell">{subcategory}</Cell>
       <Cell>
         <Flexbox>
           <span className="hidden md:inline">$</span>
@@ -71,7 +71,7 @@ export const ProductsRow = ({
           tailwind="hidden md:flex text-yellow-600 hover:text-yellow-700 transition-all"
         />
         <span className="flex items-center text-yellow-600 transition-all hover:text-yellow-700 md:hidden">
-          {rating} <FaStar />
+          {rating} {!rating && 0} <FaStar />
         </span>
       </Cell>
       <StoreProvider>

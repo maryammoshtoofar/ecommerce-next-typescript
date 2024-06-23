@@ -14,4 +14,3 @@ export * from './trending-products';
 export * from './upload-area';
 export * from './upload-box';
 export * from './upload-card';
-export * from './wysiwyg';

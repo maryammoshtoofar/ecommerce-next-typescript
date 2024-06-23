@@ -1,5 +1,4 @@
 import mongoose, { Schema } from 'mongoose';
-import { categorySchema } from './category';
 import { ProductI } from '@/app/_types/data-types';
 
 
@@ -9,8 +8,8 @@ const productSchema = new Schema<ProductI>(
     images: Array,
     name: String,
     description: String,
-    category: categorySchema,
-    subcategory: categorySchema,
+    category: String,
+    subcategory: String,
     price: Number,
     quantity: Number,
     rating: { type: Number, default: null },
