@@ -24,7 +24,7 @@ const Inventory = async ({ searchParams }: SearchParamProps) => {
   const del = id && !show;
   return (
     <Section>
-      <Flexbox tailwind="justify-between">
+      <Flexbox tailwind="justify-between flex-col gap-4 smmobile:gap-0 smmobile:flex-row row-span-1">
         <Title>inventory</Title>
         <Link href="?show=true">
           <Button label="add new product" />
