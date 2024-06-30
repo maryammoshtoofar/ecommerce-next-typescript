@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -29,7 +29,8 @@
     ".next/types/**/*.ts",
     "postcss.config.js",
     "tailwind.config.ts",
-    "app/utils/sortColors.js"
+    "app/utils/sortColors.js",
+    "app/lib/mongodb/mongodb.ts"
   ],
   "exclude": ["node_modules"]
 }

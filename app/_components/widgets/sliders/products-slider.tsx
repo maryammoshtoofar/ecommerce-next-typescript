@@ -2,14 +2,13 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { SwiperOptions } from 'swiper/types/swiper-options';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Slide from '../slides/product-slide';
+import { ProductSlide as Slide } from '@/app/_components/widgets';
 import { recommendedProducts } from '@/app/_lib/recommended-products';
 
-const ProductSlider = () => {
+export const ProductSlider = () => {
   return (
     <section className="product-slider-section">
       <h1 className="product-slider-title">recommended</h1>
@@ -51,5 +50,3 @@ const ProductSlider = () => {
     </section>
   );
 };
-
-export default ProductSlider;

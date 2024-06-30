@@ -1,6 +1,6 @@
-import { UIComponent } from '@/app/_types/types';
+import { UIComponent } from '@/app/_types/component-types';
 
-const Bean1 = (props: UIComponent) => {
+export const Bean1 = (props: UIComponent) => {
   return (
     <div className={props.tailwind}>
       <svg
@@ -33,5 +33,3 @@ const Bean1 = (props: UIComponent) => {
     </div>
   );
 };
-
-export default Bean1;

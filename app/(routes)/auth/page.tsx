@@ -1,7 +1,5 @@
 'use client';
-import Image from 'next/Image';
-import loginBg from '@/public/img/auth-1.jpg';
-import registerBg from '@/public/img/auth-2.jpg';
+import Image from 'next/image';
 import Input from '@/app/_components/base/input/input';
 import Tab from '@/app/_components/base/tab/tab';
 import { FaEnvelope } from 'react-icons/fa';
@@ -9,9 +7,9 @@ import { FaLock } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';
 import { FaGoogle } from 'react-icons/fa';
 import Button from '@/app/_components/base/button/button';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { authImages } from '@/app/_lib/auth-images';
-import { getRandomImages } from '@/app/_lib/utils/utils';
+import { getRandomImages } from '@/app/_utils/utils';
 
 type Props = {};
 
@@ -20,7 +18,7 @@ const page = (props: Props) => {
   const [activeTab, setActiveTab] = useState<number>(1);
 
   return (
-    <main className="flex min-h-screen w-full flex-col gap-4 bg-coffee-500 lg:max-h-screen lg:flex-row lg:gap-0">
+    <>
       <section className="overflow-hidden md:h-1/2 lg:h-auto lg:w-1/2">
         {activeTab === 1 && (
           <Image
@@ -92,7 +90,7 @@ const page = (props: Props) => {
           </div>
         </form>
       </section>
-    </main>
+    </>
   );
 };
 

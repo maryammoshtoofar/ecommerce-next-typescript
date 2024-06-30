@@ -1,10 +1,9 @@
 import Image from 'next/image';
-import { TestimonialsSlideProps } from '@/app/_types/types';
-import Card from '../card/card';
-import StarRating from '../star-rating/star-rating';
+import { TestimonialsSlideProps } from '@/app/_types/component-types';
+import { StarRating, Card } from '@/app/_components/widgets';
 import { FaQuoteRight } from 'react-icons/fa';
 
-const TestimonialSlide = (props: TestimonialsSlideProps) => {
+export const TestimonialSlide = (props: TestimonialsSlideProps) => {
   const { id, title, img, alt, comment, occupation, rating } = props.slide;
   return (
     <Card key={id} tailwind="testimonial-card">
@@ -17,5 +16,3 @@ const TestimonialSlide = (props: TestimonialsSlideProps) => {
     </Card>
   );
 };
-
-export default TestimonialSlide;

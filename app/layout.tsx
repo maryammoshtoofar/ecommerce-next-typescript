@@ -1,8 +1,7 @@
-import '@/app/_lib/styles/globals.css';
-import Header from '@/app/_components/layout/user/header/header';
-import Footer from '@/app/_components/layout/user/footer/footer';
+import '@/app/_styles/globals.css';
 import type { Metadata } from 'next';
 import { Dancing_Script, Roboto_Slab } from 'next/font/google';
+import { UIComponent } from './_types/component-types';
 
 const slab = Roboto_Slab({
   subsets: ['latin'],
@@ -20,12 +19,14 @@ export const metadata: Metadata = {
   title: 'Coffee Ecommerce',
   description: 'Buy Coffee and Coffee Equipment Online',
 };
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+
+const RootLayout = ({ children }: UIComponent) => {
   return (
-    <html lang="en" className={`${slab.variable} ${dancingScript.variable} h-full scroll-smooth`}>
-      <body className="font-slab min-h-full">
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${slab.variable} ${dancingScript.variable} h-full scroll-smooth m-0 p-0`}
+    >
+      <body className="h-full font-slab m-0 p-0">{children}</body>
     </html>
   );
 };

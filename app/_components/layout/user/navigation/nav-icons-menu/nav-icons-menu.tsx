@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { BsPerson } from 'react-icons/bs';
 import { BsCart2 } from 'react-icons/bs';
 import { SlMenu } from 'react-icons/sl';
-const NavIconsMenu = () => {
+
+export const NavIconsMenu = () => {
   return (
     <nav className="nav-icons-menu ">
       <Link href={CART}>
@@ -16,4 +17,3 @@ const NavIconsMenu = () => {
     </nav>
   );
 };
-export default NavIconsMenu;

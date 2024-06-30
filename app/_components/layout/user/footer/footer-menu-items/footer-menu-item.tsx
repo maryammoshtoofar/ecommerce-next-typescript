@@ -1,6 +1,6 @@
-import { UIComponent } from '@/app/_types/types';
+import { UIComponent } from '@/app/_types/component-types';
 
-const FooterMenuItem = ({ children }: UIComponent) => {
+export const FooterMenuItem = ({ children }: UIComponent) => {
   return <li className="cursor-pointer">{children}</li>;
 };
-export default FooterMenuItem;
+

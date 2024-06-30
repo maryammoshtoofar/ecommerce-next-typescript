@@ -4,10 +4,10 @@ import { Navigation, Pagination, EffectCreative } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Slide from '../slides/testimonial-slide';
+import { TestimonialSlide as Slide } from '../slides/testimonial-slide';
 import { testimonials } from '@/app/_lib/testimonials';
 
-const TestimonialsSlider = () => {
+export const TestimonialsSlider = () => {
   return (
     <section className="testimonials-section">
       <div className="testimonials ">
@@ -56,5 +56,3 @@ const TestimonialsSlider = () => {
     </section>
   );
 };
-
-export default TestimonialsSlider;

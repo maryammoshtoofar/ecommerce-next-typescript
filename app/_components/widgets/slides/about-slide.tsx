@@ -1,10 +1,11 @@
+"use client"
 import Image from 'next/image';
-import { AboutSlideProps } from '@/app/_types/types';
-import Card from '../card/card';
-import { generateCaptionLength, shortenDescription } from '@/app/_lib/utils/utils';
+import { AboutSlideProps } from '@/app/_types/component-types';
+import { Card } from '@/app/_components/widgets';
+import { generateCaptionLength, shortenDescription } from '@/app/_utils/utils';
 import { useEffect, useState } from 'react';
 
-const AboutSlide = (props: AboutSlideProps) => {
+export const AboutSlide = (props: AboutSlideProps) => {
   const { id, img, alt, title, caption } = props.slide;
   const { screenWidth } = props;
   const [captionLength, setCaptionLength] = useState(397);
@@ -20,9 +21,10 @@ const AboutSlide = (props: AboutSlideProps) => {
       <p className="about-slide-caption">
         {shortenDescription(caption, captionLength)}
       </p>
-      <button className="about-slide-btn">More</button>
+      <button className="cursor-pointer self-end text-white underline">
+        More
+      </button>
     </Card>
   );
 };
 
-export default AboutSlide;

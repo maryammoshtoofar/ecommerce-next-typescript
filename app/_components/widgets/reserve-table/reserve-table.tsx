@@ -1,7 +1,6 @@
-import { UIComponent } from '@/app/_types/types';
+import { UIComponent } from '@/app/_types/component-types';
 import Image from 'next/image';
 import cupAndPeople from '@/app/_assets/cup-and-people.png';
-import Input from '@/app/_components/base/input/input';
 import { MdOutlineCalendarToday } from 'react-icons/md';
 import { MdOutlineWatchLater } from 'react-icons/md';
 import { LuUsers2 } from 'react-icons/lu';
@@ -9,8 +8,8 @@ import { AiOutlineUser } from 'react-icons/ai';
 import { MdOutlinePhoneIphone } from 'react-icons/md';
 import { RxEnvelopeClosed } from 'react-icons/rx';
 import { TbReservedLine } from 'react-icons/tb';
-import Button from '@/app/_components/base/button/button';
-const ReserveTable = (props: UIComponent) => {
+import { Button, Input } from '@/app/_components/base/';
+export const ReserveTable = (props: UIComponent) => {
   return (
     <section className="reserve-table-section">
       <h1 className="reserve-table-title">
@@ -49,7 +48,6 @@ const ReserveTable = (props: UIComponent) => {
           />
           <Button
             label="Reserve"
-            tailwind="reserve-table-btn"
             mode="secondary"
             component={<TbReservedLine />}
           />
@@ -58,5 +56,3 @@ const ReserveTable = (props: UIComponent) => {
     </section>
   );
 };
-
-export default ReserveTable;

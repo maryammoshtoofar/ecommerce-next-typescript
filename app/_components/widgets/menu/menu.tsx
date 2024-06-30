@@ -1,16 +1,16 @@
-import { UIComponent } from '@/app/_types/types';
+import { UIComponent } from '@/app/_types/component-types';
 import Image from 'next/image';
 import menuPicMan from '@/public/img/menu-pic-man.png';
 import menuPicWoman from '@/public/img/menu-pic-woman.png';
-import MenuItem from '../menu-item/menu-item';
+import { MenuItem } from '@/app/_components/widgets';
 import { MenuItems } from '@/app/_lib/menu-items';
 import { BsArrowDownRightSquare } from 'react-icons/bs';
 
-const Menu = (props: UIComponent) => {
+export const Menu = (props: UIComponent) => {
   return (
     <section className="menu-section">
       <h1 className="menu-title">Popular Menu</h1>
-      <div className="menu-container">
+      <article className="menu-container">
         <div className="menu-images">
           <Image
             src={menuPicWoman}
@@ -36,7 +36,7 @@ const Menu = (props: UIComponent) => {
             );
           })}
         </ul>
-      </div>
+      </article>
       <ul className="invisible">
         <li dir="left" className="menu-item-1" />
         <li dir="left" className="menu-item-2" />
@@ -53,5 +53,3 @@ const Menu = (props: UIComponent) => {
     </section>
   );
 };
-
-export default Menu;

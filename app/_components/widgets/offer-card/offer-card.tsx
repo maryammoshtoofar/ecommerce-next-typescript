@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import { UIComponent } from '@/app/_types/types';
-import Card from '../card/card';
-import Button from '@/app/_components/base/button/button';
+import { UIComponent } from '@/app/_types/component-types';
+import { Card } from '../card/card';
+import { Button } from '@/app/_components/base';
 import coffeePackages from '@/app/_assets/coffee-packages.png';
 
-const OfferCard = (props: UIComponent) => {
+export const OfferCard = (props: UIComponent) => {
   return (
     <section className="offer-section">
       <Card tailwind="offer-card">
@@ -19,7 +19,11 @@ const OfferCard = (props: UIComponent) => {
             most renowned coffee growing regions in the world, ensuring that
             each cup is unrivaled in flavor and freshness.
           </p>
-          <Button mode="primary" label="Shop Now" tailwind="offer-card-btn" />
+          <Button
+            mode="primary"
+            label="Shop Now"
+            tailwind=" w-2/3 sm:w-auto lg:w-2/3 xl:w-2/5"
+          />
         </div>
         <Image
           className="offer-card-img"
@@ -30,5 +34,3 @@ const OfferCard = (props: UIComponent) => {
     </section>
   );
 };
-
-export default OfferCard;
