@@ -1,5 +1,6 @@
 import { StaticImageData } from 'next/image';
 import { Dispatch, ReactElement, SetStateAction } from 'react';
+import { ProductI } from './data-types';
 
 export type UIComponent = {
   children?: React.ReactNode;
@@ -74,4 +75,9 @@ export type ImageArray = StaticImageData[];
 export type AdminNavItemProps = UIComponent & {
   active?: boolean;
   href: string;
+};
+
+export type TableProps = UIComponent & {
+  headings: string[];
+  products: ProductI[];
 };

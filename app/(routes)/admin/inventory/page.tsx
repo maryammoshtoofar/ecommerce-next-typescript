@@ -1,3 +1,5 @@
+
+// todo : fix hydration warning for products table
 import {
   ProductsRow as Row,
   ProductsTable as Table,
@@ -11,14 +13,23 @@ import {
   getCategoryTitleById,
   getSubcategoryTitleById,
 } from '@/app/api/actions/actions';
-import { ProductI } from '@/app/_types/data-types';
 type SearchParamProps = {
   searchParams: Record<string, string> | null | undefined;
 };
 
 const Inventory = async ({ searchParams }: SearchParamProps) => {
   const products = await getAllProducts();
-  console.log(products);
+  const tableHeadings = [
+    'image',
+    'name',
+    'category',
+    'subcategory',
+    'price',
+    'stock',
+    'quantity',
+    'rating',
+    'actions',
+  ];
   const show = searchParams?.show;
   const id = searchParams?.id;
   const del = id && !show;
@@ -30,31 +41,7 @@ const Inventory = async ({ searchParams }: SearchParamProps) => {
           <Button label="add new product" />
         </Link>
       </Flexbox>
-      <Table>
-        {products.map(async (product: ProductI) => {
-          const category = await getCategoryTitleById(product.category);
-          const subcategory = await getSubcategoryTitleById(
-            product.subcategory,
-          );
-
-          console.log('caaat', category);
-          console.log('caaat', subcategory);
-          return (
-            <Row
-              key={product._id}
-              id={product._id}
-              thumbnail={product.images[0]}
-              name={product.name}
-              category={category}
-              subcategory={subcategory}
-              stock={product.quantity ? true : false}
-              price={product.price}
-              quantity={product.quantity}
-              rating={product.rating}
-            />
-          );
-        })}
-      </Table>
+      <Table headings={tableHeadings} products={products} />
       {show && <ProductModal id={id} />}
       {del && <DeleteProductModal id={id} />}
     </Section>

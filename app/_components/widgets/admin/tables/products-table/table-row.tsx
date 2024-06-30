@@ -32,51 +32,61 @@ export const ProductsRow = ({
   subcategory,
 }: Props) => {
   const stockIcon = stock ? <FaCheck /> : <ImCross />;
-  console.log('category in cell', category);
+  console.log('id', id);
   return (
-    <TableRow>
+    <TableRow key={id}>
       <Cell>
-        <Checkbox />
+        checkbox
+        {/* <Checkbox /> */}
       </Cell>
       <Cell>
-        <Image
+        image goes here
+        {/* <Image
           src={`http://localhost:3000/uploads/${thumbnail}`}
           alt={name}
           className="w-20 max-w-none"
           width={100}
           height={100}
-        />
+        /> */}
       </Cell>
       <Cell>{name}</Cell>
       <Cell tailwind="table-cell">{category}</Cell>
       <Cell tailwind="table-cell">{subcategory}</Cell>
       <Cell>
-        <Flexbox>
-          <span className="hidden md:inline">$</span>
-          <span className=" md:hidden">{price}</span>
-          <span className="hidden md:inline">{priceFormatter(price)}</span>
-        </Flexbox>
+        {/* <Flexbox> */}
+        {/* <span className="hidden md:inline">$</span> */}
+        {/* <span className=" md:hidden"> */}
+        {price}
+        {/* </span> */}
+        {/* <span className="hidden md:inline">{priceFormatter(price)}</span> */}
+        {/* </Flexbox> */}
       </Cell>
       <Cell>
-        <Flexbox>
-          <StockLabel stock={stock}>{stockIcon}</StockLabel>
-        </Flexbox>
+        {/* <Flexbox> */}
+        {/* <StockLabel stock={stock}> */}
+        {stockIcon}
+        {/* </StockLabel> */}
+        {/* </Flexbox> */}
       </Cell>
       <Cell>
-        <Flexbox>{quantity}</Flexbox>
+        {/* <Flexbox> */}
+        {quantity}
+        {/* </Flexbox> */}
       </Cell>
       <Cell>
-        <StarRating
+        {/* <StarRating
           rating={rating}
           tailwind="hidden md:flex text-yellow-600 hover:text-yellow-700 transition-all"
-        />
-        <span className="flex items-center text-yellow-600 transition-all hover:text-yellow-700 md:hidden">
-          {rating} {!rating && 0} <FaStar />
-        </span>
+        /> */}
+        {/* <span className="flex items-center text-yellow-600 transition-all hover:text-yellow-700 md:hidden"> */}
+        {rating} {!rating && 0}
+        {/* <FaStar /> */}
+        {/* </span> */}
       </Cell>
-      <StoreProvider>
+      <Cell>Actions go here</Cell>
+      {/* <StoreProvider>
         <ActionsCell id={id} />
-      </StoreProvider>
+      </StoreProvider> */}
     </TableRow>
   );
 };
