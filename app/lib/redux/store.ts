@@ -1,4 +1,8 @@
-import { configureStore, createListenerMiddleware } from '@reduxjs/toolkit';
+import {
+  TypedStartListening,
+  configureStore,
+  createListenerMiddleware,
+} from '@reduxjs/toolkit';
 import { shopApi } from './features/api/api-slice';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import subcategoriesReducer from './features/subcategories/subcategories-slice';
@@ -38,7 +42,11 @@ export const loadFromLocalStorage = () => {
 };
 
 const listenerMiddleware = createListenerMiddleware();
-listenerMiddleware.startListening({
+const startListening = listenerMiddleware.startListening as TypedStartListening<
+  RootState,
+  AppDispatch
+>;
+startListening({
   predicate: (action, currentState, previousState) => {
     return currentState.cart !== previousState.cart;
   },
