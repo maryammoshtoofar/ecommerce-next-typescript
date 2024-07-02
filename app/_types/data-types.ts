@@ -1,7 +1,8 @@
 import { StaticImageData } from 'next/image';
+import Product from '../lib/models/product';
 
 export interface ProductI {
-  _id: string;
+  id: string;
   images: string[];
   name: string;
   description: string;
@@ -16,14 +17,14 @@ export interface ProductI {
 }
 
 export interface Comment {
-  _id: string;
+  id: string;
   user: User;
   caption: string;
   images: string[] | null;
   rating: 1 | 2 | 3 | 4 | 5;
 }
 export interface Question {
-  _id: string;
+  id: string;
   user: User;
   caption: string;
   answers: Answer[] | null;
@@ -36,7 +37,7 @@ export interface OrderedProduct {
 }
 
 export interface Answer {
-  _id: string;
+  id: string;
   user: User;
   caption: string;
 }
@@ -52,14 +53,14 @@ export interface User {
 }
 
 export interface Order {
-  _id: string;
+  id: string;
   products: OrderedProduct[];
   total: number;
   status: 'pending' | 'paid' | 'cancelled' | 'delivered';
 }
 
 export interface CategoryI {
-  _id: string;
+  id: string;
   title: string;
   description: string;
   image: string;
@@ -67,8 +68,12 @@ export interface CategoryI {
 }
 
 export interface SubcategoryI {
-  _id: string;
+  id: string;
   category: string;
   title: string;
   image: string;
+}
+
+export interface CartItem extends ProductI {
+  numberInCart: number;
 }

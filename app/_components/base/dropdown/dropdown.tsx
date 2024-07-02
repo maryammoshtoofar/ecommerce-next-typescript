@@ -45,15 +45,18 @@ export const Dropdown = ({ items, title, selectOption }: DropDownProps) => {
         )}
       >
         {items &&
-          items.map((item) => (
-            <li
-              key={item._id}
-              className="w-full bg-white hover:bg-coffee-10"
-              onClick={() => handleChange(item)}
-            >
-              {item.title}
-            </li>
-          ))}
+          items.map((item) => {
+            const id = item._id.toString();
+            return (
+              <li
+                key={id}
+                className="w-full bg-white hover:bg-coffee-10"
+                onClick={() => handleChange(item)}
+              >
+                {item.title}
+              </li>
+            );
+          })}
       </ul>
     </div>
   );

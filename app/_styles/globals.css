@@ -107,7 +107,7 @@
     @apply hidden md:col-start-10 md:col-end-18 md:flex lg:text-lg xl:text-2xl;
   }
   .nav-icons-menu {
-    @apply col-start-17 mt-2 flex gap-1 justify-self-end md:col-start-9 md:justify-self-start;
+    @apply col-start-17 mt-2 flex gap-4 justify-self-end md:col-start-9 md:justify-self-start;
   }
   .nav-icon {
     @apply cursor-pointer text-coffee-70 xl:text-2xl 2xl:text-3xl;
