@@ -1,15 +1,14 @@
 'use client';
 import Image from 'next/image';
-import Input from '@/app/_components/base/input/input';
-import Tab from '@/app/_components/base/tab/tab';
+import { Input, Tab, Button } from '@/app/_components/base';
 import { FaEnvelope } from 'react-icons/fa';
 import { FaLock } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';
 import { FaGoogle } from 'react-icons/fa';
-import Button from '@/app/_components/base/button/button';
 import { useState } from 'react';
 import { authImages } from '@/app/_lib/auth-images';
 import { getRandomImages } from '@/app/_utils/utils';
+import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 
 type Props = {};
 
@@ -89,6 +88,12 @@ const page = (props: Props) => {
             <FaFacebook className="cursor-pointer" />
           </div>
         </form>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </section>
     </>
   );

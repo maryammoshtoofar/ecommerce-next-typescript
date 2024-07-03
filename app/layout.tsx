@@ -3,7 +3,13 @@ import type { Metadata } from 'next';
 import { Dancing_Script, Roboto_Slab } from 'next/font/google';
 import { UIComponent } from './_types/component-types';
 import { ToastProvider } from './_components/widgets';
-
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs';
 const slab = Roboto_Slab({
   subsets: ['latin'],
   variable: '--font-roboto-slab',
@@ -23,14 +29,16 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: UIComponent) => {
   return (
-    <html
-      lang="en"
-      className={`${slab.variable} ${dancingScript.variable} m-0 h-full scroll-smooth p-0`}
-    >
-      <body className="m-0 h-full p-0 font-slab">
-        <ToastProvider>{children}</ToastProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html
+        lang="en"
+        className={`${slab.variable} ${dancingScript.variable} m-0 h-full scroll-smooth p-0`}
+      >
+        <body className="m-0 h-full p-0 font-slab">
+          <ToastProvider>{children}</ToastProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 };
 export default RootLayout;
