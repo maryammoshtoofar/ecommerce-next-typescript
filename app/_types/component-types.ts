@@ -85,3 +85,5 @@ export type TableProps = UIComponent & {
 export type ProductCardProps = UIComponent & {
   product: ProductI;
 };
+
+

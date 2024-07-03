@@ -6,7 +6,10 @@ import { Icon } from '../../base';
 import { FiShoppingCart } from 'react-icons/fi';
 import { shortenDescription } from '@/app/_utils/utils';
 import { useAppDispatch } from '@/app/lib/redux/hooks';
-import { addToCart } from '@/app/lib/redux/features/cart/cart-slice';
+import {
+  addToCart,
+  updateTotalPrice,
+} from '@/app/lib/redux/features/cart/cart-slice';
 import { ProductCardProps } from '@/app/_types/component-types';
 import { toast } from 'react-toastify';
 
@@ -16,6 +19,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
     try {
       const cartItem = Object.assign(product);
       dispatch(addToCart(cartItem));
+      dispatch(updateTotalPrice(product.price));
       toast.success('added to cart');
     } catch (error) {
       console.log(error);
