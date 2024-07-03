@@ -11,3 +11,4 @@ export * from './sliders';
 export * from './sliders';
 export * from './slides';
 export * from './star-rating';
+export * from './toast';

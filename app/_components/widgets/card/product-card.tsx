@@ -8,12 +8,19 @@ import { shortenDescription } from '@/app/_utils/utils';
 import { useAppDispatch } from '@/app/lib/redux/hooks';
 import { addToCart } from '@/app/lib/redux/features/cart/cart-slice';
 import { ProductCardProps } from '@/app/_types/component-types';
+import { toast } from 'react-toastify';
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const dispatch = useAppDispatch();
   const handleAddToCart = () => {
-    const cartItem = Object.assign(product);
-    dispatch(addToCart(cartItem));
+    try {
+      const cartItem = Object.assign(product);
+      dispatch(addToCart(cartItem));
+      toast.success('added to cart');
+    } catch (error) {
+      console.log(error);
+      toast.error('Something went wrong');
+    }
   };
   return (
     <Card

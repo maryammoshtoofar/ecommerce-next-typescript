@@ -15,7 +15,6 @@ const localStorageKey = 'cart';
 
 // Function to save state to localStorage
 const saveToLocalStorage = (state: RootState) => {
-  console.log('state', state);
   try {
     if (typeof window !== 'undefined') {
       const serializedState = JSON.stringify(state.cart);

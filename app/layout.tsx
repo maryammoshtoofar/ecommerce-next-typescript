@@ -2,6 +2,7 @@ import '@/app/_styles/globals.css';
 import type { Metadata } from 'next';
 import { Dancing_Script, Roboto_Slab } from 'next/font/google';
 import { UIComponent } from './_types/component-types';
+import { ToastProvider } from './_components/widgets';
 
 const slab = Roboto_Slab({
   subsets: ['latin'],
@@ -24,9 +25,11 @@ const RootLayout = ({ children }: UIComponent) => {
   return (
     <html
       lang="en"
-      className={`${slab.variable} ${dancingScript.variable} h-full scroll-smooth m-0 p-0`}
+      className={`${slab.variable} ${dancingScript.variable} m-0 h-full scroll-smooth p-0`}
     >
-      <body className="h-full font-slab m-0 p-0">{children}</body>
+      <body className="m-0 h-full p-0 font-slab">
+        <ToastProvider>{children}</ToastProvider>
+      </body>
     </html>
   );
 };

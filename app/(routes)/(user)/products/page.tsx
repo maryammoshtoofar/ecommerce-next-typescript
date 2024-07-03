@@ -9,7 +9,6 @@ const Products = async () => {
     <section className="relative flex flex-wrap justify-center gap-4 bg-coffee-470 px-4 pt-32">
       <Title tailwind="text-coffee-70 absolute top-12">All Products</Title>
       {products.map((product) => {
-        console.log('idddd', product);
         return <ProductCard key={product.id} product={product} />;
       })}
     </section>
