@@ -7,86 +7,78 @@ import { ImCross } from 'react-icons/im';
 import { priceFormatter } from '@/app/_utils/utils';
 import { FaStar } from 'react-icons/fa6';
 import { StoreProvider } from '@/app/_components/layout';
+import { ProductI } from '@/app/_types/data-types';
+import {
+  getCategoryTitleById,
+  getSubcategoryTitleById,
+} from '@/app/api/actions/actions';
 
 type Props = UIComponent & {
-  thumbnail: string;
-  id: string;
-  name: string;
-  category: string;
-  subcategory: string;
-  stock: boolean;
-  price: number;
-  quantity: number;
-  rating: number | null;
+  product: ProductI;
+  // thumbnail: string;
+  // id: string;
+  // name: string;
+  // category: string;
+  // subcategory: string;
+  // stock: boolean;
+  // price: number;
+  // quantity: number;
+  // rating: number | null;
 };
 
-export const ProductsRow = ({
-  thumbnail,
-  id,
-  name,
-  category,
-  stock,
-  price,
-  quantity,
-  rating,
-  subcategory,
-}: Props) => {
+export const ProductsRow = async ({ product }: Props) => {
+  const stock = product.quantity ? true : false;
   const stockIcon = stock ? <FaCheck /> : <ImCross />;
-  console.log('id', id);
+  const category = await getCategoryTitleById(product.category);
+  const subcategory = await getSubcategoryTitleById(product.subcategory);
+  console.log('id', product.id);
   return (
-    <TableRow key={id}>
+    <TableRow key={product.id}>
       <Cell>
-        checkbox
-        {/* <Checkbox /> */}
+        <Checkbox />
       </Cell>
       <Cell>
-        image goes here
-        {/* <Image
-          src={`http://localhost:3000/uploads/${thumbnail}`}
-          alt={name}
+        <Image
+          src={`http://localhost:3000/uploads/${product.images[0]}`}
+          alt={product.name}
           className="w-20 max-w-none"
           width={100}
           height={100}
-        /> */}
+        />
       </Cell>
-      <Cell>{name}</Cell>
+      <Cell>{product.name}</Cell>
       <Cell tailwind="table-cell">{category}</Cell>
       <Cell tailwind="table-cell">{subcategory}</Cell>
       <Cell>
-        {/* <Flexbox> */}
-        {/* <span className="hidden md:inline">$</span> */}
-        {/* <span className=" md:hidden"> */}
-        {price}
-        {/* </span> */}
-        {/* <span className="hidden md:inline">{priceFormatter(price)}</span> */}
-        {/* </Flexbox> */}
+        <Flexbox>
+          <span className="hidden md:inline">$</span>
+          <span className=" md:hidden">{product.price}</span>
+          <span className="hidden md:inline">
+            {priceFormatter(product.price)}
+          </span>
+        </Flexbox>
       </Cell>
       <Cell>
-        {/* <Flexbox> */}
-        {/* <StockLabel stock={stock}> */}
-        {stockIcon}
-        {/* </StockLabel> */}
-        {/* </Flexbox> */}
+        <Flexbox>
+          <StockLabel stock={stock}>{stockIcon}</StockLabel>
+        </Flexbox>
       </Cell>
       <Cell>
-        {/* <Flexbox> */}
-        {quantity}
-        {/* </Flexbox> */}
+        <Flexbox>{product.quantity}</Flexbox>
       </Cell>
       <Cell>
-        {/* <StarRating
-          rating={rating}
+        <StarRating
+          rating={product.rating}
           tailwind="hidden md:flex text-yellow-600 hover:text-yellow-700 transition-all"
-        /> */}
-        {/* <span className="flex items-center text-yellow-600 transition-all hover:text-yellow-700 md:hidden"> */}
-        {rating} {!rating && 0}
-        {/* <FaStar /> */}
-        {/* </span> */}
+        />
+        <span className="flex items-center text-yellow-600 transition-all hover:text-yellow-700 md:hidden">
+          {product.rating} {!product.rating && 0}
+          <FaStar />
+        </span>
       </Cell>
-      <Cell>Actions go here</Cell>
-      {/* <StoreProvider>
-        <ActionsCell id={id} />
-      </StoreProvider> */}
+      <StoreProvider>
+        <ActionsCell id={product.id} />
+      </StoreProvider>
     </TableRow>
   );
 };
