@@ -43,7 +43,7 @@ export const Sidebar = () => {
   return (
     <nav
       className={clsx(
-        'sm:admin-nav-glow sticky top-0 z-40 col-span-2 flex justify-between px-2 py-2 pt-6 transition-all sm:row-span-3 sm:h-screen sm:flex-col sm:items-center sm:justify-normal  sm:gap-6 sm:bg-coffee-190 sm:px-0 sm:py-8 lg:col-span-3 2xl:items-start 2xl:ps-10',
+        'sm:admin-nav-glow sticky top-0 z-40 col-span-2 flex justify-between px-2 py-2 pt-6 transition-all sm:row-span-3 sm:min-h-screen sm:flex-col sm:items-center sm:justify-normal  sm:gap-6 sm:bg-coffee-190 sm:px-0 sm:py-8 lg:col-span-3 2xl:items-start 2xl:ps-10',
         { 'bg-coffee-690': scrolled },
       )}
     >

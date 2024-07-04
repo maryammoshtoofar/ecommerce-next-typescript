@@ -3,7 +3,7 @@ import { UserButton } from '@clerk/nextjs';
 
 export const ProfileSection = () => {
   return (
-    <article className="col-span-6 flex items-center justify-evenly gap-3 pe-2 sm:col-span-6 sm:text-coffee-360 xl:col-span-4">
+    <article className="col-span-6 flex items-center justify-evenly gap-3  sm:col-span-6 sm:text-coffee-360 xl:col-span-4">
       <div className="flex gap-2">
         <UserButton />
         <div>

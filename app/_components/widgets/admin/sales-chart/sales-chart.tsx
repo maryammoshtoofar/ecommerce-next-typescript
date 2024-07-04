@@ -24,8 +24,6 @@ ChartJS.register(
 
 const labels = ['9:00 A.M', '12:00 P.M', '4:00 P.M', '8:00 P.M', '12:00 A.M'];
 
-
-
 export const SalesChart = (props: Props) => {
   const data = {
     labels,
@@ -35,20 +33,21 @@ export const SalesChart = (props: Props) => {
         fill: true,
         borderColor: '#977163',
         backgroundColor: ' rgba(229,205,196,0.1)',
-        tension: 0.5,
+        tension: 0.01,
       },
     ],
   };
   return (
-    <article className="rounded-lg bg-coffee-10 p-4 lg:w-2/3">
-      <div className="flex w-full items-baseline justify-between py-2">
-        <h2 className="text-xl capitalize text-coffee-230">Sales Analytics</h2>
+    <article className="flex flex-col justify-center rounded-lg bg-coffee-10 p-4 lg:w-2/3">
+      <div className="flex w-full items-baseline justify-between py-1">
+        <h2 className="text-base font-bold capitalize text-coffee-230">
+          Sales Analytics
+        </h2>
         <span className="cursor-pointer text-sm font-bold uppercase text-coffee-190">
           See all
         </span>
       </div>
       <Line data={data} />
     </article>
-    
   );
 };

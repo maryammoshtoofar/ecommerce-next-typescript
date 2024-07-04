@@ -1,5 +1,9 @@
 import { UIComponent } from '@/app/_types/component-types';
 
 export const CardsContainer = (props: UIComponent) => {
-  return <div className="grid grid-cols-12 gap-4">{props.children}</div>;
+  return (
+    <div className="flex flex-col gap-2 md:flex-row">
+      {props.children}
+    </div>
+  );
 };

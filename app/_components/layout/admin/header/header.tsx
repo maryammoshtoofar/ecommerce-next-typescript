@@ -1,7 +1,7 @@
 'use client';
 
 import { Input } from '@/app/_components/base';
-import {ProfileSection} from '@/app/_components/widgets';
+import { ProfileSection } from '@/app/_components/widgets';
 import { FiSearch } from 'react-icons/fi';
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
@@ -25,7 +25,7 @@ export const AdminHeader = (props: Props) => {
   return (
     <header
       className={clsx(
-        'sticky top-20 z-40  grid grid-cols-12 items-center gap-4 pb-6 ps-2 sm:top-0  col-start-4 col-end-12 sm:pt-4 lg:top-0 xl:gap-12',
+        'sticky top-20 z-40 col-start-3 col-end-13 row-start-1 grid grid-cols-12 grid-rows-2 items-center gap-4 py-1 ps-2 sm:top-0 sm:pt-4 lg:top-0 lg:col-start-4 xl:gap-12',
         {
           'bg-coffee-690': scrolled,
         },

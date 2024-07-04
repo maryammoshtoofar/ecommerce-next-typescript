@@ -17,13 +17,13 @@ export const DashboardCard = ({
   progress,
 }: Props) => {
   return (
-    <article className="col-span-full flex  flex-col gap-6 rounded-lg bg-coffee-10 p-4 text-coffee-190 sm:col-span-6 md:col-span-4">
+    <article className="flex w-full flex-col gap-6 rounded-lg bg-coffee-10 p-2 text-coffee-190 md:col-span-4 lg:p-4">
       <div className="flex items-center gap-2">
-        <span className="rounded-lg bg-coffee-640 p-4 text-2xl text-slate-600">
+        <span className="rounded-lg bg-coffee-640 p-4 text-xl text-slate-600">
           {component}
         </span>
         <div>
-          <h2 className="text-xl capitalize">{title}</h2>
+          <h2 className="capitalize lg:text-xl">{title}</h2>
           <span
             className={clsx(' font-bold', {
               'text-green-500': percentage > 0,

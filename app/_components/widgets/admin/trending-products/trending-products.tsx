@@ -7,14 +7,16 @@ import { TrendingProduct as Product } from '@/app/_components/widgets';
 
 export const TrendingProducts = () => {
   return (
-    <article className="rounded-lg bg-coffee-10 px-4 pt-3 lg:w-1/3 ">
+    <article className="overflow-y-auto rounded-lg bg-coffee-10 px-4 pt-3">
       <div className="flex w-full items-baseline justify-between py-2">
-        <h2 className="text-xl capitalize text-coffee-230">Trending Coffee</h2>
+        <h2 className="text-base font-bold capitalize text-coffee-230">
+          Trending Coffee
+        </h2>
         <span className="cursor-pointer text-sm font-bold uppercase text-coffee-190">
           See all
         </span>
       </div>
-      <ul className="flex flex-col gap-4 lg:gap-2">
+      <ul className="flex flex-col gap-4  lg:gap-2">
         <Product img={mocha} name="cappuccino" price={85} amount={240} />
         <Product img={latte} name="latte" price={70.5} amount={220} />
         <Product img={frappe} name="frappuccino" price={82.5} amount={200} />

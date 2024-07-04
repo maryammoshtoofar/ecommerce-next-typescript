@@ -35,6 +35,10 @@ export default {
         // Complex site-specific column configuration
         footer: '200px minmax(900px, 1fr) 100px',
       },
+      gridTemplateRows: {
+        // Simple 16 row grid
+        '16': 'repeat(16, minmax(0, 1fr))',
+      },
       gridColumnStart: {
         '13': '13',
         '14': '14',
@@ -49,6 +53,9 @@ export default {
         '16': '16',
         '17': '17',
         '18': '18',
+      },
+      gridRowEnd: {
+        '17': '17',
       },
       screens: {
         tablet: '850px',

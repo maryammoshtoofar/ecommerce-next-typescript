@@ -15,7 +15,7 @@ import { FiShoppingCart } from 'react-icons/fi';
 const Dashboard = () => {
   return (
     <Section>
-      <Title>dashboard</Title>
+      <Title tailwind="row-span-1 col-span-full">dashboard</Title>
       <Container>
         <Card
           title="total orders"
