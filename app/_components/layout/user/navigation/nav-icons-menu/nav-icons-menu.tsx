@@ -13,7 +13,7 @@ import {
 import Link from 'next/link';
 import { useEffect } from 'react';
 import { BsPerson } from 'react-icons/bs';
-import { BsCart2 } from 'react-icons/bs';
+import { BsCart2, BsCart, BsCartFill, BsCart4 } from 'react-icons/bs';
 import { SlMenu } from 'react-icons/sl';
 
 export const NavIconsMenu = () => {
@@ -30,7 +30,7 @@ export const NavIconsMenu = () => {
   return (
     <nav className="nav-icons-menu ">
       <Link href={CART} className="relative">
-        <BsCart2 className="nav-icon" />
+        <BsCart4 className="nav-icon" />
         <span className="absolute -right-4 -top-3 rounded-full bg-red-600 px-1 text-sm font-bold text-white">
           {items.length}
         </span>

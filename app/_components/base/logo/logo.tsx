@@ -9,7 +9,7 @@ type LogoProps = {
 };
 export const Logo = ({ className, adminStyle }: LogoProps) => {
   return (
-    <Link href={HOME} className={adminStyle}>
+    <Link href={HOME} className={`w-12 xl:w-14 ${adminStyle}`}>
       <Image src={logo} alt="logo" className={className} priority={true} />
     </Link>
   );

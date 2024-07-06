@@ -98,7 +98,7 @@
     @apply bg-[linear-gradient(to_left,_#7C573C_0%_50%,_#221518_14%_50%)];
   }
   .header {
-    @apply absolute z-50 grid w-full grid-cols-header items-center bg-transparent px-2;
+    @apply fixed z-50 grid w-full grid-cols-header items-start bg-coffee-690 bg-transparent px-2 md:items-center md:bg-transparent;
   }
   .logo {
     @apply col-start-1 col-end-3 mt-2 w-12 xl:w-14;
@@ -107,10 +107,10 @@
     @apply hidden md:col-start-10 md:col-end-18 md:flex lg:text-lg xl:text-2xl;
   }
   .nav-icons-menu {
-    @apply col-start-17 mt-2 flex gap-4 justify-self-end md:col-start-9 md:justify-self-start;
+    @apply col-start-17 mt-4 flex items-center gap-5 justify-self-end md:col-start-8 md:justify-self-start xl:col-start-9;
   }
   .nav-icon {
-    @apply cursor-pointer text-coffee-70 xl:text-2xl 2xl:text-3xl;
+    @apply cursor-pointer text-2xl text-coffee-70 2xl:text-3xl;
   }
   .hamburger-icon {
     @apply md:hidden;
@@ -119,7 +119,7 @@
     @apply bg-coffee-630  backdrop-blur-lg;
   }
   .hero {
-    @apply relative h-0 w-full bg-hero bg-contain bg-no-repeat pb-[79.42%];
+    @apply relative mt-14 h-0 w-full bg-hero bg-contain bg-no-repeat pb-[79.42%] md:mt-0;
   }
   .hero-content {
     @apply relative ps-6 pt-24 md:ps-3 lg:ps-24 lg:pt-52;
