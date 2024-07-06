@@ -6,6 +6,10 @@ export default {
   theme: {
     extend: {
       colors,
+      animation: {
+        wiggle: 'wiggle 0.5s infinite',
+        waves: 'waves 0.8s infinite',
+      },
       fontFamily: {
         slab: ['var(--font-roboto-slab)'],
         dancing: ['var(--font-dancing-script)'],
@@ -66,6 +70,16 @@ export default {
         // => @media (min-width: 1280px) { ... }
         smmobile: '335px',
         // => @media (min-width: 335px) { ... }
+      },
+      keyframes: {
+        waves: {
+          '0%': { transform: 'scale(1,1)', opacity: 1 },
+          '100%': { transform: 'scale(1.5,1.5)', opacity: 0 },
+        },
+        wiggle: {
+          '25%': { transform: 'rotate(180deg) translateY(.25rem) ' },
+          '75%': { transform: 'rotate(180deg) translateY(-.25rem)' },
+        },
       },
     },
   },

@@ -10,3 +10,4 @@ export * from './logo';
 export * from './overlay';
 export * from './tab';
 export * from './wandering-coffee-beans';
+export * from './spinners';

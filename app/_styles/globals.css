@@ -101,7 +101,7 @@
     @apply fixed z-50 grid w-full grid-cols-header items-start bg-coffee-690 bg-transparent px-2 md:items-center md:bg-transparent;
   }
   .logo {
-    @apply col-start-1 col-end-3 mt-2 w-12 xl:w-14;
+    @apply  mt-2 w-12 xl:w-14;
   }
   .nav-menu {
     @apply hidden md:col-start-10 md:col-end-18 md:flex lg:text-lg xl:text-2xl;

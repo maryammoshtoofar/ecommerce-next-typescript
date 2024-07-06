@@ -1,4 +1,3 @@
-// import Image from 'next/image';
 import logo from '@/app/_assets/logo.png';
 import Link from 'next/link';
 import { HOME } from '@/app/_config/routes';

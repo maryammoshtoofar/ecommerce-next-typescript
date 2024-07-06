@@ -3,7 +3,6 @@ import { auth } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   const { sessionClaims } = auth();
-  console.log('session claims', sessionClaims);
   // If the user does not have the admin role, redirect them to the home page
   if (sessionClaims?.metadata.role !== 'admin') {
     redirect('/');
