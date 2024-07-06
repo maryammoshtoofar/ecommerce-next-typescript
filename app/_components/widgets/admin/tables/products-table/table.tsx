@@ -24,7 +24,6 @@ export const ProductsTable = async (props: TableProps) => {
         </thead>
         <tbody className="overflow-x-scroll">
           {props.products.map((product: ProductI) => {
-            console.log(product);
             return <ProductsRow product={product} />;
           })}
         </tbody>

@@ -15,15 +15,6 @@ import {
 
 type Props = UIComponent & {
   product: ProductI;
-  // thumbnail: string;
-  // id: string;
-  // name: string;
-  // category: string;
-  // subcategory: string;
-  // stock: boolean;
-  // price: number;
-  // quantity: number;
-  // rating: number | null;
 };
 
 export const ProductsRow = async ({ product }: Props) => {
@@ -31,7 +22,7 @@ export const ProductsRow = async ({ product }: Props) => {
   const stockIcon = stock ? <FaCheck /> : <ImCross />;
   const category = await getCategoryTitleById(product.category);
   const subcategory = await getSubcategoryTitleById(product.subcategory);
-  console.log('id', product.id);
+  
   return (
     <TableRow key={product.id}>
       <Cell>

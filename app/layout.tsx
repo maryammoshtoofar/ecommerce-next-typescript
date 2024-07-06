@@ -3,13 +3,7 @@ import type { Metadata } from 'next';
 import { Dancing_Script, Roboto_Slab } from 'next/font/google';
 import { UIComponent } from './_types/component-types';
 import { ToastProvider } from './_components/widgets';
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from '@clerk/nextjs';
+import { ClerkProvider } from '@clerk/nextjs';
 const slab = Roboto_Slab({
   subsets: ['latin'],
   variable: '--font-roboto-slab',
