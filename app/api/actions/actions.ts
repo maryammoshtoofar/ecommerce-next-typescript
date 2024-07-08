@@ -5,6 +5,8 @@ import Product from '../../lib/models/product';
 import { NextResponse } from 'next/server';
 import Category from '@/app/lib/models/category';
 import Subcategory from '@/app/lib/models/subcategory';
+import { OrderI } from '@/app/_types/data-types';
+import Order from '@/app/lib/models/order';
 
 // Product actions
 
@@ -59,5 +61,19 @@ export async function getSubcategoryTitleById(id: string) {
     return subcategory.title;
   } catch (error) {
     return { message: 'error getting subcategory by ID' };
+  }
+}
+
+// Order actions
+
+export async function createNewOrder(order: OrderI) {
+  try {
+    await connectMongoDB();
+    const newOrder = new Order(order);
+    const res = await newOrder.save();
+    // const newOrder = await Order.insertOne(order);
+    return res;
+  } catch (error) {
+    return { message: 'error submitting order' };
   }
 }

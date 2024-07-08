@@ -9,15 +9,13 @@ type Props = {};
 
 const Cart = (props: Props) => {
   const cart = useAppSelector((state) => state.cart);
-  console.log('Cart', cart);
   return (
     <section className="flex min-h-screen flex-col items-center justify-center gap-8 bg-coffee-470 font-dancing text-3xl text-coffee-60">
       {cart.total ? (
         <CartTable />
       ) : (
         <>
-          {' '}
-          <span>Your cart is empty !</span>{' '}
+          <span>Your cart is empty !</span>
           <Link href={PRODUCTS}>
             <Button label="Start Shopping" />
           </Link>

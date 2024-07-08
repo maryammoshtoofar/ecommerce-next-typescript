@@ -3,8 +3,9 @@ import {
   CATEGORIES_URL,
   SUBCATEGORIES_URL,
   PRODUCTS_URL,
+  ORDERS_URL,
 } from '@/app/_config/api';
-import { CategoryI, ProductI } from '@/app/_types/data-types';
+import { CategoryI, OrderI, ProductI } from '@/app/_types/data-types';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 interface CategoriesDataInterface {
   categories: CategoryI[];
@@ -21,10 +22,15 @@ interface ProductDataInterface {
   product: ProductI;
 }
 
+interface OrderDataInterface {
+  order: OrderI;
+}
+
 export const shopApi = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
   endpoints: (builder) => ({
+    // category
     getAllCategories: builder.query<CategoriesDataInterface, string>({
       query: () => CATEGORIES_URL,
     }),
@@ -34,8 +40,17 @@ export const shopApi = createApi({
     >({
       query: (id) => `${SUBCATEGORIES_URL}?category=${id}`,
     }),
+    // product
     getProductById: builder.query<ProductDataInterface, string>({
       query: (id) => `${PRODUCTS_URL}/${id}`,
+    }),
+    // order
+    addNewOrder: builder.mutation<OrderDataInterface, OrderI>({
+      query: (order) => ({
+        url: ORDERS_URL,
+        method: 'post',
+        body: order,
+      }),
     }),
   }),
 });
@@ -44,4 +59,5 @@ export const {
   useGetAllCategoriesQuery,
   useGetSubcategoriesByCategoryQuery,
   useGetProductByIdQuery,
+  useAddNewOrderMutation,
 } = shopApi;

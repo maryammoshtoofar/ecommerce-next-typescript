@@ -33,7 +33,6 @@ type Inputs = {
   quantity: number;
 };
 export const AddProductForm = () => {
-  console.log('hihhhhh');
   const processForm: SubmitHandler<Inputs> = (data) => setData(data);
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
@@ -51,7 +50,6 @@ export const AddProductForm = () => {
     isLoading: catIsLoading,
   } = useGetAllCategoriesQuery('categories');
 
-  console.log('catData', catError);
 
   const {
     data: subData,
@@ -66,8 +64,6 @@ export const AddProductForm = () => {
     error: prodError,
     isLoading: prodIsLoading,
   } = useGetProductByIdQuery(id!);
-
-  console.log('prodData', prodData);
 
   useEffect(() => {
     if (prodData) {

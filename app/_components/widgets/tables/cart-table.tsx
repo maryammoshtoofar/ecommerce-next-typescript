@@ -1,16 +1,31 @@
 'use client';
-
 import { UIComponent } from '@/app/_types/component-types';
 import { useAppDispatch, useAppSelector } from '@/app/lib/redux/hooks';
 import Image from 'next/image';
 import { FaTrashAlt } from 'react-icons/fa';
 import { Button } from '../../base';
-import { removeFromCart } from '@/app/lib/redux/features/cart/cart-slice';
+import {
+  clearCart,
+  removeFromCart,
+} from '@/app/lib/redux/features/cart/cart-slice';
 import { toast } from 'react-toastify';
-
+import { useAddNewOrderMutation } from '@/app/lib/redux/features/api/api-slice';
+import { OrderI } from '@/app/_types/data-types';
+import { useUser } from '@clerk/nextjs';
+import { useEffect, useState } from 'react';
+import { User } from '@clerk/nextjs/server';
+import { useAuth } from '@clerk/nextjs';
 export const CartTable = (props: UIComponent) => {
   const cart = useAppSelector((state) => state.cart);
   const dispatch = useAppDispatch();
+  const { isLoaded, userId } = useAuth();
+  const [user, setUser] = useState<string | null>(null);
+  const [addNewOrder, { isLoading }] = useAddNewOrderMutation();
+  useEffect(() => {
+    if (isLoaded) {
+      setUser(userId);
+    }
+  }, [isLoaded]);
 
   const handleRemoveFromCart = (id: string) => {
     try {
@@ -18,6 +33,23 @@ export const CartTable = (props: UIComponent) => {
       toast.success('Removed from Cart');
     } catch (error) {
       console.log(error);
+      toast.error('Something Went Wrong');
+    }
+  };
+
+  const handleSubmitOrder = async () => {
+    const newOrder = {
+      products: cart.items,
+      total: cart.total,
+      status: 'paid',
+      userId: user,
+    } as OrderI;
+    try {
+      await addNewOrder(newOrder).unwrap();
+      toast.success('Order Submitted Successfully');
+      dispatch(clearCart());
+    } catch (err) {
+      console.error('Failed to add order: ', err);
       toast.error('Something Went Wrong');
     }
   };
@@ -46,7 +78,7 @@ export const CartTable = (props: UIComponent) => {
         <tbody>
           {cart.items.map((item) => {
             return (
-              <tr key={item.id}>
+              <tr key={item._id}>
                 <td className="flex w-full flex-col items-center gap-2 border border-coffee-340 p-2 text-center capitalize sm:flex-row">
                   <Image
                     src={`/uploads/${item.images[0]}`}
@@ -74,7 +106,7 @@ export const CartTable = (props: UIComponent) => {
                 <td className="border border-coffee-340 text-center text-lg capitalize sm:p-2">
                   <FaTrashAlt
                     className="m-auto cursor-pointer"
-                    onClick={() => handleRemoveFromCart(item.id)}
+                    onClick={() => handleRemoveFromCart(item._id)}
                   />
                 </td>
               </tr>
@@ -84,7 +116,10 @@ export const CartTable = (props: UIComponent) => {
       </table>
       <div className="flex w-full justify-between py-4">
         <p>Total Cart Price: ${cart.total}</p>
-        <Button label="Proceed to Checkout"></Button>
+        <Button
+          label="Proceed to Checkout"
+          onClick={handleSubmitOrder}
+        ></Button>
       </div>
     </div>
   );

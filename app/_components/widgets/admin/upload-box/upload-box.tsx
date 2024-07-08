@@ -9,7 +9,6 @@ type Props = {
 };
 
 export const UploadBox = ({ images }: Props) => {
-  console.log(images);
   return (
     <Flexbox tailwind="flex-col gap-4 w-full items-stretch">
       <Flexbox tailwind="justify-between">
