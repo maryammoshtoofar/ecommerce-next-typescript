@@ -5,9 +5,10 @@ type Props = UIComponent & {
 };
 export const Cell = (props: Props) => {
   return (
-    <td className="whitespace-nowrap border border-coffee-640 p-1">
-      {props.children}
-      {/* <Flexbox tailwind={props.customContainerStyle}>{props.children}</Flexbox> */}
+    <td
+      className={`whitespace-nowrap border border-coffee-640 p-1 ${props.tailwind}`}
+    >
+      <Flexbox tailwind={props.customContainerStyle}>{props.children}</Flexbox>
     </td>
   );
 };
