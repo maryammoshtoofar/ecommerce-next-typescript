@@ -52,6 +52,13 @@ export const shopApi = createApi({
         body: order,
       }),
     }),
+    editOrder: builder.mutation({
+      query: (order) => ({
+        url: ORDERS_URL,
+        method: 'put',
+        body: order,
+      }),
+    }),
   }),
 });
 
@@ -60,4 +67,5 @@ export const {
   useGetSubcategoriesByCategoryQuery,
   useGetProductByIdQuery,
   useAddNewOrderMutation,
+  useEditOrderMutation,
 } = shopApi;

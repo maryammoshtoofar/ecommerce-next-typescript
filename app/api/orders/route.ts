@@ -39,3 +39,18 @@ export async function DELETE(req: DeleteReqI) {
   await Order.findByIdAndDelete(id);
   return NextResponse.json({ message: 'Order deleted' }, { status: 200 });
 }
+
+export async function PUT(req: Request) {
+  await connectMongoDB();
+  try {
+    const { orderID, field } = await req.json();
+    await Order.findByIdAndUpdate(orderID, field);
+    return NextResponse.json({ message: 'Order Edited' }, { status: 201 });
+  } catch (error: any) {
+    console.log(error);
+    return NextResponse.json(
+      { message: error.message },
+      { status: error.status },
+    );
+  }
+}
