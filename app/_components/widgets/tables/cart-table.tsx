@@ -10,7 +10,7 @@ import {
 } from '@/app/lib/redux/features/cart/cart-slice';
 import { toast } from 'react-toastify';
 import { useAddNewOrderMutation } from '@/app/lib/redux/features/api/api-slice';
-import { OrderI } from '@/app/_types/data-types';
+import { OrderDocument, OrderI } from '@/app/_types/data-types';
 import { useUser } from '@clerk/nextjs';
 import { useEffect, useState } from 'react';
 import { User } from '@clerk/nextjs/server';
@@ -18,12 +18,13 @@ import { useAuth } from '@clerk/nextjs';
 export const CartTable = (props: UIComponent) => {
   const cart = useAppSelector((state) => state.cart);
   const dispatch = useAppDispatch();
-  const { isLoaded, userId } = useAuth();
-  const [user, setUser] = useState<string | null>(null);
+  const { isLoaded, user } = useUser();
+  const [username, setUsername] = useState<string | null | undefined>('');
   const [addNewOrder, { isLoading }] = useAddNewOrderMutation();
+
   useEffect(() => {
     if (isLoaded) {
-      setUser(userId);
+      setUsername(user?.username);
     }
   }, [isLoaded]);
 
@@ -38,13 +39,13 @@ export const CartTable = (props: UIComponent) => {
   };
 
   const handleSubmitOrder = async () => {
-    console.log('user', user);
+    console.log('user', username);
     const newOrder = {
       products: cart.items,
       total: cart.total,
       status: 'paid',
-      userId: user,
-    } as OrderI;
+      user: username,
+    } as OrderDocument;
     console.log(newOrder);
     try {
       await addNewOrder(newOrder).unwrap();
@@ -80,7 +81,7 @@ export const CartTable = (props: UIComponent) => {
         <tbody>
           {cart.items.map((item) => {
             return (
-              <tr key={item._id.toHexString()}>
+              <tr key={item._id.toString()}>
                 <td className="flex w-full flex-col items-center gap-2 border border-coffee-340 p-2 text-center capitalize sm:flex-row">
                   <Image
                     src={`/uploads/${item.pictures[0]}`}
@@ -91,7 +92,7 @@ export const CartTable = (props: UIComponent) => {
                   <span className="block max-w-full overflow-x-auto">
                     {item.name}
                   </span>
-                  <span className="lowercase">
+                  <span className="lowercase sm:hidden">
                     ${item.price} x {item.numberInCart} = $
                     {item.price * item.numberInCart}
                   </span>

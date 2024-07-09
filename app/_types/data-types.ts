@@ -25,7 +25,7 @@ export interface OrderI {
   products: CartItem[];
   total: number;
   status: 'pending' | 'paid' | 'cancelled' | 'delivered';
-  userId: string;
+  user: string;
 }
 
 export interface OrderDocument extends OrderI, Document {

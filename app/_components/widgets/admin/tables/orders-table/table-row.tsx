@@ -11,14 +11,15 @@ import { LuPencilLine } from 'react-icons/lu';
 import { LuTrash } from 'react-icons/lu';
 import { TfiMoreAlt } from 'react-icons/tfi';
 import { FaStar } from 'react-icons/fa6';
-import { OrderI, OrderDocument } from '@/app/_types/data-types';
+import { OrderDocument } from '@/app/_types/data-types';
 
 type Props = UIComponent & {
   order: OrderDocument;
 };
 
-export const OrdersRow = ({ order }: Props) => {
+export const OrdersRow = async ({ order }: Props) => {
   const date = new Date(order.createdAt);
+  console.log('orser', order);
   return (
     <TableRow>
       <Cell>
@@ -26,7 +27,7 @@ export const OrdersRow = ({ order }: Props) => {
       </Cell>
       <Cell>{order._id.toHexString()}</Cell>
       <Cell>{date.toLocaleDateString()}</Cell>
-      <Cell>{order.userId}</Cell>
+      <Cell>{order.user}</Cell>
       <Cell>
         <Flexbox>
           <span className="hidden md:inline">$</span>

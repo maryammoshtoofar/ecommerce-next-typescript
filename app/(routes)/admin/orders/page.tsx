@@ -1,10 +1,4 @@
-import {
-  OrdersRow as Row,
-  OrdersTable as Table,
-} from '@/app/_components/widgets';
-import arabica from '@/public/img/thumbnails/arabica.png';
-import houseBlend from '@/public/img/thumbnails/house-blend.png';
-import robusta from '@/public/img/thumbnails/robusta.png';
+import { OrdersTable as Table } from '@/app/_components/widgets';
 import { Title, Section } from '@/app/_components/base';
 import { getAllOrders } from '@/app/api/actions/actions';
 const Inventory = async () => {
@@ -12,7 +6,7 @@ const Inventory = async () => {
   const orders = await getAllOrders();
   return (
     <Section>
-      <Title>inventory</Title>
+      <Title>orders</Title>
       <Table orders={orders} headings={tableHeadings} />
     </Section>
   );

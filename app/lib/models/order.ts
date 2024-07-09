@@ -6,7 +6,7 @@ const OrderSchema = new Schema(
     products: Array,
     status: String,
     total: Number,
-    userId: String,
+    user: String,
   },
   { timestamps: true },
 );
