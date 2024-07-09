@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image';
 import { Dispatch, ReactElement, SetStateAction } from 'react';
-import { ProductI } from './data-types';
+import { OrderDocument, OrderI, ProductDocument, ProductI } from './data-types';
 
 export type UIComponent = {
   children?: React.ReactNode;
@@ -77,13 +77,16 @@ export type AdminNavItemProps = UIComponent & {
   href: string;
 };
 
-export type TableProps = UIComponent & {
+export type ProductTableProps = UIComponent & {
   headings: string[];
-  products: ProductI[];
+  products: ProductDocument[];
 };
 
 export type ProductCardProps = UIComponent & {
-  product: ProductI;
+  product: ProductDocument;
 };
 
-
+export type OrderTableProps = UIComponent & {
+  headings: string[];
+  orders: OrderDocument[];
+};

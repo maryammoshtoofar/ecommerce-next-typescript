@@ -1,10 +1,10 @@
 import connectMongoDB from '@/app/lib/mongodb/mongodb';
 import Category from '@/app/lib/models/category';
 import { NextResponse } from 'next/server';
-import { CategoryI } from '@/app/_types/data-types';
+import { CategoryDocument } from '@/app/_types/data-types';
 
 export interface ReqI {
-  json: () => PromiseLike<CategoryI> | CategoryI;
+  json: () => PromiseLike<CategoryDocument> | CategoryDocument;
 }
 
 interface DeleteReqI {

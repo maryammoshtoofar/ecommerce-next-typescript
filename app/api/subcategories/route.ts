@@ -1,10 +1,10 @@
 import connectMongoDB from '@/app/lib/mongodb/mongodb';
 import Subcategory from '@/app/lib/models/subcategory';
 import { NextResponse } from 'next/server';
-import { SubcategoryI } from '@/app/_types/data-types';
+import { SubcategoryDocument } from '@/app/_types/data-types';
 
 interface ReqI {
-  json: () => PromiseLike<SubcategoryI> | SubcategoryI;
+  json: () => PromiseLike<SubcategoryDocument> | SubcategoryDocument;
 }
 
 interface DeleteReqI {
@@ -12,9 +12,9 @@ interface DeleteReqI {
 }
 
 export async function POST(req: ReqI) {
-  const { title, description } = await req.json();
+  const { title } = await req.json();
   await connectMongoDB();
-  await Subcategory.create({ title, description });
+  await Subcategory.create({ title });
   return NextResponse.json({ message: 'Subcategory Created' }, { status: 201 });
 }
 

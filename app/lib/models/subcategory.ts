@@ -1,13 +1,13 @@
-import mongoose, { Schema } from 'mongoose';
-import { SubcategoryI } from '@/app/_types/data-types';
-export const subcategorySchema = new Schema<SubcategoryI>({
+import mongoose, { Model, Schema } from 'mongoose';
+import { SubcategoryDocument } from '@/app/_types/data-types';
+
+export const SubcategorySchema = new Schema<SubcategoryDocument>({
   category: String,
   title: String,
-  image:String
+  image: String,
 });
 
-const Subcategory =
+const Subcategory: Model<SubcategoryDocument> =
   mongoose.models.Subcategory ||
-  mongoose.model('Subcategory', subcategorySchema);
-
+  mongoose.model<SubcategoryDocument>('Subcategory', SubcategorySchema);
 export default Subcategory;

@@ -2,8 +2,6 @@ import connectMongoDB from '@/app/lib/mongodb/mongodb';
 import Product from '@/app/lib/models/product';
 import { NextResponse } from 'next/server';
 import { ProductI } from '@/app/_types/data-types';
-import Category from '@/app/lib/models/category';
-import Subcategory from '@/app/lib/models/subcategory';
 
 export interface ReqI {
   formData: () => {
@@ -16,40 +14,40 @@ interface DeleteReqI {
   nextUrl: { searchParams: { get: (arg0: string) => any } };
 }
 
-export const POST = async (req: Request) => {
-  await connectMongoDB();
-  try {
-    const formData = await req.formData();
-    const category = await Category.findOne({ _id: formData.get('category') });
-    const subcategory = await Subcategory.findOne({
-      _id: formData.get('subcategory'),
-    });
-    interface NewProductI {
-      [key: string]: FormDataEntryValue | FormDataEntryValue[];
-    }
-    const NewProduct: ProductI | NewProductI = {};
-    const images: FormDataEntryValue[] = [];
-    formData.forEach((value, key) => {
-      if (key === 'subcategory') {
-        NewProduct[key] = subcategory;
-        return;
-      } else if (key === 'category') {
-        NewProduct[key] = category;
-        return;
-      } else if (key === 'images') {
-        images.push(value);
-        return;
-      }
-      NewProduct[key] = value;
-    });
-    NewProduct.images = images;
-    await Product.create(NewProduct);
+// export const POST = async (req: Request) => {
+//   await connectMongoDB();
+//   try {
+//     const formData = await req.formData();
+//     const category = await Category.findOne({ _id: formData.get('category') });
+//     const subcategory = await Subcategory.findOne({
+//       _id: formData.get('subcategory'),
+//     });
+//     interface NewProductI {
+//       [key: string]: FormDataEntryValue | FormDataEntryValue[];
+//     }
+//     const NewProduct: ProductI | NewProductI = {};
+//     const images: FormDataEntryValue[] = [];
+//     formData.forEach((value, key) => {
+//       if (key === 'subcategory') {
+//         NewProduct[key] = subcategory;
+//         return;
+//       } else if (key === 'category') {
+//         NewProduct[key] = category;
+//         return;
+//       } else if (key === 'images') {
+//         images.push(value);
+//         return;
+//       }
+//       NewProduct[key] = value;
+//     });
+//     NewProduct.images = images;
+//     await Product.create(NewProduct);
 
-    return NextResponse.json({ message: 'Product Created' }, { status: 201 });
-  } catch (error: any) {
-    return NextResponse.json({ message: error }, { status: error.status });
-  }
-};
+//     return NextResponse.json({ message: 'Product Created' }, { status: 201 });
+//   } catch (error: any) {
+//     return NextResponse.json({ message: error }, { status: error.status });
+//   }
+// };
 
 export async function GET() {
   await connectMongoDB();

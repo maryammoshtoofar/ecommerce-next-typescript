@@ -28,7 +28,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   };
   return (
     <Card
-      key={product.id}
+      key={product._id.toString()}
       tailwind="md:w-1/3 lg:w-1/6 flex flex-col w-full items-center rounded-xl relative bg-coffee-640 slide-glow"
     >
       <Icon
@@ -39,7 +39,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       <Image
         width={100}
         height={100}
-        src={`/uploads/${product.images[0]}`}
+        src={`/uploads/${product.pictures[0]}`}
         alt={product.name}
         className="-top-16 left-0"
       />

@@ -38,12 +38,14 @@ export const CartTable = (props: UIComponent) => {
   };
 
   const handleSubmitOrder = async () => {
+    console.log('user', user);
     const newOrder = {
       products: cart.items,
       total: cart.total,
       status: 'paid',
       userId: user,
     } as OrderI;
+    console.log(newOrder);
     try {
       await addNewOrder(newOrder).unwrap();
       toast.success('Order Submitted Successfully');
@@ -78,10 +80,10 @@ export const CartTable = (props: UIComponent) => {
         <tbody>
           {cart.items.map((item) => {
             return (
-              <tr key={item._id}>
+              <tr key={item._id.toHexString()}>
                 <td className="flex w-full flex-col items-center gap-2 border border-coffee-340 p-2 text-center capitalize sm:flex-row">
                   <Image
-                    src={`/uploads/${item.images[0]}`}
+                    src={`/uploads/${item.pictures[0]}`}
                     alt={item.name}
                     width={50}
                     height={50}
@@ -106,7 +108,7 @@ export const CartTable = (props: UIComponent) => {
                 <td className="border border-coffee-340 text-center text-lg capitalize sm:p-2">
                   <FaTrashAlt
                     className="m-auto cursor-pointer"
-                    onClick={() => handleRemoveFromCart(item._id)}
+                    onClick={() => handleRemoveFromCart(item._id.toHexString())}
                   />
                 </td>
               </tr>

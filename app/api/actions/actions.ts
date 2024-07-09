@@ -45,26 +45,23 @@ export async function getAllCategories() {
 }
 
 export async function getCategoryTitleById(id: string) {
-  try {
-    await connectMongoDB();
-    const category = await Category.findOne({ _id: id });
-    return category.title;
-  } catch (error) {
-    return { message: 'error getting category by ID' };
-  }
+  await connectMongoDB();
+  const category = await Category.findOne({ _id: id });
+  return category?.title;
 }
 
 export async function getSubcategoryTitleById(id: string) {
-  try {
-    await connectMongoDB();
-    const subcategory = await Subcategory.findOne({ _id: id });
-    return subcategory.title;
-  } catch (error) {
-    return { message: 'error getting subcategory by ID' };
-  }
+  await connectMongoDB();
+  const subcategory = await Subcategory.findOne({ _id: id });
+  return subcategory?.title;
 }
 
 // Order actions
+
+export async function getAllOrders() {
+  await connectMongoDB();
+  return await Order.find();
+}
 
 export async function createNewOrder(order: OrderI) {
   try {

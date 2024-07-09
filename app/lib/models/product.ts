@@ -1,11 +1,9 @@
-import mongoose, { Schema } from 'mongoose';
-import { ProductI } from '@/app/_types/data-types';
+import mongoose, { Model, Schema } from 'mongoose';
+import { ProductDocument } from '@/app/_types/data-types';
 
-
-
-const productSchema = new Schema<ProductI>(
+const ProductSchema = new Schema<ProductDocument>(
   {
-    images: Array,
+    pictures: [{ type: String }],
     name: String,
     description: String,
     category: String,
@@ -17,7 +15,8 @@ const productSchema = new Schema<ProductI>(
   { timestamps: true },
 );
 
-const Product =
-  mongoose.models.Product || mongoose.model('Product', productSchema);
+const Product: Model<ProductDocument> =
+  mongoose.models.Product ||
+  mongoose.model<ProductDocument>('Product', ProductSchema);
 
 export default Product;

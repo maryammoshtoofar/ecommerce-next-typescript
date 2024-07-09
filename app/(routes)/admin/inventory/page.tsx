@@ -1,18 +1,11 @@
-
-// todo : fix hydration warning for products table
 import {
-  ProductsRow as Row,
   ProductsTable as Table,
   ProductModal,
   DeleteProductModal,
 } from '@/app/_components/widgets';
 import { Title, Section, Flexbox, Button } from '@/app/_components/base';
 import Link from 'next/link';
-import {
-  getAllProducts,
-  getCategoryTitleById,
-  getSubcategoryTitleById,
-} from '@/app/api/actions/actions';
+import { getAllProducts } from '@/app/api/actions/actions';
 type SearchParamProps = {
   searchParams: Record<string, string> | null | undefined;
 };

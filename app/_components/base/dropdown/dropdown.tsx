@@ -1,5 +1,9 @@
 'use client';
-import { CategoryI, SubcategoryI } from '@/app/_types/data-types';
+import {
+  CategoryDocument,
+  CategoryI,
+  SubcategoryDocument,
+} from '@/app/_types/data-types';
 import { UIComponent } from '@/app/_types/component-types';
 import clsx from 'clsx';
 import { useState } from 'react';
@@ -8,7 +12,7 @@ import { useAppDispatch } from '@/app/lib/redux/hooks';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 type DropDownProps = UIComponent & {
   title: string;
-  items: CategoryI[] | SubcategoryI[] | null;
+  items: CategoryDocument[] | SubcategoryDocument[] | null;
   selectOption: ActionCreatorWithPayload<any, string>;
 };
 export const Dropdown = ({ items, title, selectOption }: DropDownProps) => {
@@ -19,7 +23,7 @@ export const Dropdown = ({ items, title, selectOption }: DropDownProps) => {
     setIsOpen(!isOpen);
   };
 
-  const handleChange = (value: CategoryI) => {
+  const handleChange = (value: CategoryDocument | SubcategoryDocument) => {
     setIsOpen(!isOpen);
     dispatch(selectOption(value));
   };

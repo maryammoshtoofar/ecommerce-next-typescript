@@ -1,8 +1,7 @@
-import mongoose, { Schema } from 'mongoose';
-import { CategoryI, SubcategoryI } from '@/app/_types/data-types';
-import { subcategorySchema } from './subcategory';
+import mongoose, { Schema, Model } from 'mongoose';
+import { CategoryDocument } from '@/app/_types/data-types';
 
-export const categorySchema = new Schema<CategoryI>(
+export const CategorySchema = new Schema<CategoryDocument>(
   {
     title: String,
     description: String,
@@ -12,7 +11,8 @@ export const categorySchema = new Schema<CategoryI>(
   { timestamps: true },
 );
 
-const Category =
-  mongoose.models.Category || mongoose.model('Category', categorySchema);
+const Category: Model<CategoryDocument> =
+  mongoose.models.Category ||
+  mongoose.model<CategoryDocument>('Category', CategorySchema);
 
 export default Category;

@@ -1,6 +1,8 @@
 import connectMongoDB from '@/app/lib/mongodb/mongodb';
 import Order from '@/app/lib/models/order';
 import { NextResponse } from 'next/server';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { OrderDocument } from '@/app/_types/data-types';
 
 interface DeleteReqI {
   nextUrl: { searchParams: { get: (arg0: string) => any } };
@@ -21,10 +23,14 @@ export const POST = async (req: Request) => {
   }
 };
 
-export async function GET() {
-  await connectMongoDB();
-  const orders = await Order.find();
-  return NextResponse.json({ orders }, { status: 200 });
+export async function GET(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    await connectMongoDB();
+    const orders: OrderDocument[] = await Order.find();
+    res.status(200).json(orders);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch orders' });
+  }
 }
 
 export async function DELETE(req: DeleteReqI) {

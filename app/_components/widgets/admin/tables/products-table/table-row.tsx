@@ -7,30 +7,31 @@ import { ImCross } from 'react-icons/im';
 import { priceFormatter } from '@/app/_utils/utils';
 import { FaStar } from 'react-icons/fa6';
 import { StoreProvider } from '@/app/_components/layout';
-import { ProductI } from '@/app/_types/data-types';
+import { ProductDocument } from '@/app/_types/data-types';
 import {
   getCategoryTitleById,
   getSubcategoryTitleById,
 } from '@/app/api/actions/actions';
 
 type Props = UIComponent & {
-  product: ProductI;
+  product: ProductDocument;
 };
 
 export const ProductsRow = async ({ product }: Props) => {
+  console.log('product::', product);
   const stock = product.quantity ? true : false;
   const stockIcon = stock ? <FaCheck /> : <ImCross />;
   const category = await getCategoryTitleById(product.category);
   const subcategory = await getSubcategoryTitleById(product.subcategory);
-  
+
   return (
-    <TableRow key={product.id}>
+    <TableRow key={product._id.toString()}>
       <Cell>
         <Checkbox />
       </Cell>
       <Cell>
         <Image
-          src={`http://localhost:3000/uploads/${product.images[0]}`}
+          src={`http://localhost:3000/uploads/${product.pictures[0]}`}
           alt={product.name}
           className="w-20 max-w-none"
           width={100}
@@ -68,7 +69,7 @@ export const ProductsRow = async ({ product }: Props) => {
         </span>
       </Cell>
       <StoreProvider>
-        <ActionsCell id={product.id} />
+        <ActionsCell id={product._id.toString()} />
       </StoreProvider>
     </TableRow>
   );
