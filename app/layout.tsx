@@ -26,7 +26,7 @@ const RootLayout = ({ children }: UIComponent) => {
     <ClerkProvider>
       <html
         lang="en"
-        className={`${slab.variable} ${dancingScript.variable} m-0 h-full scroll-smooth p-0`}
+        className={`${slab.variable} ${dancingScript.variable} m-0 min-h-full scroll-smooth p-0`}
       >
         <body className="m-0 min-h-full p-0 font-slab">
           <ToastProvider>{children}</ToastProvider>
