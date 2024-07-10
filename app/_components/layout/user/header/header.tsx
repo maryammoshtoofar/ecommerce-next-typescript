@@ -38,7 +38,6 @@ export const UserHeader = () => {
       <Link href={DASHBOARD} className={manageBtnStyle}>
         <Button mode="secondary" label="manage" />
       </Link>
-
       <NavIconsMenu />
       <NavMenu />
     </header>

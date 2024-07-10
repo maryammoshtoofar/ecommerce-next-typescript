@@ -7,7 +7,7 @@ type NavButtonProps = {
 };
 export const NavButton = ({ title }: NavButtonProps) => {
   const navLink =
-    title === 'home' ? '/' : title === 'services' ? '#' + title : title;
+    title === 'home' ? '/' : title === 'products' ? '/products' : '#';
   return (
     <Link
       href={navLink as Route}
