@@ -16,24 +16,26 @@ const cartSlice = createSlice({
     setCartState: (state, action: PayloadAction<CartState>) => {
       return action.payload;
     },
-    addToCart: (state, action: PayloadAction<CartItem>) => {
-      const item = state.items.find((item) => item._id === action.payload._id);
+    addToCart: (state, { payload }) => {
+      const item = state.items.find((item) => item._id === payload._id);
       if (item) {
         item.numberInCart += 1;
       } else {
-        action.payload.numberInCart = 1;
-        state.items.push(action.payload);
+        payload.numberInCart = 1;
+        state.items.push(payload);
       }
     },
-    removeFromCart: (state, action: PayloadAction<string>) => {
-      const item = state.items.find((item) => item._id === action.payload);
+    removeFromCart: (state, { payload }: PayloadAction<string>) => {
+      const item = state.items.find((item) => item._id.toString() === payload);
       if (item) {
         state.total = state.total - item.price * item.numberInCart;
-        state.items = state.items.filter((item) => item._id !== action.payload);
+        state.items = state.items.filter(
+          (item) => item._id.toString() !== payload,
+        );
       }
     },
-    updateTotalPrice: (state, action: PayloadAction<number>) => {
-      state.total += action.payload;
+    updateTotalPrice: (state, { payload }: PayloadAction<number>) => {
+      state.total += payload;
     },
     clearCart: (state) => {
       state.items = [];
