@@ -14,7 +14,7 @@ export const Hero = () => {
         <Image src={title} alt="elza coffee" className="brand-typography" />
         <div className="hero-intro">
           <p className="hero-para-1">
-            Today's good mood is sponsored by coffee
+            Today`&apos;s good mood is sponsored by coffee
           </p>
           <p className="hero-para-2">Search for your coffee now</p>
           <div className="hero-button-container">

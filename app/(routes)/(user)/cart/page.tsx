@@ -5,9 +5,7 @@ import { PRODUCTS } from '@/app/_config/routes';
 import { useAppSelector } from '@/app/lib/redux/hooks';
 import Link from 'next/link';
 
-type Props = {};
-
-const Cart = (props: Props) => {
+const Cart = () => {
   const cart = useAppSelector((state) => state.cart);
   return (
     <section className="flex min-h-screen flex-col items-center justify-center gap-8 bg-coffee-470 font-dancing text-3xl text-coffee-60">

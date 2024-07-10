@@ -2,9 +2,9 @@ import connectMongoDB from '@/app/lib/mongodb/mongodb';
 import { NextResponse } from 'next/server';
 import Product from '@/app/lib/models/product';
 import { ReqI } from '../route';
-import Category from '@/app/lib/models/category';
-import Subcategory from '@/app/lib/models/subcategory';
-import { ProductI } from '@/app/_types/data-types';
+// import Category from '@/app/lib/models/category';
+// import Subcategory from '@/app/lib/models/subcategory';
+// import { ProductI } from '@/app/_types/data-types';
 
 // export async function PUT(
 //   req: Request,

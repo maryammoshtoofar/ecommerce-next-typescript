@@ -1,4 +1,3 @@
-import { UIComponent } from '@/app/_types/component-types';
 import Image from 'next/image';
 import cupAndPeople from '@/app/_assets/cup-and-people.png';
 import { MdOutlineCalendarToday } from 'react-icons/md';
@@ -9,7 +8,7 @@ import { MdOutlinePhoneIphone } from 'react-icons/md';
 import { RxEnvelopeClosed } from 'react-icons/rx';
 import { TbReservedLine } from 'react-icons/tb';
 import { Button, Input } from '@/app/_components/base/';
-export const ReserveTable = (props: UIComponent) => {
+export const ReserveTable = () => {
   return (
     <section className="reserve-table-section">
       <h1 className="reserve-table-title">

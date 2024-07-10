@@ -22,6 +22,7 @@ export const UploadBox = ({ images }: Props) => {
         {images &&
           images.map((image) => (
             <UploadCard
+              key={image}
               src={`${BASE_URL}${UPLOADS_PATH}/${image}`}
               alt={image}
             />

@@ -1,8 +1,6 @@
-import {Title , Section} from '@/app/_components/base';
+import { Title, Section } from '@/app/_components/base';
 
-type Props = {};
-
-const StockPrice = (props: Props) => {
+const StockPrice = () => {
   return (
     <Section>
       <Title>stock-price</Title>

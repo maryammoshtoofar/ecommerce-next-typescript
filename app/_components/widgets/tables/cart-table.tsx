@@ -1,5 +1,4 @@
 'use client';
-import { UIComponent } from '@/app/_types/component-types';
 import { useAppDispatch, useAppSelector } from '@/app/lib/redux/hooks';
 import Image from 'next/image';
 import { FaTrashAlt } from 'react-icons/fa';
@@ -10,23 +9,22 @@ import {
 } from '@/app/lib/redux/features/cart/cart-slice';
 import { toast } from 'react-toastify';
 import { useAddNewOrderMutation } from '@/app/lib/redux/features/api/api-slice';
-import { OrderDocument, OrderI } from '@/app/_types/data-types';
+import { OrderDocument } from '@/app/_types/data-types';
 import { useUser } from '@clerk/nextjs';
 import { useEffect, useState } from 'react';
-import { User } from '@clerk/nextjs/server';
-import { useAuth } from '@clerk/nextjs';
-export const CartTable = (props: UIComponent) => {
+
+export const CartTable = () => {
   const cart = useAppSelector((state) => state.cart);
   const dispatch = useAppDispatch();
   const { isLoaded, user } = useUser();
   const [username, setUsername] = useState<string | null | undefined>('');
-  const [addNewOrder, { isLoading }] = useAddNewOrderMutation();
+  const [addNewOrder] = useAddNewOrderMutation();
 
   useEffect(() => {
     if (isLoaded) {
       setUsername(user?.username);
     }
-  }, [isLoaded]);
+  }, [isLoaded, user?.username]);
 
   const handleRemoveFromCart = (id: string) => {
     try {

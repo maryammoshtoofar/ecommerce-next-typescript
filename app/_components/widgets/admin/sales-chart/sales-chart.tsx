@@ -11,7 +11,6 @@ import {
 } from 'chart.js';
 // @ts-expect-error
 import { Line } from 'react-chartjs-2';
-type Props = {};
 
 ChartJS.register(
   CategoryScale,
@@ -24,7 +23,7 @@ ChartJS.register(
 
 const labels = ['9:00 A.M', '12:00 P.M', '4:00 P.M', '8:00 P.M', '12:00 A.M'];
 
-export const SalesChart = (props: Props) => {
+export const SalesChart = () => {
   const data = {
     labels,
     datasets: [

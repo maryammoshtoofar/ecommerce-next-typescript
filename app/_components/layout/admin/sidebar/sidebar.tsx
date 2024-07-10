@@ -10,14 +10,14 @@ import {
   FaDoorOpen,
   FaChevronRight,
 } from 'react-icons/fa6';
-import { MdDiscount } from 'react-icons/md';
+// import { MdDiscount } from 'react-icons/md';
 import { Logo } from '@/app/_components/base';
 import {
   DASHBOARD,
   INVENTORY,
   ORDERS,
   SETTINGS,
-  STOCK,
+  // STOCK,
   USERS,
 } from '@/app/_config/routes';
 import { useEffect, useState } from 'react';

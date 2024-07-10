@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { DASHBOARD } from '@/app/_config/routes';
 import Link from 'next/link';
-import { useAuth, useUser } from '@clerk/nextjs';
+import { useUser } from '@clerk/nextjs';
 
 export const UserHeader = () => {
   const { user } = useUser();

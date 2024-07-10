@@ -10,11 +10,11 @@ type Inputs = {
 };
 export const ReactHookForm = () => {
   const [data, setData] = useState<Inputs>();
-
+  console.log(data);
   const {
     register,
     handleSubmit,
-    watch,
+    // watch,
     formState: { errors },
   } = useForm<Inputs>({
     defaultValues: {

@@ -6,7 +6,7 @@ import { authImages } from '@/app/_lib/auth-images';
 import { getRandomImages } from '@/app/_utils/utils';
 import { SignIn, SignUp, useUser, ClerkLoading } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
-import { BASE_URL, DASHBOARD } from '@/app/_config/routes';
+import { BASE_URL } from '@/app/_config/routes';
 const Auth = () => {
   const { firstNum, secondNum } = getRandomImages(authImages);
   const [activeTab, setActiveTab] = useState<number>(1);
@@ -17,7 +17,7 @@ const Auth = () => {
     if (user.isLoaded && user.isSignedIn) {
       router.push(BASE_URL);
     }
-  }, [user]);
+  }, [user, router]);
 
   return (
     <>
@@ -55,7 +55,7 @@ const Auth = () => {
           </Tab>
         </div>
         <ClerkLoading>
-            <DotsSpinner />
+          <DotsSpinner />
         </ClerkLoading>
         {activeTab === 1 && (
           <SignIn

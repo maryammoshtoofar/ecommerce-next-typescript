@@ -6,9 +6,8 @@ import { FiSearch } from 'react-icons/fi';
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 
-type Props = {};
 
-export const AdminHeader = (props: Props) => {
+export const AdminHeader = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = () => {
@@ -35,7 +34,7 @@ export const AdminHeader = (props: Props) => {
         <h1
           className={`font-dancing text-xl font-bold capitalize text-coffee-360 smmobile:text-2xl  sm:text-3xl lg:text-4xl `}
         >
-          brewmaster's hub
+          brewmaster&apos;s hub
         </h1>
         <h2 className="hidden text-sm font-bold capitalize text-coffee-360 sm:block lg:text-lg">
           crafting success, one sip at a time

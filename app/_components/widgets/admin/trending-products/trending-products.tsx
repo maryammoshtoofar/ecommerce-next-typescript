@@ -1,4 +1,3 @@
-import cappuccino from '@/public/img/cappuccino.png';
 import latte from '@/public/img/latte.png';
 import frappe from '@/public/img/frappe.png';
 import mocha from '@/public/img/mocha.png';

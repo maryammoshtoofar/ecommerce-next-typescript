@@ -1,10 +1,5 @@
-'use client';
-import { getProductById } from '@/app/api/actions/actions';
 import { Cell } from '@/app/_components/base';
-import { selectProduct } from '@/app/lib/redux/features/products/products-slice';
-import { useAppDispatch } from '@/app/lib/redux/hooks';
 import Link from 'next/link';
-import { useEffect } from 'react';
 import { BiDetail } from 'react-icons/bi';
 import { LuPencilLine, LuTrash } from 'react-icons/lu';
 import { TfiMoreAlt } from 'react-icons/tfi';
@@ -12,7 +7,6 @@ import { TfiMoreAlt } from 'react-icons/tfi';
 type Props = { id: string };
 
 export const ActionsCell = ({ id }: Props) => {
-  const dispatch = useAppDispatch();
 
   return (
     <Cell customContainerStyle="flex lg:gap-3 text-lg text-coffee-100 ">

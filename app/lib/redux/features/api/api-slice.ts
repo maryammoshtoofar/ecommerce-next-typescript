@@ -5,18 +5,23 @@ import {
   PRODUCTS_URL,
   ORDERS_URL,
 } from '@/app/_config/api';
-import { CategoryI, OrderI, ProductI } from '@/app/_types/data-types';
+import {
+  CategoryDocument,
+  CategoryI,
+  OrderI,
+  ProductI,
+} from '@/app/_types/data-types';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 interface CategoriesDataInterface {
-  categories: CategoryI[];
+  categories: CategoryDocument[];
 }
 interface SubcategoriesDataInterface {
-  subcategories: CategoryI[];
+  subcategories: CategoryDocument[];
 }
 
-interface ProductsDataInterface {
-  products: ProductI[];
-}
+// interface ProductsDataInterface {
+//   products: ProductI[];
+// }
 
 interface ProductDataInterface {
   product: ProductI;

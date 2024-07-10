@@ -5,11 +5,11 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import {
   Input,
   Label,
-  Dropdown,
+  // Dropdown,
   Flexbox,
-  Button,
+  // Button,
 } from '@/app/_components/base/';
-import { UploadBox } from '../upload-box';
+// import { UploadBox } from '../upload-box';
 import {
   useGetAllCategoriesQuery,
   useGetSubcategoriesByCategoryQuery,
@@ -17,15 +17,9 @@ import {
 } from '@/app/lib/redux/features/api/api-slice';
 import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/app/lib/redux/hooks';
-import {
-  selectCategory,
-  setCategories,
-} from '@/app/lib/redux/features/categories/categories-slice';
+import { setCategories } from '@/app/lib/redux/features/categories/categories-slice';
 import { selectProduct } from '@/app/lib/redux/features/products/products-slice';
-import {
-  selectSubcategory,
-  setSubcategories,
-} from '@/app/lib/redux/features/subcategories/subcategories-slice';
+import { setSubcategories } from '@/app/lib/redux/features/subcategories/subcategories-slice';
 import { skipToken } from '@reduxjs/toolkit/query';
 type Inputs = {
   name: string;
@@ -40,8 +34,6 @@ export const AddProductForm = () => {
   const { selectedCategory, allCategories: categories } = useAppSelector(
     (state) => state.categories,
   );
-  const { selectedSubcategory, allSubcategories: subcategories } =
-    useAppSelector((state) => state.subcategories);
   const { selectedProduct } = useAppSelector((state) => state.products);
 
   const {
@@ -50,20 +42,17 @@ export const AddProductForm = () => {
     isLoading: catIsLoading,
   } = useGetAllCategoriesQuery('categories');
 
-
   const {
     data: subData,
     error: subError,
     isLoading: subIsLoading,
   } = useGetSubcategoriesByCategoryQuery(
-    selectedCategory?._id ? selectedCategory._id : skipToken,
+    selectedCategory?._id.toString()
+      ? selectedCategory._id.toString()
+      : skipToken,
   );
 
-  const {
-    data: prodData,
-    error: prodError,
-    isLoading: prodIsLoading,
-  } = useGetProductByIdQuery(id!);
+  const { data: prodData } = useGetProductByIdQuery(id!);
 
   useEffect(() => {
     if (prodData) {
@@ -74,18 +63,19 @@ export const AddProductForm = () => {
   useEffect(() => {
     if (!catIsLoading && !catError && catData)
       dispatch(setCategories(catData.categories));
-  }, [catIsLoading, catError]);
+  }, [catIsLoading, catError, dispatch]);
   useEffect(() => {
     if (selectedCategory && !subError && !subIsLoading && subData) {
       dispatch(setSubcategories(subData.subcategories));
     }
-  }, [selectedCategory, subData]);
+  }, [selectedCategory, subData, dispatch]);
 
   const [data, setData] = useState<Inputs>();
+  console.log(data);
   const {
     register,
     handleSubmit,
-    watch,
+    // watch,
     formState: { errors },
   } = useForm<Inputs>({
     defaultValues: {

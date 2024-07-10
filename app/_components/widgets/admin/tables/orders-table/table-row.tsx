@@ -2,10 +2,10 @@
 import { Flexbox, Cell, Checkbox, TableRow } from '@/app/_components/base';
 import { UIComponent } from '@/app/_types/component-types';
 import { priceFormatter } from '@/app/_utils/utils';
-import { BiDetail } from 'react-icons/bi';
-import { LuPencilLine } from 'react-icons/lu';
-import { LuTrash } from 'react-icons/lu';
-import { TfiMoreAlt } from 'react-icons/tfi';
+// import { BiDetail } from 'react-icons/bi';
+// import { LuPencilLine } from 'react-icons/lu';
+// import { LuTrash } from 'react-icons/lu';
+// import { TfiMoreAlt } from 'react-icons/tfi';
 import { OrderDocument } from '@/app/_types/data-types';
 import { MdDeliveryDining } from 'react-icons/md';
 import { useEditOrderMutation } from '@/app/lib/redux/features/api/api-slice';
@@ -17,7 +17,7 @@ type Props = UIComponent & {
 };
 
 export const OrdersRow = ({ order }: Props) => {
-  const [editOrder, { isLoading }] = useEditOrderMutation();
+  const [editOrder] = useEditOrderMutation();
   const [status, setStatus] = useState(order.status);
   const date = new Date(order.createdAt);
 

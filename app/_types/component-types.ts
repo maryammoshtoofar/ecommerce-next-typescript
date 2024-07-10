@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image';
 import { Dispatch, ReactElement, SetStateAction } from 'react';
-import { OrderDocument, OrderI, ProductDocument, ProductI } from './data-types';
+import { OrderDocument, ProductDocument } from './data-types';
 
 export type UIComponent = {
   children?: React.ReactNode;

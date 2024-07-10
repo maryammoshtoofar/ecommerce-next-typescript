@@ -1,6 +1,6 @@
 import { OrderTableProps } from '@/app/_types/component-types';
 import { TableHeadCell, Checkbox } from '@/app/_components/base';
-import { OrderDocument, OrderI } from '@/app/_types/data-types';
+import { OrderDocument } from '@/app/_types/data-types';
 import { OrdersRow as Row } from '@/app/_components/widgets';
 
 export const OrdersTable = ({ headings, orders }: OrderTableProps) => {

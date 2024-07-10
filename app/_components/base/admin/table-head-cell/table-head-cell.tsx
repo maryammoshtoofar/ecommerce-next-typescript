@@ -1,4 +1,3 @@
-import { IconType } from 'react-icons';
 type Props = {
   children: React.ReactNode;
 };

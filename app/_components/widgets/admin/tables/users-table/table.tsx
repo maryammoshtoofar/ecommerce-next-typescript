@@ -1,15 +1,4 @@
 import { UIComponent } from '@/app/_types/component-types';
-import {
-  MdOutlineInventory,
-  MdOutlineAttachMoney,
-  MdOutlineImage,
-  MdOutlineSubtitles,
-  MdOutlineCategory,
-  MdGridOn,
-} from 'react-icons/md';
-import { FaHashtag } from 'react-icons/fa';
-import { GoNumber } from 'react-icons/go';
-import { FaRegStar } from 'react-icons/fa';
 import { TableHeadCell, Checkbox } from '@/app/_components/base';
 
 export const UsersTable = (props: UIComponent) => {
@@ -21,11 +10,11 @@ export const UsersTable = (props: UIComponent) => {
             <TableHeadCell>
               <Checkbox />
             </TableHeadCell>
-            <TableHeadCell component={FaHashtag}>ID</TableHeadCell>
-            <TableHeadCell component={MdOutlineImage}>user</TableHeadCell>
-            <TableHeadCell component={MdOutlineImage}>user name</TableHeadCell>
-            <TableHeadCell component={MdOutlineCategory}>email</TableHeadCell>
-            <TableHeadCell component={MdGridOn}>actions</TableHeadCell>
+            <TableHeadCell>ID</TableHeadCell>
+            <TableHeadCell>user</TableHeadCell>
+            <TableHeadCell>user name</TableHeadCell>
+            <TableHeadCell>email</TableHeadCell>
+            <TableHeadCell>actions</TableHeadCell>
           </tr>
         </thead>
         <tbody className="overflow-x-scroll">{props.children}</tbody>

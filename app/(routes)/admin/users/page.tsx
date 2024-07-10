@@ -3,8 +3,6 @@ import {
   UsersTable as Table,
 } from '@/app/_components/widgets';
 import user from '@/public/img/admin-profile.png';
-import houseBlend from '@/public/img/thumbnails/house-blend.png';
-import robusta from '@/public/img/thumbnails/robusta.png';
 import { Title, Section } from '@/app/_components/base';
 
 const Users = () => {

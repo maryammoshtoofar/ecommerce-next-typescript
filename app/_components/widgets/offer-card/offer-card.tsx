@@ -1,10 +1,9 @@
 import Image from 'next/image';
-import { UIComponent } from '@/app/_types/component-types';
 import { Card } from '../card/card';
 import { Button } from '@/app/_components/base';
 import coffeePackages from '@/app/_assets/coffee-packages.png';
 
-export const OfferCard = (props: UIComponent) => {
+export const OfferCard = () => {
   return (
     <section className="offer-section">
       <Card tailwind="offer-card">

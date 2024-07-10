@@ -30,8 +30,8 @@ export default function NotFound() {
           alt="coffee-world"
         />
         <p className="px-4 text-center font-bold text-coffee-70 sm:text-2xl xl:px-0">
-          Looks like you've spilled your coffee. This page isn't brewing right
-          now. Let's get you back on track!
+          Looks like you&apos;ve spilled your coffee. This page isn&apos;t brewing right
+          now. Let&apos;s get you back on track!
         </p>
       </div>
 

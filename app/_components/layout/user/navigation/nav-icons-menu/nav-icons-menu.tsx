@@ -4,16 +4,12 @@ import { AUTH, CART } from '@/app/_config/routes';
 import { setCartState } from '@/app/lib/redux/features/cart/cart-slice';
 import { useAppDispatch, useAppSelector } from '@/app/lib/redux/hooks';
 import { loadFromLocalStorage } from '@/app/lib/redux/store';
-import {
-  OrganizationSwitcher,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from '@clerk/nextjs';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
+import { Route } from 'next';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import { BsPerson } from 'react-icons/bs';
-import { BsCart2, BsCart, BsCartFill, BsCart4 } from 'react-icons/bs';
+import { BsCart4 } from 'react-icons/bs';
 import { SlMenu } from 'react-icons/sl';
 
 export const NavIconsMenu = () => {
@@ -39,7 +35,7 @@ export const NavIconsMenu = () => {
         <UserButton />
       </SignedIn>
       <SignedOut>
-        <Link href={AUTH}>
+        <Link href={AUTH as Route}>
           <BsPerson className="nav-icon" />
         </Link>
       </SignedOut>

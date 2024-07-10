@@ -1,6 +1,4 @@
-type Props = {};
-
-const Catalog = (props: Props) => {
+const Catalog = () => {
   return <div>Catalog</div>;
 };
 

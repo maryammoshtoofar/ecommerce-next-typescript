@@ -1,7 +1,6 @@
 'use client';
 import {
   CategoryDocument,
-  CategoryI,
   SubcategoryDocument,
 } from '@/app/_types/data-types';
 import { UIComponent } from '@/app/_types/component-types';

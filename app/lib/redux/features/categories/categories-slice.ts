@@ -1,8 +1,8 @@
-import { CategoryI } from '@/app/_types/data-types';
+import { CategoryDocument, CategoryI } from '@/app/_types/data-types';
 import { createSlice } from '@reduxjs/toolkit';
 interface CategoryState {
-  allCategories: CategoryI[] | null;
-  selectedCategory: CategoryI | null;
+  allCategories: CategoryDocument[] | null;
+  selectedCategory: CategoryDocument | null;
 }
 const initialState: CategoryState = {
   allCategories: [],

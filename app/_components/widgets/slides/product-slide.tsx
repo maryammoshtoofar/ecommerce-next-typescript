@@ -3,7 +3,6 @@ import { ProductSlideProps } from '@/app/_types/component-types';
 import { Card } from '@/app/_components/widgets';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { FiShoppingCart } from 'react-icons/fi';
-import { CiCoffeeBean } from 'react-icons/ci';
 import { Icon } from '@/app/_components/base';
 import { shortenDescription } from '@/app/_utils/utils';
 

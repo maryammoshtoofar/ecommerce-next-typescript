@@ -7,14 +7,14 @@ import {
   TitleFooterMenuItem,
 } from '@/app/_components/layout';
 
-import {
-  CAREERS,
-  CONTACT,
-  FAQ,
-  LOCATIONS,
-  MENU,
-  STORY,
-} from '@/app/_config/routes';
+// import {
+//   CAREERS,
+//   CONTACT,
+//   FAQ,
+//   LOCATIONS,
+//   MENU,
+//   STORY,
+// } from '@/app/_config/routes';
 import Link from 'next/link';
 
 export const FooterMenu = () => {
