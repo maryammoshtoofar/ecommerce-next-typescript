@@ -29,10 +29,10 @@ export const generateCaptionLength = (screenWidth: number, type: string) => {
 };
 
 export const getRandomImages = (imgArray: ImageArray) => {
-  let firstNum = Math.floor(Math.random() * (8 - 1 + 1)) + 1;
-  let secondNum = Math.floor(Math.random() * (8 - 1 + 1)) + 1;
+  let firstNum = Math.floor(Math.random() * (imgArray.length - 1 + 1)) + 1;
+  let secondNum = Math.floor(Math.random() * (imgArray.length - 1 + 1)) + 1;
   while (firstNum === secondNum) {
-    secondNum = Math.floor(Math.random() * (8 - 1 + 1)) + 1;
+    secondNum = Math.floor(Math.random() * (imgArray.length - 1 + 1)) + 1;
   }
   return { firstNum, secondNum };
 };
