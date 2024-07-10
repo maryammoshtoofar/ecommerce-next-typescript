@@ -5,10 +5,10 @@ import { MdClose } from 'react-icons/md';
 import { AddProductForm } from '@/app/_components/widgets';
 import { StoreProvider } from '@/app/_components/layout';
 
-// type Props = {
-//   id: string | undefined;
-// };
-export const ProductModal = () => {
+type Props = {
+  id: string | undefined;
+};
+export const ProductModal = (props:Props) => {
   return (
     <StoreProvider>
       <Overlay tailwind="items-baseline">
