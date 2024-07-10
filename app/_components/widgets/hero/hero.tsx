@@ -37,7 +37,7 @@ export const Hero = () => {
         <Link href={ORDER}>
           <Button
             label="Hurry Up"
-            tailwind="my-5 border bg-transparent px-2 text-lg font-thin md:absolute md:-bottom-1 md:right-2 md:h-1/5 md:w-24 md:text-xs lg:h-8 lg:w-32 xl:w-40;"
+            tailwind="my-5 border bg-transparent px-2 text-lg font-thin md:absolute md:-bottom-1 md:right-2 md:h-1/5 md:text-sm lg:h-8 lg:w-32 xl:w-40 lg:px-0 lg:text-lg"
             component={<FaMotorcycle />}
           />
         </Link>
