@@ -1,18 +1,6 @@
 import connectMongoDB from '@/app/lib/mongodb/mongodb';
 import Product from '@/app/lib/models/product';
-import { NextResponse } from 'next/server';
-import { ProductI } from '@/app/_types/data-types';
-
-export interface ReqI {
-  formData: () => {
-    (): PromiseLike<ProductI> | ProductI;
-  };
-}
-
-
-interface DeleteReqI {
-  nextUrl: { searchParams: { get: (arg0: string) => any } };
-}
+import { NextRequest, NextResponse } from 'next/server';
 
 // export const POST = async (req: Request) => {
 //   await connectMongoDB();
@@ -55,7 +43,7 @@ export async function GET() {
   return NextResponse.json({ products }, { status: 200 });
 }
 
-export async function DELETE(req: DeleteReqI) {
+export async function DELETE(req: NextRequest) {
   const id = req.nextUrl.searchParams.get('id');
   await connectMongoDB();
   await Product.findByIdAndDelete(id);

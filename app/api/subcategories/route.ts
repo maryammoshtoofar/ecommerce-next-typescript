@@ -1,17 +1,8 @@
 import connectMongoDB from '@/app/lib/mongodb/mongodb';
 import Subcategory from '@/app/lib/models/subcategory';
-import { NextResponse } from 'next/server';
-import { SubcategoryDocument } from '@/app/_types/data-types';
+import { NextRequest, NextResponse } from 'next/server';
 
-interface ReqI {
-  json: () => PromiseLike<SubcategoryDocument> | SubcategoryDocument;
-}
-
-interface DeleteReqI {
-  nextUrl: { searchParams: { get: (arg0: string) => any } };
-}
-
-export async function POST(req: ReqI) {
+export async function POST(req: Request) {
   const { title } = await req.json();
   await connectMongoDB();
   await Subcategory.create({ title });
@@ -29,7 +20,7 @@ export async function GET(req: any) {
     return NextResponse.json({ categories }, { status: 200 });
   }
 }
-export async function DELETE(req: DeleteReqI) {
+export async function DELETE(req: NextRequest) {
   const id = req.nextUrl.searchParams.get('id');
   await connectMongoDB();
   await Subcategory.findByIdAndDelete(id);

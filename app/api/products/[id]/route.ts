@@ -1,7 +1,6 @@
 import connectMongoDB from '@/app/lib/mongodb/mongodb';
 import { NextResponse } from 'next/server';
 import Product from '@/app/lib/models/product';
-import { ReqI } from '../route';
 // import Category from '@/app/lib/models/category';
 // import Subcategory from '@/app/lib/models/subcategory';
 // import { ProductI } from '@/app/_types/data-types';
@@ -46,7 +45,7 @@ import { ReqI } from '../route';
 //   }
 // }
 
-export async function GET(_: ReqI, { params }: { params: { id: string } }) {
+export async function GET(_: Request, { params }: { params: { id: string } }) {
   const { id } = params;
   await connectMongoDB();
   const product = await Product.findOne({ _id: id });
