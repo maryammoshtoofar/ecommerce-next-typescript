@@ -1,5 +1,6 @@
 import { FaRegBell, FaDoorOpen } from 'react-icons/fa6';
 import { UserButton } from '@clerk/nextjs';
+import { auth } from '@clerk/nextjs/server';
 
 export const ProfileSection = () => {
   return (

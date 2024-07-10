@@ -7,7 +7,7 @@ import { TrendingProduct as Product } from '@/app/_components/widgets';
 
 export const TrendingProducts = () => {
   return (
-    <article className="overflow-y-auto rounded-lg bg-coffee-10 px-4 pt-3">
+    <article className="overflow-y-auto rounded-lg bg-coffee-10 px-4 pt-3 lg:w-1/3">
       <div className="flex w-full items-baseline justify-between py-2">
         <h2 className="text-base font-bold capitalize text-coffee-230">
           Trending Coffee
