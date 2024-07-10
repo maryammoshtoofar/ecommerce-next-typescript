@@ -7,9 +7,7 @@ import {
   LineElement,
   Tooltip,
   Filler,
-  // @ts-expect-error
 } from 'chart.js';
-// @ts-expect-error
 import { Line } from 'react-chartjs-2';
 
 ChartJS.register(
