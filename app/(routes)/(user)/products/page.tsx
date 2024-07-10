@@ -6,11 +6,13 @@ const Products = async () => {
   const products = await getAllProducts();
 
   return (
-    <section className="relative flex flex-wrap justify-center gap-4 bg-coffee-470 px-4 pt-32">
-      <Title tailwind="text-coffee-70 absolute top-12">All Products</Title>
-      {products.map((product) => {
-        return <ProductCard key={product.id} product={product} />;
-      })}
+    <section className="relative flex min-h-screen flex-col flex-wrap items-center justify-center gap-6 bg-coffee-470 px-4 pt-32">
+      <Title tailwind="text-coffee-70">All Products</Title>
+      <div className="grid w-full flex-wrap gap-2 py-8 sm:grid-cols-2 sm:justify-center md:grid-cols-3 lg:grid-cols-4">
+        {products.map((product) => {
+          return <ProductCard key={product.id} product={product} />;
+        })}
+      </div>
     </section>
   );
 };

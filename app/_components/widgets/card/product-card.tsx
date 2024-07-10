@@ -29,7 +29,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <Card
       key={product._id.toString()}
-      tailwind="md:w-1/3 lg:w-1/6 flex flex-col w-full items-center rounded-xl relative bg-coffee-640 slide-glow"
+      tailwind="flex sm:flex-col w-full items-center relative bg-coffee-640 slide-glow rounded-none sm:rounded-lg"
     >
       <Icon
         component={
@@ -43,16 +43,19 @@ const ProductCard = ({ product }: ProductCardProps) => {
         alt={product.name}
         className="-top-16 left-0"
       />
+      <p className="text-sm font-bold text-coffee-520 sm:hidden">
+        {product.name}
+      </p>
       <Icon
         component={
           <FiShoppingCart
             size={'1.5rem'}
-            className="absolute bottom-3 right-3 cursor-pointer text-coffee-140 "
+            className="absolute bottom-1 right-3 cursor-pointer text-coffee-140 sm:bottom-3 "
             onClick={handleAddToCart}
           />
         }
       />
-      <p className="text-md w-full rounded-b-xl bg-coffee-660 py-5 text-center capitalize text-white">
+      <p className="text-md hidden w-full rounded-none bg-coffee-660 py-5 text-center capitalize text-white sm:block sm:rounded-b-lg">
         {shortenDescription(`${product.name} | ${product.description}`, 20)}
       </p>
     </Card>

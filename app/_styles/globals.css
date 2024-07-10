@@ -116,7 +116,7 @@
     @apply md:hidden;
   }
   .card {
-    @apply bg-coffee-630  backdrop-blur-lg;
+    @apply bg-coffee-630 backdrop-blur-lg;
   }
   .hero {
     @apply relative mt-14 h-0 w-full bg-hero bg-contain bg-no-repeat pb-[79.42%] md:mt-0;
