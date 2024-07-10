@@ -1,11 +1,6 @@
 import connectMongoDB from '@/app/lib/mongodb/mongodb';
 import Category from '@/app/lib/models/category';
 import { NextResponse } from 'next/server';
-import { CategoryDocument } from '@/app/_types/data-types';
-
-export interface ReqI {
-  json: () => PromiseLike<CategoryDocument> | CategoryDocument;
-}
 
 interface DeleteReqI {
   nextUrl: { searchParams: { get: (arg0: string) => any } };
@@ -17,7 +12,7 @@ export async function GET() {
   return NextResponse.json({ categories }, { status: 200 });
 }
 
-export async function POST(req: ReqI) {
+export async function POST(req: Request) {
   const { title, description, image } = await req.json();
   await connectMongoDB();
   await Category.create({ title, description, image });
