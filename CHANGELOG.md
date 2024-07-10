@@ -17,3 +17,13 @@
   ### Known Issues
   - Product Images might not be displayed properly
   
+
+  ## [v1.0.1] 2024-07-10
+
+  ### Added
+  - Add More Products
+
+  ### Fixed
+  - Issue with Product Images Not Showing Properly
+
+

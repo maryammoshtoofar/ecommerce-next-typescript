@@ -82,7 +82,7 @@ export const CartTable = () => {
               <tr key={item._id.toString()}>
                 <td className="flex w-full flex-col items-center gap-2 border border-coffee-340 p-2 text-center capitalize sm:flex-row">
                   <Image
-                    src={`/uploads/${item.pictures[0]}`}
+                    src={`/img/products/${item.pictures[0]}`}
                     alt={item.name}
                     width={50}
                     height={50}

@@ -31,7 +31,7 @@ export const ProductsRow = async ({ product }: Props) => {
       </Cell>
       <Cell>
         <Image
-          src={`http://localhost:3000/uploads/${product.pictures[0]}`}
+          src={`${process.env.BASE_URL}/img/products/${product.pictures[0]}`}
           alt={product.name}
           className="w-20 max-w-none"
           width={100}
