@@ -1,10 +1,6 @@
 import connectMongoDB from '@/app/lib/mongodb/mongodb';
 import Category from '@/app/lib/models/category';
-import { NextResponse } from 'next/server';
-
-interface DeleteReqI {
-  nextUrl: { searchParams: { get: (arg0: string) => any } };
-}
+import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET() {
   await connectMongoDB();
@@ -19,7 +15,7 @@ export async function POST(req: Request) {
   return NextResponse.json({ message: 'Category Created' }, { status: 201 });
 }
 
-export async function DELETE(req: DeleteReqI) {
+export async function DELETE(req: NextRequest) {
   const id = req.nextUrl.searchParams.get('id');
   await connectMongoDB();
   await Category.findByIdAndDelete(id);
