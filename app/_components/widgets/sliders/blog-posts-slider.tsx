@@ -4,7 +4,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { SwiperOptions } from 'swiper/types/swiper-options';
+// import { SwiperOptions } from 'swiper/types/swiper-options';
 import blogBg from '@/app/_assets/blog-bg.png';
 import { BlogPostSlide as Slide } from '../slides/blog-post-slide';
 import { blogPosts } from '@/app/_lib/blog-posts';
@@ -40,7 +40,7 @@ export const BlogPostsSlider = () => {
             },
           }}
           grabCursor={true}
-          onSwiper={(swiper: SwiperOptions) => console.log(swiper)}
+          // onSwiper={(swiper: SwiperOptions) => console.log(swiper)}
         >
           {blogPosts.map((slide) => (
             <SwiperSlide key={slide.id} className="py-10">

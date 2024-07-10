@@ -1,7 +1,7 @@
 'use client';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { SwiperOptions } from 'swiper/types/swiper-options';
+// import { SwiperOptions } from 'swiper/types/swiper-options';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -37,7 +37,7 @@ export const ProductSlider = () => {
         // autoplay
         grabCursor={true}
         pagination={{ clickable: true }}
-        onSwiper={(swiper: SwiperOptions) => console.log(swiper)}
+        // onSwiper={(swiper: SwiperOptions) => console.log(swiper)}
         className="product-slider"
       >
         {recommendedProducts.map((slide) => (
