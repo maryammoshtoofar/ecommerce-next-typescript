@@ -23,13 +23,13 @@ export const FooterMenu = () => {
       <ul className="footer-menu-col-1">
         <TitleFooterMenuItem>About</TitleFooterMenuItem>
         <FooterMenuItem>
-          <Link href={STORY}>Our Story</Link>
+          <Link href={'#'}>Our Story</Link>
         </FooterMenuItem>
         <FooterMenuItem>
-          <Link href={FAQ}>FAQ</Link>
+          <Link href={'#'}>FAQ</Link>
         </FooterMenuItem>
         <FooterMenuItem>
-          <Link href={CAREERS}>Careers</Link>
+          <Link href={'#'}>Careers</Link>
         </FooterMenuItem>
       </ul>
       <ul className="footer-menu-col-1">
@@ -37,21 +37,20 @@ export const FooterMenu = () => {
           <span className="hidden lg:inline">Customer</span> Resources
         </TitleFooterMenuItem>
         <FooterMenuItem>
-          <Link href={MENU}>Menu</Link>
+          <Link href={'#'}>Menu</Link>
         </FooterMenuItem>
         <FooterMenuItem>
-          <Link href={LOCATIONS}>Locations</Link>
+          <Link href={'#'}>Locations</Link>
         </FooterMenuItem>
         <FooterMenuItem>
-          <Link href={CONTACT}>Support</Link>
+          <Link href={'#'}>Support</Link>
         </FooterMenuItem>
       </ul>
       <ul className="footer-menu-col-2">
         <TitleFooterMenuItem>Services</TitleFooterMenuItem>
         <FooterMenuItem>Payment Options</FooterMenuItem>
         <FooterMenuItem>
-          <span className="hidden lg:inline">Refunds and</span>
-          Exchanges
+          <span className="hidden lg:inline">Refunds and Exchanges</span>
         </FooterMenuItem>
         <FooterMenuItem>
           <span className="hidden lg:inline">Limitation of </span>
