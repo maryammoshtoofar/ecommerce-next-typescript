@@ -7,12 +7,16 @@ import { loadFromLocalStorage } from '@/app/lib/redux/store';
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import { Route } from 'next';
 import Link from 'next/link';
-import { useEffect } from 'react';
+import { Dispatch, SetStateAction, useEffect } from 'react';
 import { BsPerson } from 'react-icons/bs';
 import { BsCart4 } from 'react-icons/bs';
 import { SlMenu } from 'react-icons/sl';
 
-export const NavIconsMenu = () => {
+type Props = {
+  navbar: boolean;
+  setNavbar: Dispatch<SetStateAction<boolean>>;
+};
+export const NavIconsMenu = ({ navbar, setNavbar }: Props) => {
   const items = useAppSelector((state) => state.cart.items);
   const dispatch = useAppDispatch();
 
@@ -39,7 +43,10 @@ export const NavIconsMenu = () => {
           <BsPerson className="nav-icon" />
         </Link>
       </SignedOut>
-      <SlMenu className="nav-icon hamburger-icon" />
+      <SlMenu
+        className="nav-icon hamburger-icon"
+        onClick={() => setNavbar(!navbar)}
+      />
     </nav>
   );
 };
