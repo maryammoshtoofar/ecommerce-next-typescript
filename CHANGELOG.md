@@ -27,3 +27,10 @@
   - Issue with Product Images Not Showing Properly
 
 
+  ## [v1.1.1] 2024-07-10
+
+  ### Added
+  - UI Mobile Navigation Menu for Users
+
+
+
