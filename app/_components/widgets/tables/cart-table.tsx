@@ -38,6 +38,10 @@ export const CartTable = () => {
 
   const handleSubmitOrder = async () => {
     console.log('user', username);
+    if(!user){
+      toast.warn("Please Log In First")
+      return
+    }
     const newOrder = {
       products: cart.items,
       total: cart.total,
