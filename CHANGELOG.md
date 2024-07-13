@@ -14,16 +14,17 @@
 - Basic MongoDB Modeling
 - Not Found Page
 
-  ### Known Issues
-  - Product Images might not be displayed properly
-  
+### Known Issues
+- Product Images might not be displayed properly
 
-  ## [v1.0.1] 2024-07-10
+## [v1.0.1] 2024-07-10
 
-  ### Added
-  - Add More Products
+### Added
+- Add More Products
 
-  ### Fixed
-  - Issue with Product Images Not Showing Properly
+## [v1.0.2] 2024-07-10
+
+### Fixed
+- Issue with Product Images Not Showing Properly
 
 
