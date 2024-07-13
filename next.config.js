@@ -15,5 +15,6 @@ module.exports = {
         pathname: '/img/**',
       },
     ],
+    domains: ['ecommerce-next-typescript-seven.vercel.app'],
   },
 };
