@@ -8,6 +8,7 @@ import { priceFormatter } from '@/app/_utils/utils';
 // import { TfiMoreAlt } from 'react-icons/tfi';
 import { OrderDocument } from '@/app/_types/data-types';
 import { MdDeliveryDining } from 'react-icons/md';
+import { FaEye, FaCheck } from 'react-icons/fa';
 import { useEditOrderMutation } from '@/app/lib/redux/features/api/api-slice';
 import { toast } from 'react-toastify';
 import { useState } from 'react';
@@ -53,14 +54,15 @@ export const OrdersRow = ({ order }: Props) => {
         </Flexbox>
       </Cell>
       <Cell>{status}</Cell>
-      <Cell customContainerStyle="flex lg:gap-3 text-4xl text-coffee-100 ">
+      <Cell customContainerStyle="flex lg:gap-3 text-xl text-coffee-100 ">
+        <FaEye className="cursor-pointer transition-all hover:text-coffee-340" />
         {status === 'paid' ? (
           <MdDeliveryDining
             onClick={handleSendOrder}
             className="cursor-pointer transition-all hover:text-coffee-340"
           />
         ) : (
-          <span className="text-base"> -</span>
+          <FaCheck className="text-base text-green-600" />
         )}
         {/* <LuPencilLine className="hidden cursor-pointer transition-all hover:text-coffee-340  md:inline " />
         <LuTrash className="hidden cursor-pointer transition-all hover:text-red-400 md:inline" />

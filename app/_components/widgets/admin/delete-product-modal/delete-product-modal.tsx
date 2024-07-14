@@ -4,8 +4,18 @@ import { INVENTORY } from '@/app/_config/routes';
 import Link from 'next/link';
 import { MdClose } from 'react-icons/md';
 import { deleteProductById } from '@/app/api/actions/actions';
+import { toast } from 'react-toastify';
 type Props = {
   id: string;
+};
+
+const handleDeleteProduct = async (id: string) => {
+  try {
+    const res = await deleteProductById(id);
+    toast.success(res.message);
+  } catch (error: any) {
+    toast.error(error.message);
+  }
 };
 
 export const DeleteProductModal = (props: Props) => {
@@ -21,7 +31,7 @@ export const DeleteProductModal = (props: Props) => {
           </p>
           <div className="flex gap-4 px-6">
             <Button
-              onClick={() => deleteProductById(props.id)}
+              onClick={() => handleDeleteProduct(props.id)}
               label="delete"
               tailwind="font-bold bg-red-600"
             />
