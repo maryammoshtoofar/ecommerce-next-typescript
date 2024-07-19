@@ -10,14 +10,6 @@ type PaginationButtonProps = UIComponent & {
   totalPages: number;
 };
 
-{
-  /* <button
-onClick={() => createPageURL(page)}
-className="cursor-pointer border border-coffee-230 bg-coffee-340 px-2 text-lg text-coffee-40 "
->
-{page}
-</button> */
-}
 export const Pagination = ({ totalPages }: PaginationButtonProps) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();

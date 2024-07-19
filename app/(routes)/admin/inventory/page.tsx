@@ -25,7 +25,7 @@ type SearchParamProps = {
 
 const Page = async ({ searchParams }: SearchParamProps) => {
   const currentPage = Number(searchParams?.page) || 1;
-  const limit = Number(searchParams?.limit) || 4;
+  const limit = Number(searchParams?.limit) || 5;
   const { products, count } = await getPaginatedProducts(currentPage, limit);
   const totalPages = Math.ceil(count / limit);
 
