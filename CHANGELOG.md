@@ -27,4 +27,7 @@
 ### Fixed
 - Issue with Product Images Not Showing Properly
 
+## [v1.1.2] 2024-07-10
 
+### Added
+- Pagination For Products and Orders
