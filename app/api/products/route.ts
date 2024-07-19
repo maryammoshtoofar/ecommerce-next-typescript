@@ -43,7 +43,7 @@ export async function GET(
   { params }: { params: { page: number; limit: number } },
 ) {
   await connectMongoDB();
-  const products = await getPaginatedProducts(1);
+  const products = await getPaginatedProducts(params.page, params.limit);
   return NextResponse.json({ products }, { status: 200 });
 }
 
