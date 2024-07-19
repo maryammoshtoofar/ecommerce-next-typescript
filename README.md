@@ -2,8 +2,8 @@
 
 PLEASE USE A VPN TO OPEN THE URL BELOW.
 
-Open  [ecommerce-next-typescript-seven.vercel.app](https://ecommerce-next-typescript-seven.vercel.app)
-Login Info: (Use this login info to be able to view the admin dashboard)
+Open  [ecommerce-next-typescript-seven.vercel.app](https://ecommerce-next-typescript-seven.vercel.app).
+Login Info: (Use this login info to be able to view the admin dashboard).
 Username: admin
 Password : coffeeadmin123
 
