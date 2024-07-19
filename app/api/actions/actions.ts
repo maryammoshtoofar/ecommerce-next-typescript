@@ -10,7 +10,7 @@ import Order from '@/app/lib/models/order';
 
 // Product actions
 
-export async function getPaginatedProducts(page: number, limit: number = 2) {
+export async function getPaginatedProducts(page: number, limit: number) {
   await connectMongoDB();
   const skip = (page - 1) * limit;
   const count = await Product.estimatedDocumentCount();
@@ -60,9 +60,12 @@ export async function getSubcategoryTitleById(id: string) {
 
 // Order actions
 
-export async function getAllOrders() {
+export async function getPaginatedOrders(page: number, limit: number) {
   await connectMongoDB();
-  return await Order.find();
+  const skip = (page - 1) * limit;
+  const count = await Order.estimatedDocumentCount();
+  const orders = await Order.find().limit(limit).skip(skip);
+  return { orders, count };
 }
 
 export async function createNewOrder(order: OrderI) {

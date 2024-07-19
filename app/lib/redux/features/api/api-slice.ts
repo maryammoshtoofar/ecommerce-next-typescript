@@ -47,9 +47,6 @@ export const shopApi = createApi({
       query: (id) => `${SUBCATEGORIES_URL}?category=${id}`,
     }),
     // product
-    getPaginatedProducts: builder.query<ProductsDataInterface, number>({
-      query: (page) => `${PRODUCTS_URL}?page=${1}&limit=${2}`,
-    }),
     getProductById: builder.query<ProductDataInterface, string>({
       query: (id) => `${PRODUCTS_URL}/${id}`,
     }),
@@ -77,5 +74,4 @@ export const {
   useGetProductByIdQuery,
   useAddNewOrderMutation,
   useEditOrderMutation,
-  useGetPaginatedProductsQuery,
 } = shopApi;
