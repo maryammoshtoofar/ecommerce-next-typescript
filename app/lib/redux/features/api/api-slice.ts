@@ -9,6 +9,7 @@ import {
   CategoryDocument,
   CategoryI,
   OrderI,
+  ProductDocument,
   ProductI,
 } from '@/app/_types/data-types';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
@@ -19,9 +20,9 @@ interface SubcategoriesDataInterface {
   subcategories: CategoryDocument[];
 }
 
-// interface ProductsDataInterface {
-//   products: ProductI[];
-// }
+interface ProductsDataInterface {
+  products: ProductDocument[];
+}
 
 interface ProductDataInterface {
   product: ProductI;
@@ -46,6 +47,9 @@ export const shopApi = createApi({
       query: (id) => `${SUBCATEGORIES_URL}?category=${id}`,
     }),
     // product
+    getPaginatedProducts: builder.query<ProductsDataInterface, number>({
+      query: (page) => `${PRODUCTS_URL}?page=${1}&limit=${2}`,
+    }),
     getProductById: builder.query<ProductDataInterface, string>({
       query: (id) => `${PRODUCTS_URL}/${id}`,
     }),
@@ -73,4 +77,5 @@ export const {
   useGetProductByIdQuery,
   useAddNewOrderMutation,
   useEditOrderMutation,
+  useGetPaginatedProductsQuery,
 } = shopApi;

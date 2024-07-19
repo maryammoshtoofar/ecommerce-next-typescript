@@ -12,6 +12,7 @@ export type UIComponent = {
 export type ButtonProps = UIComponent & {
   mode?: string;
   label: string;
+  square?: boolean;
   onClick?: () => void;
 };
 

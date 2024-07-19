@@ -18,7 +18,6 @@ type Props = UIComponent & {
 };
 
 export const ProductsRow = async ({ product }: Props) => {
-  console.log('product::', product);
   const stock = product.quantity ? true : false;
   const stockIcon = stock ? <FaCheck /> : <ImCross />;
   const category = await getCategoryTitleById(product.category);
