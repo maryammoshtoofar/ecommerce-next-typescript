@@ -9,6 +9,7 @@ import {
   CategoryDocument,
   CategoryI,
   OrderI,
+  ProductDocument,
   ProductI,
 } from '@/app/_types/data-types';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
@@ -19,9 +20,9 @@ interface SubcategoriesDataInterface {
   subcategories: CategoryDocument[];
 }
 
-// interface ProductsDataInterface {
-//   products: ProductI[];
-// }
+interface ProductsDataInterface {
+  products: ProductDocument[];
+}
 
 interface ProductDataInterface {
   product: ProductI;

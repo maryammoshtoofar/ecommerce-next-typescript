@@ -9,15 +9,15 @@ type Props = { id: string };
 export const ActionsCell = ({ id }: Props) => {
 
   return (
-    <Cell customContainerStyle="flex lg:gap-3 text-lg text-coffee-100 ">
-      <BiDetail className="hidden cursor-pointer transition-all hover:text-coffee-340 md:inline" />
+    <Cell customContainerStyle="flex gap-2 lg:gap-3 text-lg text-coffee-100 ">
+      <BiDetail className=" cursor-pointer transition-all hover:text-coffee-340" />
       <Link href={`?show=true&id=${id}`}>
-        <LuPencilLine className="hidden cursor-pointer transition-all hover:text-coffee-340  md:inline " />
+        <LuPencilLine className=" cursor-pointer transition-all hover:text-coffee-340" />
       </Link>
       <Link href={`?id=${id}`}>
-        <LuTrash className="hidden cursor-pointer transition-all hover:text-red-400 md:inline" />
+        <LuTrash className=" cursor-pointer transition-all hover:text-red-400" />
       </Link>
-      <TfiMoreAlt className="cursor-pointer transition-all hover:text-coffee-340 md:hidden" />
+
     </Cell>
   );
 };

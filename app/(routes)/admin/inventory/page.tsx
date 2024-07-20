@@ -3,15 +3,32 @@ import {
   ProductModal,
   DeleteProductModal,
 } from '@/app/_components/widgets';
-import { Title, Section, Flexbox, Button } from '@/app/_components/base';
+import {
+  Title,
+  Section,
+  Flexbox,
+  Button,
+  Pagination,
+} from '@/app/_components/base';
 import Link from 'next/link';
-import { getAllProducts } from '@/app/api/actions/actions';
+import { getPaginatedProducts } from '@/app/api/actions/actions';
+
 type SearchParamProps = {
-  searchParams: Record<string, string> | null | undefined;
+  searchParams: {
+    query?: string;
+    page?: string;
+    limit?: number;
+    show?: string;
+    id?: string;
+  };
 };
 
-const Inventory = async ({ searchParams }: SearchParamProps) => {
-  const products = await getAllProducts();
+const Page = async ({ searchParams }: SearchParamProps) => {
+  const currentPage = Number(searchParams?.page) || 1;
+  const limit = Number(searchParams?.limit) || 5;
+  const { products, count } = await getPaginatedProducts(currentPage, limit);
+  const totalPages = Math.ceil(count / limit);
+
   const tableHeadings = [
     'image',
     'name',
@@ -23,9 +40,11 @@ const Inventory = async ({ searchParams }: SearchParamProps) => {
     'rating',
     'actions',
   ];
+
   const show = searchParams?.show;
   const id = searchParams?.id;
   const del = id && !show;
+
   return (
     <Section>
       <Flexbox tailwind="justify-between flex-col gap-4 smmobile:gap-0 smmobile:flex-row row-span-1">
@@ -34,11 +53,15 @@ const Inventory = async ({ searchParams }: SearchParamProps) => {
           <Button label="add new product" />
         </Link>
       </Flexbox>
-      <Table headings={tableHeadings} products={products} />
+      {products && <Table headings={tableHeadings} products={products} />}
+
       {show && <ProductModal id={id} />}
       {del && <DeleteProductModal id={id} />}
+      <div className="pagination flex justify-center">
+        <Pagination totalPages={totalPages} />
+      </div>
     </Section>
   );
 };
 
-export default Inventory;
+export default Page;

@@ -18,20 +18,23 @@
 - Product Images might not be displayed properly
 
 ## [v1.0.1] 2024-07-10
-
 ### Added
 - Add More Products
 
 ## [v1.0.2] 2024-07-10
-
 ### Fixed
 - Issue with Product Images Not Showing Properly
 
+## [v1.1.1] 2024-07-10
+### Added
+- UI Mobile Navigation Menu for Users
 
-  ## [v1.1.1] 2024-07-10
 
-  ### Added
+## [v1.1.2] 2024-07-19
+### Added
   - UI Mobile Navigation Menu for Users
 
 
-
+## [v1.1.2] 2024-07-19
+### Added
+- Pagination For Products and Orders

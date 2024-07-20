@@ -1,6 +1,7 @@
 import connectMongoDB from '@/app/lib/mongodb/mongodb';
 import Product from '@/app/lib/models/product';
 import { NextRequest, NextResponse } from 'next/server';
+import { getPaginatedProducts } from '../actions/actions';
 
 // export const POST = async (req: Request) => {
 //   await connectMongoDB();
@@ -37,9 +38,12 @@ import { NextRequest, NextResponse } from 'next/server';
 //   }
 // };
 
-export async function GET() {
+export async function GET(
+  req: Request,
+  { params }: { params: { page: number; limit: number } },
+) {
   await connectMongoDB();
-  const products = await Product.find();
+  const products = await getPaginatedProducts(params.page, params.limit);
   return NextResponse.json({ products }, { status: 200 });
 }
 
